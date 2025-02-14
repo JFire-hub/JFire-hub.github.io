@@ -143,9 +143,9 @@ $(document).on(":passagedisplay", function (eventObject) {
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  gtag('js', new Date(), {cookieFlags: 'max-age=7200;secure;samesite=none'});
 
-  gtag('config', 'G-ENLJX0HN6N');
+  gtag('config', 'G-ENLJX0HN6N', {cookieFlags: 'max-age=7200;secure;samesite=none'});
 </script>
 <link rel="icon" type="image/x-icon" href="./assets/misc/favicon.ico" />
 </head>
