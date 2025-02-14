@@ -138,6 +138,15 @@ $(document).on(":passagedisplay", function (eventObject) {
     });
   });
 });</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENLJX0HN6N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ENLJX0HN6N');
+</script>
 <link rel="icon" type="image/x-icon" href="./assets/misc/favicon.ico" />
 </head>
 <body>
@@ -310,9 +319,10 @@ $(document).on(":passagedisplay", function (eventObject) {
 &lt;div class=&quot;textbox&quot;&gt;
     &lt;&lt;textbox &quot;$gfName&quot; &quot;Hannah&quot;&gt;&gt;
 &lt;/div&gt;
-&lt;&lt;set $maxEnergy to 10&gt;&gt;
-&lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;energy_button [[Alright, let&#39;s get started|Intro_End]] 10&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Intro_1" tags="" position="850,100" size="100,100">&lt;&lt;fadein 2s&gt;&gt;
+&lt;&lt;energy_button [[Alright, let&#39;s get started|Intro_End]] 10&gt;&gt;
+    &lt;&lt;set $maxEnergy to 10&gt;&gt;
+    &lt;&lt;update_willpower $willpower+1&gt;&gt;
+&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Intro_1" tags="" position="850,100" size="100,100">&lt;&lt;fadein 2s&gt;&gt;
 &lt;&lt;mc thinking&gt;&gt;
     ...
     Huh?
@@ -983,7 +993,9 @@ $(document).on(":passagedisplay", function (eventObject) {
     You try all sorts of things to find the limits of your capabilities and just like that a week passes.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;button [[Unknowingly, a week has passed|Intro_17]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Intro_17" tags="" position="350,350" size="100,100">&lt;&lt;set $currentDay to 9&gt;&gt;
+&lt;&lt;button [[Unknowingly, a week has passed|Intro_17]]&gt;&gt;
+    &lt;&lt;set $maxEnergy to 10&gt;&gt;
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Intro_17" tags="" position="350,350" size="100,100">&lt;&lt;set $currentDay to 9&gt;&gt;
 &lt;&lt;update&gt;&gt;
 
 &lt;&lt;image &quot;./assets/misc/time_passing.jpg&quot;&gt;&gt;
@@ -1036,7 +1048,6 @@ $(document).on(":passagedisplay", function (eventObject) {
     I should probably start by possessing the people nearby, here in the hospital as well as the people visiting me one by one and try to find some clues.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;set $maxEnergy to 10&gt;&gt;
 &lt;&lt;energy_button [[Alright, time to start my investigation|Intro_End]] 10&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Intro_End" tags="" position="475,350" size="100,100">&lt;div class=&quot;subtitle&quot;&gt;
 Now that you have seen the intro, let&#39;s explain a few more things.
 &lt;/div&gt;
@@ -1071,7 +1082,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     __Mechanics:__
     There are 2 important stats in this game, energy and willpower.
     &#39;&#39;__Energy__&#39;&#39;: You need energy to perform actions like exploring or taking control of people. If you don&#39;t have enough, you won&#39;t be able to take action. Restore it by sleeping. Some people have more energy than others and a bit of their energy may linger with you. If that happens, your maximum energy will rise allowing you to do more every day. Make sure to explore everything to find these people.
-    &#39;&#39;__Willpower__&#39;&#39;: Not all people are easy to take over. The higher your willpower, the higher the chance you can take over somebody. Whenever you successfully influence somebody, you will gain additional willpower. This is not limitless, so if it no longer rises, it means you have reached the max for now. As you progress through the story, the maximum willpower will rise as well, allowing you more freedom in taking over people.
+    &#39;&#39;__Willpower__&#39;&#39;: Not all people are easy to take over. The higher your willpower, the higher the chance you can take over somebody. Whenever you successfully influence somebody, you will gain additional willpower. This is not limitless, so if it no longer rises, it means you have reached your current maximum potential. As you progress through the story, the maximum willpower will rise as well, allowing you more freedom in taking over people.
 &lt;&lt;/narrate&gt;&gt;
 
 &lt;&lt;dev&gt;&gt;
@@ -1642,7 +1653,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 
 &lt;!-- Exploration --&gt;</tw-passagedata><tw-passagedata pid="49" name="Hospital_Hallway_Floor_1_Text_Exploration_1" tags="" position="1100,600" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     This really is a big hospital, although for some reason multiple departments are bunched together.
-    I&#39;m definitely going to take a look here sometime.
+    Looks like there are some delivery rooms here. I&#39;m definitely going to take a look there sometime.
 &lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Hospital_Hallway_Floor_1_Text_Exploration_2" tags="" position="1225,600" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Quite a number of patient rooms on this floor as well, might as well look into them from time to time.
 &lt;&lt;/mc&gt;&gt;
@@ -2967,7 +2978,7 @@ why did officer come so fast (had explanation, but seems a bit suspicious)? mc b
 &lt;&lt;image &quot;./assets/characters/littlesister/littlesister_profile.jpg&quot;&gt;&gt;
 
 &lt;&lt;mc thinking&gt;&gt;
-    Ah, it&#39;s my mother and little sister. They were here earlier too, but I was experimenting with taking people over, so I only saw them when I got back and immediately fell asleep. This time I can actually see them properly.
+    Ah, it&#39;s my mother and little sister. They were here earlier too, but I was experimenting with taking people over, so I only saw them when I got back and fell asleep immediately. This time I can actually see them properly.
 &lt;&lt;/mc&gt;&gt;
 
 &lt;&lt;mc thinking&gt;&gt;
@@ -4048,6 +4059,10 @@ Let&#39;s start with some information on how the game is constructed
 &lt;/div&gt;
 
 &lt;&lt;dev&gt;&gt;
+    On the left hand side, there is a bar with some helpful information. You can collapse or expand it for a better gaming experience. You can also use it to view your progress or some hints on how to proceed. In addition, you can change your settings to your liking. Finally, you can save and load or even restart the game here.
+&lt;&lt;/dev&gt;&gt;
+
+&lt;&lt;dev&gt;&gt;
     Whenever you see a box like this one, it means somebody is speaking.
     Their portrait will be to the left, and their name at the top.
     Everything in the box will be the things they say.
@@ -4088,7 +4103,9 @@ Let&#39;s start with some information on how the game is constructed
 &lt;&lt;/dev&gt;&gt;
 
 &lt;&lt;button [[Play the intro|Intro_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[Skip the intro|Intro_Skip]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Avatar_Selection_Button_Widget" tags="widget" position="475,2100" size="100,100">&lt;&lt;widget &#39;avatar_selection&#39;&gt;&gt;
+&lt;&lt;button [[Skip the intro|Intro_Skip]]&gt;&gt;
+    &lt;&lt;set $maxEnergy to 10&gt;&gt;
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Avatar_Selection_Button_Widget" tags="widget" position="475,2100" size="100,100">&lt;&lt;widget &#39;avatar_selection&#39;&gt;&gt;
     &lt;div class=&quot;column-avatar&quot;&gt;
         &lt;&lt;set $imgSrc to &quot;&lt;img src=&quot;+$args[1]+&quot;&gt;&quot;&gt;&gt;
         &lt;&lt;link $imgSrc&gt;&gt;
