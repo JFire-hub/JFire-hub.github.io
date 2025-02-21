@@ -155,7 +155,7 @@ $(document).on(":passagedisplay", function (eventObject) {
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002// --><tw-storydata name="Lucid Coma" startnode="161" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.image{margin-top:15px;margin-bottom:15px;text-align:center}.image>img{max-width:100%;max-height:100%}.column{float:left;width:48%;margin:0 1%;text-align:left}.column:first-child{text-align:right}.column-avatar{float:left;width:12%;margin:0 1%;text-align:left}.column-avatar>a>img{width:100%}.column-avatar:first-child{margin-left:2%}.column-avatar:last-child{margin-right:2%}.row:after{content:"";display:table;clear:both}.title{text-align:center;text-decoration:underline;font-weight:700;font-size:x-large;margin-bottom:20px}.subtitle{text-align:center;margin-bottom:20px}.macro-button{border:1px #a194e6 solid;border-radius:10px;background-color:#3320a4;color:#fff;margin:10px auto;width:80%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.textbox{text-align:center}.textbox>input{width:80%;text-align:center}.narrating{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto}.narrating>p{padding:.5em;margin:0}.say{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto;display:grid;grid-template-columns:15fr 85fr;grid-gap:0px}.say>img{max-width:100%;margin:auto}.say>div>p:first-of-type{font-weight:700;padding:.2em 0 .2em 1em;margin:0;border-bottom:1px solid #eee}.say>div>p:last-of-type{padding:.5em .5em .5em 1em;margin:0}.video{width:100%}</style><script role="script" id="twine-user-script" type="text/twine-javascript">"use strict";function _typeof2(t){return _typeof2="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},_typeof2(t)}Config.passages.nobr=!0,function(){var t="disabled",e=["button","fieldset","input","menuitem","optgroup","option","select","textarea"];function a(e,a){return e instanceof $||(e=$(e)),e.ariaDisabled(void 0===a||!!a),function(e){e.ariaIsDisabled()?e.addClass(t):e.removeClass(t)}(e),e}Macro.add("disable",{tags:null,handler:function(){var t,s,i,r=$(document.createElement("span")).addClass("macro-"+this.name).wiki(this.payload[0].contents);try{t=this.args.raw.trim()?!!Scripting.evalJavaScript(this.args.full):void 0}catch(t){return this.error("bad evaluation: "+t.message)}a((s=r,(i=$(s).find(e.join(",")).first())[0]||(i=$(s).children().eq(0))[0]?i:$(s)),t),$(this.output).append(r)}})}(),Macro.add("fadein",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).hide().delay(e).fadeIn(t)}}),Macro.add("fadeout",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).delay(e).fadeOut(t)}}),Macro.add("image",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],s=$(document.createElement("div")).addClass("image"),a&&(s=s.attr("style",a)),s.append($(document.createElement("img")).attr("src",e)),s.appendTo(t)}}),$(document).on(":liveupdate",(function(){$(".macro-live").trigger(":liveupdateinternal")})),Macro.add(["update","upd"],{handler:function(){$(document).trigger(":liveupdate")}}),Macro.add(["live","l","lh"],{skipArgs:!0,handler:function(){if(0===this.args.full.length)return this.error("no expression specified");try{var t=this.args.full,e=toStringOrDefault(Scripting.evalJavaScript(t),null);if(null!==e){var a="lh"===this.name,s=$("<span></span>").addClass("macro-live").wiki(a?Util.escape(e):e).appendTo(this.output);s.on(":liveupdateinternal",this.createShadowWrapper((function(e){var i=toStringOrDefault(Scripting.evalJavaScript(t),null);s.empty().wiki(a?Util.escape(i):i)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),Macro.add(["liveblock","lb"],{tags:null,handler:function(){try{var t=this.payload[0].contents.trim();if(t){var e=$("<span></span>").addClass("macro-live macro-live-block").wiki(t).appendTo(this.output);e.on(":liveupdateinternal",this.createShadowWrapper((function(a){e.empty().wiki(t)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),function(){var t=!0,e=!1,a=!1,s={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},i=["center","left","right"],r=["swing","linear"];function n(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var a=clone(s);this.settings=Object.assign(a,t),this.settings.align=n(this.settings.align),this.settings.easing=n(this.settings.easing),i.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var c=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),h=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(c),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),d=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(c);this.$element=c,this.$bars={top:u,bottom:d},this.$label=h,h.css("font-size",parseInt(c.css("height"),10)<parseInt($(".passage").css("font-size"),10)?c.css("height"):$(".passage").css("font-size")),h.css("line-height",c.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,a,s){if(!l.has(t)||e){Object.assign(a,{id:t});var i=new l(a,s);return l._list.set(t,i),i}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function a(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(a,Engine.minDomActionDelay):a(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"===_typeof2(t)&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var a=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"===_typeof2(e)&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&a.addClass(e.classes),e.attr&&"object"===_typeof2(e.attr)&&a.attr(e.attr)),t.append(a.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!a)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],s=null,i=null,r=null,n=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(s=this.payload.find((function(t){return"colors"===t.name})),i=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),n=this.payload.find((function(t){return"label"===t.name})));var o={};if(s){if(!s.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(s.args.length){case 1:o.empty=s.args[0],o.full="transparent";break;case 2:o.full=s.args[0],o.empty=s.args[1];break;default:o.full=s.args[0],o.empty=s.args[1],o.back=s.args[2]}}if(i){if(!i.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=i.args[0],i.args[1]&&(o.height=i.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(n){var c=n.args[0];if(!c||"string"!=typeof c)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=c.trim(),n.args[1]&&"string"==typeof n.args[1]&&(o.text=n.args[1]),n.args[2]&&"string"==typeof n.args[2]&&(o.align=n.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}(),Macro.add("narrate",{tags:null,handler:function(){var t,e,a;t=this.output,e=this.payload[0].contents,a=$(document.createElement("div")).addClass("narrating"),e=(e=(e=e.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>"),a.append($(document.createElement("p")).wiki(e)),a.appendTo(t)}}),function(){var t=new Map;function e(e,a,s,i){if(void 0===s&&a&&(s=a,a=null),State.length)throw new Error("addCharacter() -> must be called before story starts");e&&s?(t.has(e)&&console.error('addCharacter() -> overwriting character "'+e+'"'),t.set(e,{displayName:a,image:s,color:i})):console.error("addCharacter() -> invalid arguments")}function a(e,a,s,i,r){var n=$(document.createElement("div")).addClass(Util.slugify(a)+" say"),o=$(document.createElement("div")),l=t.has(a)?t.get(a):null,c=l.color;c&&(n=n.css("border-color",c)),i&&i.startsWith("$")&&(i=State.variables[i.substring(1)]);var h=l?l.image:null;h&&h.startsWith("$")&&(h=State.variables[h.substring(1)]);var u=$(document.createElement("img")).attr("src",i||h||"");u.attr("src")&&u.attr("src").trim()&&n.append(u);var d=a.toUpperFirst();l&&l.displayName&&(d=l.displayName),s=(s=(s=s.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>");var g=$(document.createElement("p"));c&&(g=(g=g.css("border-bottom-color",c)).css("background-color",c));var p=$(document.createElement("p"));return r&&p.css("font-style","italic"),o.append(g.wiki(d)).append(p.wiki(s)),n.append(o),e&&(e instanceof $||(e=$(e)),n.appendTo(e)),n}setup.say=a,setup.addCharacter=e,Macro.add("character",{handler:function(){e(this.args[0],this.args[1],this.args[2],this.args[3])}}),$(document).one(":passagestart",(function(){var e=Array.from(t.keys());e.push("say"),Macro.add(e,{tags:null,handler:function(){"say"!==this.name?a(this.output,this.name,this.payload[0].contents,null,this.args[0]):a(this.output,this.args[0],this.payload[0].contents,this.args[1],this.args[2])}})}))}(),Macro.add("statistic",{handler:function(){var t,e,a,s,i;t=this.output,e=this.args[0],a=this.args[1],s=this.args[2],(i=$(document.createElement("div")).addClass("row")).append($(document.createElement("div")).addClass("column").wiki(e+":")),i.append($(document.createElement("div")).addClass("column").wiki(a+" / "+s)),i.appendTo(t)}}),Macro.add("video",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],(s=$(document.createElement("video")).attr("controls","").attr("playsinline","").addClass("video")).append($(document.createElement("source")).attr("src",e).attr("type",a)),s.appendTo(t)}});</script><tw-passagedata pid="1" name="Stay_In_Body" tags="" position="100,100" size="100,100">&lt;&lt;narrate&gt;&gt;
+	<!-- UUID://84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002// --><tw-storydata name="Lucid Coma" startnode="195" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.image{margin-top:15px;margin-bottom:15px;text-align:center}.image>img{max-width:100%;max-height:100%}.column{float:left;width:48%;margin:0 1%;text-align:left}.column:first-child{text-align:right}.column-avatar{float:left;width:12%;margin:0 1%;text-align:left}.column-avatar>a>img{width:100%}.column-avatar:first-child{margin-left:2%}.column-avatar:last-child{margin-right:2%}.row:after{content:"";display:table;clear:both}.title{text-align:center;text-decoration:underline;font-weight:700;font-size:x-large;margin-bottom:20px}.subtitle{text-align:center;margin-bottom:20px}.macro-button{border:1px #a194e6 solid;border-radius:10px;background-color:#3320a4;color:#fff;margin:10px auto;width:80%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.textbox{text-align:center}.textbox>input{width:80%;text-align:center}.narrating{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto}.narrating>p{padding:.5em;margin:0}.say{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto;display:grid;grid-template-columns:15fr 85fr;grid-gap:0px}.say>img{max-width:100%;margin:auto}.say>div>p:first-of-type{font-weight:700;padding:.2em 0 .2em 1em;margin:0;border-bottom:1px solid #eee}.say>div>p:last-of-type{padding:.5em .5em .5em 1em;margin:0}.video{width:100%}</style><script role="script" id="twine-user-script" type="text/twine-javascript">"use strict";function _typeof2(t){return _typeof2="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},_typeof2(t)}Config.passages.nobr=!0,function(){var t="disabled",e=["button","fieldset","input","menuitem","optgroup","option","select","textarea"];function a(e,a){return e instanceof $||(e=$(e)),e.ariaDisabled(void 0===a||!!a),function(e){e.ariaIsDisabled()?e.addClass(t):e.removeClass(t)}(e),e}Macro.add("disable",{tags:null,handler:function(){var t,s,i,r=$(document.createElement("span")).addClass("macro-"+this.name).wiki(this.payload[0].contents);try{t=this.args.raw.trim()?!!Scripting.evalJavaScript(this.args.full):void 0}catch(t){return this.error("bad evaluation: "+t.message)}a((s=r,(i=$(s).find(e.join(",")).first())[0]||(i=$(s).children().eq(0))[0]?i:$(s)),t),$(this.output).append(r)}})}(),Macro.add("fadein",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).hide().delay(e).fadeIn(t)}}),Macro.add("fadeout",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).delay(e).fadeOut(t)}}),Macro.add("image",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],s=$(document.createElement("div")).addClass("image"),a&&(s=s.attr("style",a)),s.append($(document.createElement("img")).attr("src",e)),s.appendTo(t)}}),$(document).on(":liveupdate",(function(){$(".macro-live").trigger(":liveupdateinternal")})),Macro.add(["update","upd"],{handler:function(){$(document).trigger(":liveupdate")}}),Macro.add(["live","l","lh"],{skipArgs:!0,handler:function(){if(0===this.args.full.length)return this.error("no expression specified");try{var t=this.args.full,e=toStringOrDefault(Scripting.evalJavaScript(t),null);if(null!==e){var a="lh"===this.name,s=$("<span></span>").addClass("macro-live").wiki(a?Util.escape(e):e).appendTo(this.output);s.on(":liveupdateinternal",this.createShadowWrapper((function(e){var i=toStringOrDefault(Scripting.evalJavaScript(t),null);s.empty().wiki(a?Util.escape(i):i)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),Macro.add(["liveblock","lb"],{tags:null,handler:function(){try{var t=this.payload[0].contents.trim();if(t){var e=$("<span></span>").addClass("macro-live macro-live-block").wiki(t).appendTo(this.output);e.on(":liveupdateinternal",this.createShadowWrapper((function(a){e.empty().wiki(t)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),function(){var t=!0,e=!1,a=!1,s={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},i=["center","left","right"],r=["swing","linear"];function n(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var a=clone(s);this.settings=Object.assign(a,t),this.settings.align=n(this.settings.align),this.settings.easing=n(this.settings.easing),i.includes(this.settings.align)||(this.settings.align="center"),r.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var c=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),h=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(c),u=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),d=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(u).appendTo(c);this.$element=c,this.$bars={top:u,bottom:d},this.$label=h,h.css("font-size",parseInt(c.css("height"),10)<parseInt($(".passage").css("font-size"),10)?c.css("height"):$(".passage").css("font-size")),h.css("line-height",c.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,a,s){if(!l.has(t)||e){Object.assign(a,{id:t});var i=new l(a,s);return l._list.set(t,i),i}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function a(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(a,Engine.minDomActionDelay):a(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"===_typeof2(t)&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var a=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"===_typeof2(e)&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&a.addClass(e.classes),e.attr&&"object"===_typeof2(e.attr)&&a.attr(e.attr)),t.append(a.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!a)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],s=null,i=null,r=null,n=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(s=this.payload.find((function(t){return"colors"===t.name})),i=this.payload.find((function(t){return"sizing"===t.name})),r=this.payload.find((function(t){return"animation"===t.name})),n=this.payload.find((function(t){return"label"===t.name})));var o={};if(s){if(!s.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(s.args.length){case 1:o.empty=s.args[0],o.full="transparent";break;case 2:o.full=s.args[0],o.empty=s.args[1];break;default:o.full=s.args[0],o.empty=s.args[1],o.back=s.args[2]}}if(i){if(!i.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=i.args[0],i.args[1]&&(o.height=i.args[1])}if(r){if(!r.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof r.args[0]||r.args[0]){if("string"!=typeof r.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&&["swing","linear"].includes(r.args[1])&&(o.easing=r.args[1])}if(n){var c=n.args[0];if(!c||"string"!=typeof c)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=c.trim(),n.args[1]&&"string"==typeof n.args[1]&&(o.text=n.args[1]),n.args[2]&&"string"==typeof n.args[2]&&(o.align=n.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}(),Macro.add("narrate",{tags:null,handler:function(){var t,e,a;t=this.output,e=this.payload[0].contents,a=$(document.createElement("div")).addClass("narrating"),e=(e=(e=e.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>"),a.append($(document.createElement("p")).wiki(e)),a.appendTo(t)}}),function(){var t=new Map;function e(e,a,s,i){if(void 0===s&&a&&(s=a,a=null),State.length)throw new Error("addCharacter() -> must be called before story starts");e&&s?(t.has(e)&&console.error('addCharacter() -> overwriting character "'+e+'"'),t.set(e,{displayName:a,image:s,color:i})):console.error("addCharacter() -> invalid arguments")}function a(e,a,s,i,r){var n=$(document.createElement("div")).addClass(Util.slugify(a)+" say"),o=$(document.createElement("div")),l=t.has(a)?t.get(a):null,c=l.color;c&&(n=n.css("border-color",c)),i&&i.startsWith("$")&&(i=State.variables[i.substring(1)]);var h=l?l.image:null;h&&h.startsWith("$")&&(h=State.variables[h.substring(1)]);var u=$(document.createElement("img")).attr("src",i||h||"");u.attr("src")&&u.attr("src").trim()&&n.append(u);var d=a.toUpperFirst();l&&l.displayName&&(d=l.displayName),s=(s=(s=s.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>");var g=$(document.createElement("p"));c&&(g=(g=g.css("border-bottom-color",c)).css("background-color",c));var p=$(document.createElement("p"));return r&&p.css("font-style","italic"),o.append(g.wiki(d)).append(p.wiki(s)),n.append(o),e&&(e instanceof $||(e=$(e)),n.appendTo(e)),n}setup.say=a,setup.addCharacter=e,Macro.add("character",{handler:function(){e(this.args[0],this.args[1],this.args[2],this.args[3])}}),$(document).one(":passagestart",(function(){var e=Array.from(t.keys());e.push("say"),Macro.add(e,{tags:null,handler:function(){"say"!==this.name?a(this.output,this.name,this.payload[0].contents,null,this.args[0]):a(this.output,this.args[0],this.payload[0].contents,this.args[1],this.args[2])}})}))}(),Macro.add("statistic",{handler:function(){var t,e,a,s,i;t=this.output,e=this.args[0],a=this.args[1],s=this.args[2],(i=$(document.createElement("div")).addClass("row")).append($(document.createElement("div")).addClass("column").wiki(e+":")),i.append($(document.createElement("div")).addClass("column").wiki(a+" / "+s)),i.appendTo(t)}}),Macro.add("video",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],(s=$(document.createElement("video")).attr("controls","").attr("playsinline","").addClass("video")).append($(document.createElement("source")).attr("src",e).attr("type",a)),s.appendTo(t)}});</script><tw-passagedata pid="1" name="Stay_In_Body" tags="" position="100,100" size="100,100">&lt;&lt;narrate&gt;&gt;
     You decide to tough it out and stay in your body.
     Agonizing pain continues to buffet your body and you find yourself slowly fading away into nothingness.
 &lt;&lt;/narrate&gt;&gt;
@@ -1109,7 +1109,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     You find yourself in a delivery room.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;image &quot;./assets/locations/hospital_delivery_room.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Hospital_Delivery_Room_Text_Footer" tags="" position="850,350" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;image &quot;./assets/locations/hospital_delivery_room.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Hospital_Delivery_Room_Text_Footer" tags="" position="850,350" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 
 &lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="28" name="Hospital_Delivery_Room_Text_Scene_1" tags="" position="975,350" size="100,100">&lt;&lt;button [[A woman is giving birth|Hospital_Delivery_Room_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Hospital_Delivery_Room_Scene_1" tags="" position="1100,350" size="100,100">&lt;&lt;narrate&gt;&gt;
@@ -1198,7 +1198,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     I better leave them to it.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;random_scenes_button 1 $rnd_delivery_room_scenes [[You decide to return to the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Hospital_Elevator" tags="" position="1225,350" size="100,100">&lt;&lt;include Hospital_Elevator_Text_Header&gt;&gt;
+&lt;&lt;random_scenes_button 1 $rnd_delivery_room_scenes [[You decide to return to the hallway|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Hospital_Elevator" tags="" position="1225,350" size="100,100">&lt;&lt;include Hospital_Elevator_Text_Header&gt;&gt;
 
 &lt;&lt;include Main_Story&gt;&gt;
 &lt;&lt;include Side_Stories&gt;&gt;
@@ -1215,8 +1215,10 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 &lt;&lt;narrate&gt;&gt;
     On the buttons of the elevator, you see more information about the different floors
     - Ground floor: Lobby
-    - Floor 1: Short term patient rooms + Maternity ward
+    - Floor 1: Short term patient rooms + Nurses station
     - Floor 2: Long term patient rooms + General examination rooms
+    - Floor 3: Maternity ward
+    - Floor 4: Oncology ward
 &lt;&lt;/narrate&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Hospital_Elevator_Text_Footer" tags="" position="225,475" size="100,100">&lt;&lt;button [[Go to the ground floor lobby|Hospital_Lobby]]&gt;&gt;
     &lt;&lt;set $hospital_current_floor to &#39;ground floor&#39;&gt;&gt;
 &lt;&lt;/button&gt;&gt;
@@ -1225,6 +1227,12 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 &lt;&lt;/button&gt;&gt;
 &lt;&lt;button [[Go to the 2nd floor hallway|Hospital_Hallway_Floor_2]]&gt;&gt;
     &lt;&lt;set $hospital_current_floor to &#39;2nd floor&#39;&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;button [[Go to the 3rd floor hallway|Hospital_Hallway_Floor_3]]&gt;&gt;
+    &lt;&lt;set $hospital_current_floor to &#39;3rd floor&#39;&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;button [[Go to the 4th floor hallway|Hospital_Hallway_Floor_4]]&gt;&gt;
+    &lt;&lt;set $hospital_current_floor to &#39;4th floor&#39;&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 
 &lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="33" name="Hospital_Elevator_Text_Scene_1" tags="" position="350,475" size="100,100">&lt;&lt;button [[You see a woman pressing the button repeatedly|Hospital_Elevator_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Hospital_Elevator_Text_Scene_2" tags="" position="475,475" size="100,100">&lt;&lt;button [[Two nurses are riding the elevator, sharing gossip|Hospital_Elevator_Scene_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Hospital_Elevator_Scene_1" tags="" position="600,475" size="100,100">&lt;&lt;narrate&gt;&gt;
@@ -1652,13 +1660,12 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 &lt;&lt;image &quot;./assets/locations/hospital_hallway.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Hospital_Hallway_Floor_1_Text_Footer" tags="" position="975,600" size="100,100">&lt;&lt;button [[Enter an elevator|Hospital_Elevator]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;!-- Exploration --&gt;</tw-passagedata><tw-passagedata pid="49" name="Hospital_Hallway_Floor_1_Text_Exploration_1" tags="" position="1100,600" size="100,100">&lt;&lt;mc thinking&gt;&gt;
-    This really is a big hospital, although for some reason multiple departments are bunched together.
-    Looks like there are some delivery rooms here. I&#39;m definitely going to take a look there sometime.
+    The nurses station is on this floor, I should check it out from time to time.
 &lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Hospital_Hallway_Floor_1_Text_Exploration_2" tags="" position="1225,600" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Quite a number of patient rooms on this floor as well, might as well look into them from time to time.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;!-- Rooms --&gt;</tw-passagedata><tw-passagedata pid="51" name="Hospital_Hallway_Floor_1_Text_Room_1" tags="" position="100,725" size="100,100">&lt;&lt;button [[Enter a delivery room|Hospital_Delivery_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Hospital_Hallway_Floor_1_Text_Room_2" tags="" position="225,725" size="100,100">&lt;&lt;button [[Enter a patient&#39;s room|Hospital_Patient_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Hospital_Hallway_Floor_2" tags="" position="350,725" size="100,100">&lt;&lt;include Hospital_Hallway_Floor_2_Text_Header&gt;&gt;
+&lt;!-- Rooms --&gt;</tw-passagedata><tw-passagedata pid="51" name="Hospital_Hallway_Floor_1_Text_Room_1" tags="" position="100,725" size="100,100">&lt;&lt;button [[Enter the nurses station|Hospital_Nurses_Station]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Hospital_Hallway_Floor_1_Text_Room_2" tags="" position="225,725" size="100,100">&lt;&lt;button [[Enter a patient&#39;s room|Hospital_Patient_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Hospital_Hallway_Floor_2" tags="" position="350,725" size="100,100">&lt;&lt;include Hospital_Hallway_Floor_2_Text_Header&gt;&gt;
 
 &lt;&lt;include Main_Story&gt;&gt;
 &lt;&lt;include Side_Stories&gt;&gt;
@@ -1702,19 +1709,105 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     And who knows, maybe outside?
 &lt;&lt;/mc&gt;&gt;
 
-&lt;!-- Rooms --&gt;</tw-passagedata><tw-passagedata pid="58" name="Hospital_Hallway_Floor_2_Text_Room_1" tags="" position="975,725" size="100,100">&lt;&lt;button [[Enter an examination room|Hospital_Exam_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Hospital_Hallway_Floor_2_Text_Room_2" tags="" position="1100,725" size="100,100">&lt;&lt;button [[Enter an elevator|Hospital_Elevator]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="Hospital_Lobby" tags="" position="1225,725" size="100,100">&lt;&lt;include Hospital_Lobby_Text_Header&gt;&gt;
+&lt;!-- Rooms --&gt;</tw-passagedata><tw-passagedata pid="58" name="Hospital_Hallway_Floor_2_Text_Room_1" tags="" position="975,725" size="100,100">&lt;&lt;button [[Enter an examination room|Hospital_Exam_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Hospital_Hallway_Floor_2_Text_Room_2" tags="" position="1100,725" size="100,100">&lt;&lt;button [[Enter an elevator|Hospital_Elevator]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="Hospital_Hallway_Floor_3" tags="" position="1225,725" size="100,100">&lt;&lt;include Hospital_Hallway_Floor_3_Text_Header&gt;&gt;
+
+&lt;&lt;include Main_Story&gt;&gt;
+&lt;&lt;include Side_Stories&gt;&gt;
+
+&lt;&lt;liveblock&gt;&gt;
+    &lt;&lt;if $exploration_success&gt;&gt;
+        &lt;&lt;set $exploration_success to false&gt;&gt;
+        &lt;&lt;if $exp_hallway_floor[2] == 1&gt;&gt;
+            &lt;&lt;include Hospital_Hallway_Floor_3_Text_Exploration_1&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $exp_hallway_floor[2] == 2&gt;&gt;
+            &lt;&lt;include Hospital_Hallway_Floor_3_Text_Exploration_2&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $exp_hallway_floor[2] &lt; 2 &gt;&gt;
+        &lt;&lt;energy_button &#39;Explore&#39; $energy-2&gt;&gt;
+            &lt;&lt;set $exp_hallway_floor[2]++&gt;&gt;
+            &lt;&lt;set $exploration_success to true&gt;&gt;
+        &lt;&lt;/energy_button&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $exp_hallway_floor[2] &gt;= 1&gt;&gt;
+        &lt;&lt;include Hospital_Hallway_Floor_3_Text_Room_1&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $exp_hallway_floor[2] &gt;= 2&gt;&gt;
+        &lt;&lt;include Hospital_Hallway_Floor_3_Text_Room_2&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;include Hospital_Hallway_Floor_3_Text_Footer&gt;&gt;
+&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Hospital_Hallway_Floor_3_Text_Header" tags="" position="100,850" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You stand in the maternity ward of the hospital, and see a number of doors as well as an elevator.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;image &quot;./assets/locations/hospital_hallway.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Hospital_Hallway_Floor_3_Text_Footer" tags="" position="225,850" size="100,100">&lt;&lt;button [[Enter an elevator|Hospital_Elevator]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;!-- Exploration --&gt;</tw-passagedata><tw-passagedata pid="63" name="Hospital_Hallway_Floor_3_Text_Exploration_1" tags="" position="350,850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+    Looks like there are some delivery rooms here. I&#39;m definitely going to take a look there sometime.
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Hospital_Hallway_Floor_3_Text_Exploration_2" tags="" position="475,850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+    Quite a number of patient rooms on this floor as well, might as well look into them from time to time.
+&lt;&lt;/mc&gt;&gt;
+
+&lt;!-- Rooms --&gt;</tw-passagedata><tw-passagedata pid="65" name="Hospital_Hallway_Floor_3_Text_Room_1" tags="" position="600,850" size="100,100">&lt;&lt;button [[Enter a delivery room|Hospital_Delivery_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Hospital_Hallway_Floor_3_Text_Room_2" tags="" position="725,850" size="100,100">&lt;&lt;button [[Enter a patient&#39;s room|Hospital_Maternity_Patient_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Hospital_Hallway_Floor_4" tags="" position="850,850" size="100,100">&lt;&lt;include Hospital_Hallway_Floor_4_Text_Header&gt;&gt;
+
+&lt;&lt;include Main_Story&gt;&gt;
+&lt;&lt;include Side_Stories&gt;&gt;
+
+&lt;&lt;liveblock&gt;&gt;
+    &lt;&lt;if $exploration_success&gt;&gt;
+        &lt;&lt;set $exploration_success to false&gt;&gt;
+        &lt;&lt;if $exp_hallway_floor[3] == 1&gt;&gt;
+            &lt;&lt;include Hospital_Hallway_Floor_4_Text_Exploration_1&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $exp_hallway_floor[3] == 2&gt;&gt;
+            &lt;&lt;include Hospital_Hallway_Floor_4_Text_Exploration_2&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $exp_hallway_floor[3] &lt; 2 &gt;&gt;
+        &lt;&lt;energy_button &#39;Explore&#39; $energy-2&gt;&gt;
+            &lt;&lt;set $exp_hallway_floor[3]++&gt;&gt;
+            &lt;&lt;set $exploration_success to true&gt;&gt;
+        &lt;&lt;/energy_button&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $exp_hallway_floor[3] &gt;= 1&gt;&gt;
+        &lt;&lt;include Hospital_Hallway_Floor_4_Text_Room_1&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;if $exp_hallway_floor[3] &gt;= 2&gt;&gt;
+        &lt;&lt;include Hospital_Hallway_Floor_4_Text_Room_2&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+
+    &lt;&lt;include Hospital_Hallway_Floor_4_Text_Footer&gt;&gt;
+&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Hospital_Hallway_Floor_4_Text_Header" tags="" position="975,850" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You stand in the oncology ward of the hospital, and see a number of doors as well as an elevator.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;image &quot;./assets/locations/hospital_hallway.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Hospital_Hallway_Floor_4_Text_Footer" tags="" position="1100,850" size="100,100">&lt;&lt;button [[Enter an elevator|Hospital_Elevator]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;!-- Exploration --&gt;</tw-passagedata><tw-passagedata pid="70" name="Hospital_Hallway_Floor_4_Text_Exploration_1" tags="" position="1225,850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+    Looks like there are some exam rooms here. Might as well take a look sometimes.
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Hospital_Hallway_Floor_4_Text_Exploration_2" tags="" position="100,975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+    Quite a number of patient rooms on this floor as well, might as well look into them from time to time.
+&lt;&lt;/mc&gt;&gt;
+
+&lt;!-- Rooms --&gt;</tw-passagedata><tw-passagedata pid="72" name="Hospital_Hallway_Floor_4_Text_Room_1" tags="" position="225,975" size="100,100">&lt;&lt;button [[Enter an exam room|Hospital_Oncology_Exam_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Hospital_Hallway_Floor_4_Text_Room_2" tags="" position="350,975" size="100,100">&lt;&lt;button [[Enter a patient&#39;s room|Hospital_Oncology_Patient_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Hospital_Lobby" tags="" position="475,975" size="100,100">&lt;&lt;include Hospital_Lobby_Text_Header&gt;&gt;
 
 &lt;&lt;include Main_Story&gt;&gt;
 &lt;&lt;include Side_Stories&gt;&gt;
 
 &lt;&lt;random_scenes_include $rnd_num_scenes_lobby &quot;Hospital_Lobby_Text_Scene_&quot;&gt;&gt;
 
-&lt;&lt;include Hospital_Lobby_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Hospital_Lobby_Text_Header" tags="" position="100,850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;include Hospital_Lobby_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Hospital_Lobby_Text_Header" tags="" position="600,975" size="100,100">&lt;&lt;narrate&gt;&gt;
     You find yourself in a large lobby.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;image &quot;./assets/locations/hospital_lobby.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Hospital_Lobby_Text_Footer" tags="" position="225,850" size="100,100">&lt;&lt;energy_willpower_check_button [[Go towards the entrance|Hospital_Lobby_Entrance]] $energy-0 30&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
-&lt;&lt;button [[Enter an elevator|Hospital_Elevator]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Hospital_Lobby_Entrance" tags="" position="350,850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;image &quot;./assets/locations/hospital_lobby.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Hospital_Lobby_Text_Footer" tags="" position="725,975" size="100,100">&lt;&lt;energy_willpower_check_button [[Go towards the entrance|Hospital_Lobby_Entrance]] $energy-0 30&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
+&lt;&lt;button [[Enter an elevator|Hospital_Elevator]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Hospital_Lobby_Entrance" tags="" position="850,975" size="100,100">&lt;&lt;narrate&gt;&gt;
     You are finally here, in the entrance of the hospital, ready to go out into the world once more.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1730,7 +1823,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 
 &lt;&lt;button [[Go back to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="64" name="Hospital_Lobby_Text_Scene_1" tags="" position="475,850" size="100,100">&lt;&lt;button [[You hear a conversation between siblings|Hospital_Lobby_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Hospital_Lobby_Scene_1" tags="" position="600,850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="78" name="Hospital_Lobby_Text_Scene_1" tags="" position="975,975" size="100,100">&lt;&lt;button [[You hear a conversation between siblings|Hospital_Lobby_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Hospital_Lobby_Scene_1" tags="" position="1100,975" size="100,100">&lt;&lt;narrate&gt;&gt;
     You see two siblings meeting up, the brother coming from the elevator, leaving the hospital and the sister coming in through the front door.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1787,21 +1880,579 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     Always. I&#39;ll see you later. And I&#39;ll keep you posted!
 &lt;&lt;/rnd_woman&gt;&gt;
 
-&lt;&lt;random_scenes_button 1 $rnd_lobby_scenes [[Saying their goodbyes, they part ways|Hospital_Lobby]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Hospital_Patient_Room" tags="" position="725,850" size="100,100">&lt;&lt;include Hospital_Patient_Room_Text_Header&gt;&gt;
+&lt;&lt;random_scenes_button 1 $rnd_lobby_scenes [[Saying their goodbyes, they part ways|Hospital_Lobby]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="Hospital_Maternity_Patient_Room" tags="" position="1225,975" size="100,100">&lt;&lt;include Hospital_Maternity_Patient_Room_Text_Header&gt;&gt;
+
+&lt;&lt;include Main_Story&gt;&gt;
+&lt;&lt;include Side_Stories&gt;&gt;
+
+&lt;&lt;random_scenes_include $rnd_num_scenes_maternity_patient_room &quot;Hospital_Maternity_Patient_Room_Text_Scene_&quot;&gt;&gt;
+
+&lt;&lt;include Hospital_Maternity_Patient_Room_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="Hospital_Maternity_Patient_Room_Text_Header" tags="" position="100,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You find yourself in a room in the maternity ward
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;image &quot;./assets/locations/hospital_maternity_patient_room.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="Hospital_Maternity_Patient_Room_Text_Footer" tags="" position="225,1100" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+
+&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="83" name="Hospital_Maternity_Patient_Room_Text_Scene_1" tags="" position="350,1100" size="100,100">&lt;&lt;button [[You take a peek in one of the rooms with newly born babies|Hospital_Maternity_Patient_Room_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Hospital_Maternity_Patient_Room_Scene_1" tags="" position="475,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+    Upon entering the room, you see a man staring at his newborn.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Do you think he knows how to use that little hand yet? Or is he just flexing it to assert dominance?
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I&#39;m pretty sure he&#39;s just showing us who&#39;s really in charge here.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The man nods seriously at this remark.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Right. I mean, he already has more control over the remote than I do.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I&#39;m just waiting for him to start texting his friends at 3 AM asking for snacks.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The man laughs.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Oh, don&#39;t worry. He&#39;s already planning his social media presence. Watch out for his first post: &#39;The world is big, but my crib is the center of it.&#39;
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Great. He&#39;ll be an influencer before he can even roll over.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Speaking of rolling over, do you think that&#39;s the next milestone? First words, then rolling, then... cashing in on those baby product sponsorships?
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I&#39;m hoping the first words are &#39;sleep through the night,&#39; but we&#39;ll see.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    I like your optimism, but we might be getting &#39;Wahhh&#39; for a few months first.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman glances at the baby.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Honestly, though, how does something so small manage to be so loud?
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    They&#39;re like tiny, adorable foghorns. The volume is impressive.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    The only thing louder than him crying is the sound of us Googling &#39;How to get a baby to sleep.&#39;
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    I&#39;ve memorized every sleep training video on YouTube by now. At this point, I could teach a class.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Let&#39;s hope he agrees to the syllabus... or we&#39;re both failing this course.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    I think the only thing we&#39;re passing right now is exhaustion.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    And caffeine. The true MVP of this whole thing.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Oh, absolutely. I&#39;ve become one with the coffee machine. If it had arms, I&#39;d ask it for a hug.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman laughs.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I&#39;m honestly convinced that without coffee, I would have been a puddle of human goo by now.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    We&#39;re surviving on caffeine and love, right? Mostly caffeine, though.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    You know, I was expecting a little less noise and a little more sleeping in this whole newborn thing.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    We should have done some more research. Maybe watched a documentary on &#39;What To Expect When You&#39;re Expecting To Never Sleep Again.&#39;
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Oh, definitely. I think they should include a section on &#39;How to Function on 3 Hours of Sleep and Not Turn Into Zombies.&#39;
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    I&#39;m already practicing my zombie walk. It&#39;s like a morning ritual now.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I have a feeling we&#39;ll be better at it than the baby in a few weeks. He&#39;s got some competition for &#39;world&#39;s most dramatic yawn.&#39;
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    He might win the dramatic award, but I&#39;ve got a solid chance for &#39;Best Parent Stumble While Holding a Bottle at 4 AM.&#39;
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Don&#39;t even get me started on the 3 AM feedings. I swear, it feels like we&#39;re feeding him a gourmet meal while I&#39;m holding a mug of cold coffee.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    And somehow, he&#39;s already mastered the art of pretending to be asleep while he&#39;s actually still wide awake and silently judging us.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman chuckles.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    He definitely gives us that look. Like he knows he&#39;s got us wrapped around his tiny, non-functional finger.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Oh, for sure. The way he stares at us while he&#39;s crying—it&#39;s like he&#39;s waiting for us to apologize for ruining his life.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    It&#39;s the guilt trip of a lifetime. I feel like I&#39;ve committed a crime just by trying to sleep for 20 minutes.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    At this point, I wouldn&#39;t be surprised if he starts writing passive-aggressive notes to us. Like, &#39;Dear Mom and Dad, I don&#39;t appreciate your attempts to make me sleep. Love, The Baby.&#39;
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Honestly, I think he might. He&#39;s already got the dramatic flare down.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    And don&#39;t even get me started on diaper changes. I&#39;m starting to think there should be a PhD in that.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman grins.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I&#39;m about 5 minutes away from calling in a professional diaper changer. If they had a service for that, I&#39;d sign up.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Right? I mean, if he&#39;s going to cry that loud, at least he could give me some applause after I&#39;ve successfully wrestled him into a fresh diaper.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman laughs.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    The only applause we&#39;re getting right now is from our exhausted brains slapping us for taking on this role.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    Well, we&#39;re in this together. For better or for worse, and for a lot of caffeine.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Mostly caffeine. But yeah, we got this... somehow.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The man glances at the baby.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man&gt;&gt;
+    I think he&#39;s plotting his next move already.
+&lt;&lt;/rnd_man&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Great. Bring on the next challenge, kiddo. We&#39;re ready.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;random_scenes_button 1 $rnd_maternity_patient_room_scenes [[Smiling at the heartwarming conversation, you leave the room|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Hospital_Nurses_Station" tags="" position="600,1100" size="100,100">&lt;&lt;include Hospital_Nurses_Station_Text_Header&gt;&gt;
+
+&lt;&lt;include Main_Story&gt;&gt;
+&lt;&lt;include Side_Stories&gt;&gt;
+
+&lt;&lt;random_scenes_include $rnd_num_scenes_nurses_station &quot;Hospital_Nurses_Station_Text_Scene_&quot;&gt;&gt;
+
+&lt;&lt;include Hospital_Nurses_Station_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Hospital_Nurses_Station_Text_Header" tags="" position="725,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You find yourself in the nurses station.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;image &quot;./assets/locations/hospital_nurses_station.webp&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Hospital_Nurses_Station_Text_Footer" tags="" position="850,1100" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+
+&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="88" name="Hospital_Nurses_Station_Text_Scene_1" tags="" position="975,1100" size="100,100">&lt;&lt;button [[You hear 2 nurses talking|Hospital_Nurses_Station_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Hospital_Nurses_Station_Scene_1" tags="" position="1100,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+    As you pass the nurses station, you hear 2 nurses talking. One of the nurses is shuffling through charts, looking exhausted.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    So, I&#39;m pretty sure my coffee has just become my blood type at this point. You think they&#39;ll let me donate coffee instead of plasma?
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The other nurse laughs.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    I&#39;d donate coffee to you, but I&#39;m afraid I&#39;ll end up drinking it myself. I just found an empty cup in the break room, and I swear I looked at it like it was a treasure chest. The level of desperation is real.
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    Oh, definitely. I think they should install a coffee IV drip in the break room. Maybe even a &#39;permanent caffeine infusion&#39; option. I mean, if they&#39;re putting IVs in everyone else, why not us?
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    I&#39;m not opposed. Honestly, I think I&#39;m running on a combination of adrenaline, caffeine, and sheer willpower at this point. How else do we survive this?
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The first nurse smirks.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    You know what&#39;s worse? When you finally get a break, but the second you sit down, your pager goes off. Like, it&#39;s some kind of cosmic joke.
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    I&#39;m convinced the universe has it out for us. &#39;Oh, you thought you could rest? Here, have a 2 AM emergency for your trouble.&#39;
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    And the best part? You&#39;ll get to the patient&#39;s room and realize all they wanted was a blanket. A warm blanket. Not even a cup of water, just a blanket.
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The second nurse groans.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    That&#39;s when you question your entire life choices. Like, why am I here, answering pages, running on fumes... for blankets?
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    Honestly, though, I think the hospital should issue a &#39;blanket emergency&#39; manual. Like, &#39;Step 1: Provide a blanket. Step 2: Watch as the patient immediately falls asleep and doesn&#39;t need anything else for three hours.&#39;
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The second nurse laughs.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    Honestly, some patients act like they&#39;re in a five-star hotel. I had one yesterday ask if I could bring them sushi. I mean, sushi? What kind of hospital is this?!
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    That&#39;s when I draw the line. I don&#39;t even know if we have a sushi place nearby, and frankly, if it&#39;s a delivery driver, I&#39;m going to be so mad if they arrive faster than I did.
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    Right? We&#39;re over here running between rooms, and a sushi delivery person waltzes in like they own the place.
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    Honestly, we should start charging for &#39;premium service&#39;—$10 if they want anything beyond the basics. I bet we&#39;d make a killing. &#39;Do you want a pillow with that blanket? Extra $5.&#39;
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The second nurse laughs.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    Or if they want a soda with their lunch, that&#39;s a $7 fee. And let&#39;s not even get started on the &#39;extra side of ranch.&#39;
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    Ooh, extra ranch. That&#39;s the platinum level of hospital services.
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    At this rate, we should just run a side business: &#39;Nursing by day, room service by night.&#39;
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;rnd_nurse1&gt;&gt;
+    I like it. I&#39;ll add some sushi to the menu. &#39;Specialty today: fish sticks and a side of your medication. Delivered with a smile.&#39;
+&lt;&lt;/rnd_nurse1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The second nurse laughs hard.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_nurse2&gt;&gt;
+    Next time, we might be the ones paging the doctors: &#39;Can you come to our station? We&#39;ve got an emergency sushi order.&#39;
+&lt;&lt;/rnd_nurse2&gt;&gt;
+
+&lt;&lt;random_scenes_button 1 $rnd_nurses_station_scenes [[Laughing at the silly conversation, you return to the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Hospital_Oncology_Exam_Room" tags="" position="1225,1100" size="100,100">&lt;&lt;include Hospital_Oncology_Exam_Room_Text_Header&gt;&gt;
+
+&lt;&lt;include Main_Story&gt;&gt;
+&lt;&lt;include Side_Stories&gt;&gt;
+
+&lt;&lt;random_scenes_include $rnd_num_scenes_oncology_exam_room &quot;Hospital_Oncology_Exam_Room_Text_Scene_&quot;&gt;&gt;
+
+&lt;&lt;include Hospital_Oncology_Exam_Room_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Hospital_Oncology_Exam_Room_Text_Header" tags="" position="100,1225" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You find yourself in an examination room.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;image &quot;./assets/locations/hospital_oncology_exam_room.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Hospital_Oncology_Exam_Room_Text_Footer" tags="" position="225,1225" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_4]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+
+&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="93" name="Hospital_Oncology_Exam_Room_Text_Scene_1" tags="" position="350,1225" size="100,100">&lt;&lt;button [[You see a doctor and a woman in an examination room|Hospital_Oncology_Exam_Room_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Hospital_Oncology_Exam_Room_Scene_1" tags="" position="475,1225" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You see a woman sitting on an examination table, talking to her doctor.
+    The doctor speaks with a gentle but professional tone.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    Good morning, Mrs. Harris. How are you feeling today?
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman looks tired but tries to smile.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Morning, Dr. Williams. Honestly, I&#39;m tired. This treatment... it&#39;s a lot, but I&#39;m hanging in there. How&#39;s everything looking on your end?
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The doctor sits across from her and looks at her chart.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    We&#39;ve been reviewing your test results, and while there&#39;s been some progress with the treatment, I want to talk through some important details with you today. The tumor has shrunk, which is a good sign, but we also need to discuss the next steps in your care. How have you been feeling about everything so far?
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman pauses, taking a deep breath.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I mean, I try not to think about it too much. But the fear of it not working... the waiting… it gets to me. I know I should be optimistic because the treatment&#39;s working, but it feels like I&#39;m always waiting for the other shoe to drop.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The doctor nods thoughtfully.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    I understand. It&#39;s perfectly normal to feel that way, especially when facing something as uncertain as cancer. It&#39;s a lot to carry, and no matter what we know about the treatment, there&#39;s always that fear of it not being enough. I&#39;m here to give you the most accurate information I can, and to support you through every step, even when it&#39;s hard.
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    I really appreciate that, Dr. Williams. But... do you think I have more time? I just keep thinking about everything I might miss... my family, my grandchildren growing up... I want to know if I should be planning for the future, or if I should be preparing for something else.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The doctor pauses, maintaining eye contact with a compassionate expression.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    I wish I could give you a definitive answer, but the truth is, cancer doesn&#39;t always follow a clear path. What I can tell you is that we are seeing positive signs from the treatment, and we&#39;re doing everything we can to extend your time. We&#39;ll continue to monitor your condition closely, and if any changes happen, we&#39;ll make adjustments as needed. It&#39;s important to me that we give you the best care possible, and part of that includes being transparent with you. We don&#39;t know exactly what the future holds, but we are actively working to give you more of it.
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman answers the doctor, voice shaking a little.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    It&#39;s just hard. I thought I had more time before all of this. And now every day feels... uncertain. I just don&#39;t know how to deal with that uncertainty. How do you keep going when you&#39;re not sure what&#39;s next?
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The doctor answers her softly.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    I won&#39;t lie to you, it&#39;s not easy. The uncertainty can feel overwhelming, and it&#39;s okay to feel lost or scared sometimes. But I want you to know that you&#39;re not facing this alone. You have a team that&#39;s here for you—me, the nurses, the specialists—we&#39;re all working together to give you the best possible care, and we&#39;ll keep you informed every step of the way. You don&#39;t have to carry the weight of the unknown on your own.
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman nods, wiping her tears.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Thank you. It&#39;s just that... I want to be there for my family, but I don&#39;t know how much more I can handle. The treatments are wearing me out, and I&#39;m so tired.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    It&#39;s okay to be tired. The treatments are tough, but they&#39;re also doing important work in your body. If you&#39;re ever feeling overwhelmed or need a break, we can talk about ways to manage your energy better. Whether it&#39;s adjusting your treatment schedule or helping with any side effects, we&#39;ll make sure you&#39;re as comfortable as possible. You need to take care of yourself, too.
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman answers quietly.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Do you think I&#39;ll be okay? I know you don&#39;t have a crystal ball, but... I need some hope right now.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The doctor pauses, then speaks gently but earnestly.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    I believe you have a lot of fight left in you, and we&#39;re doing everything we can to give you the best chance. Hope is important, and I don&#39;t want to take that away from you. Just know that we&#39;re here to support you, no matter what happens, and we&#39;re going to keep giving it our all.
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The woman nods slowly, wearing a small, weary smile.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_woman&gt;&gt;
+    Thank you, Dr. Williams. I&#39;m scared, but hearing you say that... it helps. I&#39;ll keep fighting.
+&lt;&lt;/rnd_woman&gt;&gt;
+
+&lt;&lt;rnd_doc&gt;&gt;
+    That&#39;s all any of us can do. And we&#39;ll be right here, fighting with you every step of the way.
+&lt;&lt;/rnd_doc&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    You whisper softly to the woman, knowing she can&#39;t hear you.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;mc&gt;&gt;
+    Hang in there, and good luck!
+&lt;&lt;/mc&gt;&gt;
+
+&lt;&lt;random_scenes_button 1 $rnd_oncology_exam_room_scenes [[Silently, you leave the examination room|Hospital_Hallway_Floor_4]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Hospital_Oncology_Patient_Room" tags="" position="600,1225" size="100,100">&lt;&lt;include Hospital_Oncology_Patient_Room_Text_Header&gt;&gt;
+
+&lt;&lt;include Main_Story&gt;&gt;
+&lt;&lt;include Side_Stories&gt;&gt;
+
+&lt;&lt;random_scenes_include $rnd_num_scenes_oncology_patient_room &quot;Hospital_Oncology_Patient_Room_Text_Scene_&quot;&gt;&gt;
+
+&lt;&lt;include Hospital_Oncology_Patient_Room_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="Hospital_Oncology_Patient_Room_Text_Header" tags="" position="725,1225" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You find yourself in a room in the oncology ward
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;image &quot;./assets/locations/hospital_oncology_patient_room.jpg&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="Hospital_Oncology_Patient_Room_Text_Footer" tags="" position="850,1225" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_4]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+
+&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="98" name="Hospital_Oncology_Patient_Room_Text_Scene_1" tags="" position="975,1225" size="100,100">&lt;&lt;button [[You hear 2 patients talking in their room|Hospital_Oncology_Patient_Room_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="Hospital_Oncology_Patient_Room_Scene_1" tags="" position="1100,1225" size="100,100">&lt;&lt;narrate&gt;&gt;
+    You enter a room with 2 cancer patients softly talking to each other.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man1&gt;&gt;
+    I used to come here to visit my sister. Never thought I&#39;d be the one in the bed, you know?
+&lt;&lt;/rnd_man1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    His voice is quiet, while he looks out of the window.
+    The other man answers softly.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man2&gt;&gt;
+    I didn&#39;t expect it either, but here we are.
+&lt;&lt;/rnd_man2&gt;&gt;
+
+&lt;&lt;rnd_man1&gt;&gt;
+    Yeah. It feels different when you&#39;re sitting on this side of things. I&#39;ve been trying to stay positive, but some days... it&#39;s hard.
+&lt;&lt;/rnd_man1&gt;&gt;
+
+&lt;&lt;rnd_man2&gt;&gt;
+    I know exactly what you mean. Some days feel like you&#39;re just pretending. Like, you put on this brave face, but inside... it&#39;s different. It&#39;s hard to stay strong when everything feels out of your control.
+&lt;&lt;/rnd_man2&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The first man nods, looking down.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man1&gt;&gt;
+    I feel that too. I want to be strong for my family, for my kids, but... some days, I just want to break down and let myself feel all of it.
+&lt;&lt;/rnd_man1&gt;&gt;
+
+&lt;&lt;rnd_man2&gt;&gt;
+    You don&#39;t have to be strong all the time. I used to think that way—like I had to keep it all together. But there&#39;s strength in being honest about what you&#39;re feeling. It&#39;s okay to have moments where you just sit with it and let it hurt.
+&lt;&lt;/rnd_man2&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    After a long pause, the first man speaks up again.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man1&gt;&gt;
+    Do you... do you think it&#39;s okay to be afraid?
+&lt;&lt;/rnd_man1&gt;&gt;
+
+&lt;&lt;rnd_man2&gt;&gt;
+    I think it&#39;s more than okay. Fear is part of it. The unknown... the waiting... it gets to all of us. But fear doesn&#39;t mean you&#39;re weak. It just means you&#39;re human.
+&lt;&lt;/rnd_man2&gt;&gt;
+
+&lt;&lt;rnd_man1&gt;&gt;
+    I&#39;m scared of missing things. I keep thinking about the moments I won&#39;t be around for. Things my kids will do, things my wife and I will never get to do together.
+&lt;&lt;/rnd_man1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The second man sighs.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man2&gt;&gt;
+    Yeah. That&#39;s one of the hardest things. We all have these dreams, these plans... and then everything changes. I can&#39;t tell you how many nights I&#39;ve stayed up, just wishing I had more time. More time with my loved ones, more time to make things right.
+&lt;&lt;/rnd_man2&gt;&gt;
+
+&lt;&lt;rnd_man1&gt;&gt;
+    I&#39;m trying to focus on what I do have, though. The moments I still get to share with them, even if they&#39;re smaller than I imagined. I don&#39;t know if I&#39;ll ever fully get over the fear of leaving them behind, but I want to make the most of every day. Even the hard ones.
+&lt;&lt;/rnd_man1&gt;&gt;
+
+&lt;&lt;rnd_man2&gt;&gt;
+    That&#39;s the best we can do. Focus on today. On the moments we can still have, even if they don&#39;t look like what we planned. Life has a way of throwing us curve balls we never see coming, but we don&#39;t have to face them alone. We have people who care.
+&lt;&lt;/rnd_man2&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The first man pauses, wiping a tear away.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man1&gt;&gt;
+    Thank you. For saying that. It helps more than you know.
+&lt;&lt;/rnd_man1&gt;&gt;
+
+&lt;&lt;narrate&gt;&gt;
+    The second man smiles gently.
+&lt;&lt;/narrate&gt;&gt;
+
+&lt;&lt;rnd_man2&gt;&gt;
+    Anytime. We&#39;re all just trying to figure it out, one day at a time. And we&#39;re here for each other.
+&lt;&lt;/rnd_man2&gt;&gt;
+
+&lt;&lt;mc thinking&gt;&gt;
+    Some people here really have it rough.
+&lt;&lt;/mc&gt;&gt;
+
+&lt;&lt;random_scenes_button 1 $rnd_oncology_patient_room_scenes [[Sighing, you leave the room|Hospital_Hallway_Floor_4]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="Hospital_Patient_Room" tags="" position="1225,1225" size="100,100">&lt;&lt;include Hospital_Patient_Room_Text_Header&gt;&gt;
 
 &lt;&lt;include Main_Story&gt;&gt;
 &lt;&lt;include Side_Stories&gt;&gt;
 
 &lt;&lt;random_scenes_include $rnd_num_scenes_patient_room &quot;Hospital_Patient_Room_Text_Scene_&quot;&gt;&gt;
 
-&lt;&lt;include Hospital_Patient_Room_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Hospital_Patient_Room_Text_Header" tags="" position="850,850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;include Hospital_Patient_Room_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Hospital_Patient_Room_Text_Header" tags="" position="100,1350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You find yourself in another patient&#39;s room.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;image &quot;./assets/locations/hospital_room.png&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Hospital_Patient_Room_Text_Footer" tags="" position="975,850" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;image &quot;./assets/locations/hospital_room.png&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Hospital_Patient_Room_Text_Footer" tags="" position="225,1350" size="100,100">&lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 
-&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="69" name="Hospital_Patient_Room_Text_Scene_1" tags="" position="1100,850" size="100,100">&lt;&lt;button [[You hear two patients talking about their recovery|Hospital_Patient_Room_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Hospital_Patient_Room_Scene_1" tags="" position="1225,850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="103" name="Hospital_Patient_Room_Text_Scene_1" tags="" position="350,1350" size="100,100">&lt;&lt;button [[You hear two patients talking about their recovery|Hospital_Patient_Room_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Hospital_Patient_Room_Scene_1" tags="" position="475,1350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You hear 2 patients talking about their recovery. Curious, you decide to listen in on their conversation.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1854,7 +2505,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     You chuckle to yourself as you leave them to their weird conversation.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;random_scenes_button 1 $rnd_patient_room_scenes [[Go out into the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Hospital_Room" tags="" position="100,975" size="100,100">&lt;&lt;include Hospital_Hospital_Room_Text_Header&gt;&gt;
+&lt;&lt;random_scenes_button 1 $rnd_patient_room_scenes [[Go out into the hallway|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Hospital_Room" tags="" position="600,1350" size="100,100">&lt;&lt;include Hospital_Hospital_Room_Text_Header&gt;&gt;
 
 &lt;&lt;include Main_Story&gt;&gt;
 &lt;&lt;include Side_Stories&gt;&gt;
@@ -1863,18 +2514,18 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     &lt;&lt;random_scenes_include $rnd_num_scenes_hospital_room &quot;Hospital_Hospital_Room_Text_Scene_&quot;&gt;&gt;
 &lt;&lt;/liveblock&gt;&gt;
 
-&lt;&lt;include Hospital_Hospital_Room_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Hospital_Hospital_Room_Text_Header" tags="" position="225,975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;include Hospital_Hospital_Room_Text_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="Hospital_Hospital_Room_Text_Header" tags="" position="725,1350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You find yourself in your hospital room, looking down upon your motionless body.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;image &quot;./assets/locations/hospital_room.png&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Hospital_Hospital_Room_Text_Footer" tags="" position="350,975" size="100,100">&lt;&lt;button [[Try to regain control of your body|Hospital_Hospital_Room_Enter_Body]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;image &quot;./assets/locations/hospital_room.png&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Hospital_Hospital_Room_Text_Footer" tags="" position="850,1350" size="100,100">&lt;&lt;button [[Try to regain control of your body|Hospital_Hospital_Room_Enter_Body]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button [[Go to sleep|Sleep]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;br&gt;
 &lt;&lt;button [[Go out into the hallway|Hospital_Hallway_Floor_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="74" name="Hospital_Hospital_Room_Text_Scene_1" tags="" position="475,975" size="100,100">&lt;&lt;energy_willpower_check_button [[A janitor enters your room|Hospital_Hospital_Room_Janitor_Scene_1]] $energy-5 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Hospital_Hospital_Room_Text_Scene_2" tags="" position="600,975" size="100,100">&lt;&lt;energy_willpower_check_button [[A nurse enters your room|Hospital_Hospital_Room_Nurse_Scene_1]] $energy-5 3&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
+&lt;!-- Scenes --&gt;</tw-passagedata><tw-passagedata pid="108" name="Hospital_Hospital_Room_Text_Scene_1" tags="" position="975,1350" size="100,100">&lt;&lt;energy_willpower_check_button [[A janitor enters your room|Hospital_Hospital_Room_Janitor_Scene_1]] $energy-5 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="Hospital_Hospital_Room_Text_Scene_2" tags="" position="1100,1350" size="100,100">&lt;&lt;energy_willpower_check_button [[A nurse enters your room|Hospital_Hospital_Room_Nurse_Scene_1]] $energy-5 3&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
 
-&lt;!-- Entering body --&gt;</tw-passagedata><tw-passagedata pid="76" name="Hospital_Hospital_Room_Enter_Body" tags="" position="725,975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;!-- Entering body --&gt;</tw-passagedata><tw-passagedata pid="110" name="Hospital_Hospital_Room_Enter_Body" tags="" position="1225,1350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You try to return to your body and as before, it works with ease.
     However, the moment you&#39;re back in your own body, you&#39;re assaulted by extreme pain again.
 &lt;&lt;/narrate&gt;&gt;
@@ -1887,7 +2538,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 &lt;&lt;button [[Stay in your body|Stay_In_Body]]&gt;&gt;
     &lt;&lt;set $passage_param to [&quot;Death&quot;, &quot;Hospital_Room&quot;]&gt;&gt;
 &lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[Get out of your body|Hospital_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Hospital_Hospital_Room_Janitor_Scene_1" tags="" position="850,975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;button [[Get out of your body|Hospital_Room]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Hospital_Hospital_Room_Janitor_Scene_1" tags="" position="100,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     A janitor enters your room and begins cleaning.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1897,7 +2548,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     Might as well practice my control for a bit on him.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[You decide to take over the janitor|Hospital_Hospital_Room_Janitor_Scene_1_1]] $energy-2&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="Hospital_Hospital_Room_Janitor_Scene_1_1" tags="" position="975,975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You decide to take over the janitor|Hospital_Hospital_Room_Janitor_Scene_1_1]] $energy-2&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Hospital_Hospital_Room_Janitor_Scene_1_1" tags="" position="225,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     The takeover happens smoothly and very soon, you are in control.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1908,7 +2559,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     Well, he&#39;s already holding a broomstick like a microphone, I may as well have him sing a song.
 &lt;&lt;/janitor_mc&gt;&gt;
 
-&lt;&lt;energy_button [[You control the janitor to sing a song|Hospital_Hospital_Room_Janitor_Scene_1_2]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Hospital_Hospital_Room_Janitor_Scene_1_2" tags="" position="1100,975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You control the janitor to sing a song|Hospital_Hospital_Room_Janitor_Scene_1_2]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Hospital_Hospital_Room_Janitor_Scene_1_2" tags="" position="350,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     You control the janitor to bring out the best of himself.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1924,7 +2575,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 
 &lt;&lt;random_scenes_button 1 $rnd_hospital_room_scenes [[You leave the body of the janitor|Hospital_Room]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="Hospital_Hospital_Room_Nurse_Scene_1" tags="" position="1225,975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Hospital_Hospital_Room_Nurse_Scene_1" tags="" position="475,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     A nurse enters the room to wash your body and change the sheets.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1934,7 +2585,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     Might as well practice my control for a bit on him.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[You decide to take over the nurse|Hospital_Hospital_Room_Nurse_Scene_1_1]] $energy-2&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="Hospital_Hospital_Room_Nurse_Scene_1_1" tags="" position="100,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You decide to take over the nurse|Hospital_Hospital_Room_Nurse_Scene_1_1]] $energy-2&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Hospital_Hospital_Room_Nurse_Scene_1_1" tags="" position="600,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     The takeover happens smoothly and very soon, you are in control.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1945,7 +2596,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     He&#39;s listening to music, let&#39;s make him dance.
 &lt;&lt;/nurse_mc&gt;&gt;
 
-&lt;&lt;energy_button [[You control the dance to dance|Hospital_Hospital_Room_Nurse_Scene_1_2]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="Hospital_Hospital_Room_Nurse_Scene_1_2" tags="" position="225,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You control the dance to dance|Hospital_Hospital_Room_Nurse_Scene_1_2]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Hospital_Hospital_Room_Nurse_Scene_1_2" tags="" position="725,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     You control the nurse to dance like a real star.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -1962,10 +2613,10 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 
 &lt;&lt;random_scenes_button 2 $rnd_hospital_room_scenes [[You leave the body of the nurse|Hospital_Room]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Settings" tags="" position="350,1100" size="100,100">&lt;&lt;include Settings_Avatar&gt;&gt;
+&lt;&lt;/random_scenes_button&gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="Settings" tags="" position="850,1475" size="100,100">&lt;&lt;include Settings_Avatar&gt;&gt;
 &lt;&lt;include Settings_Girlfriend&gt;&gt;
 &lt;br&gt;
-&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Settings_Avatar" tags="" position="475,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Settings_Avatar" tags="" position="975,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     The image below is the currently selected avatar for the main character. Select one of the avatars below this picture to change it.
 &lt;&lt;/narrate&gt;&gt;
 &lt;&lt;liveblock&gt;&gt;
@@ -1986,7 +2637,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
         &lt;&lt;avatar_selection &#39;settings_avatar&#39; &#39;assets/avatars/avatar_mc_13.jpg&#39;&gt;&gt;
         &lt;&lt;avatar_selection &#39;settings_avatar&#39; &#39;assets/avatars/avatar_mc_14.jpg&#39;&gt;&gt;
     &lt;/div&gt; 
-&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Settings_Girlfriend" tags="" position="600,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Settings_Girlfriend" tags="" position="1100,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     The image below is the currently selected avatar for the ex-girlfriend of the character. Select one of the avatars below this picture to change it.
 &lt;&lt;/narrate&gt;&gt;
 &lt;&lt;liveblock&gt;&gt;
@@ -2007,7 +2658,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
         &lt;&lt;avatar_selection &#39;settings_avatar_gf&#39; &#39;assets/avatars/avatar_gf_13.jpg&#39;&gt;&gt;
         &lt;&lt;avatar_selection &#39;settings_avatar_gf&#39; &#39;assets/avatars/avatar_gf_14.jpg&#39;&gt;&gt;
     &lt;/div&gt; 
-&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Sleep" tags="" position="725,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="Sleep" tags="" position="1225,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
 You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2022,21 +2673,21 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;energy_button [[You wake up, feeling refreshed|Hospital_Room]] $maxEnergy&gt;&gt;
     &lt;&lt;set $currentDay to $currentDay + 1&gt;&gt;
-&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Stats" tags="" position="850,1100" size="100,100">&lt;&lt;include Progress&gt;&gt;
+&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Stats" tags="" position="100,1600" size="100,100">&lt;&lt;include Progress&gt;&gt;
 &lt;br&gt;
-&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Progress" tags="" position="975,1100" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Progress" tags="" position="225,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
     Here you can find statistics about the progress in the game.
 &lt;&lt;/narrate&gt;&gt;
 
 &lt;&lt;set _progress_main_story to $progress_main_story - 1&gt;&gt;
 &lt;&lt;set _progress_side_stories to [$progress_side_stories[0] - 1, $progress_side_stories[1] - 1]&gt;&gt;
-&lt;&lt;set _progress_random_events to $rnd_elevator_scenes.length + $rnd_exam_room_scenes.length + $rnd_delivery_room_scenes.length + $rnd_lobby_scenes.length + $rnd_patient_room_scenes.length + $rnd_hospital_room_scenes.length&gt;&gt;
-&lt;&lt;set _count_random_events to $rnd_num_scenes_elevator + $rnd_num_scenes_exam_room + $rnd_num_scenes_delivery_room + $rnd_num_scenes_lobby + $rnd_num_scenes_patient_room + $rnd_num_scenes_hospital_room&gt;&gt;
+&lt;&lt;set _progress_random_events to $rnd_elevator_scenes.length + $rnd_exam_room_scenes.length + $rnd_delivery_room_scenes.length + $rnd_lobby_scenes.length + $rnd_patient_room_scenes.length + $rnd_hospital_room_scenes.length + $rnd_nurses_station_scenes.length + $rnd_maternity_patient_room_scenes.length + $rnd_oncology_exam_room_scenes.length + $rnd_oncology_patient_room_scenes.length&gt;&gt;
+&lt;&lt;set _count_random_events to $rnd_num_scenes_elevator + $rnd_num_scenes_exam_room + $rnd_num_scenes_delivery_room + $rnd_num_scenes_lobby + $rnd_num_scenes_patient_room + $rnd_num_scenes_hospital_room + $rnd_num_scenes_maternity_patient_room + $rnd_num_scenes_nurses_station + $rnd_num_scenes_oncology_exam_room + $rnd_num_scenes_oncology_patient_room&gt;&gt;
 
 &lt;&lt;statistic &#39;Main story&#39; _progress_main_story $main_story_steps&gt;&gt;
 &lt;&lt;statistic &#39;Side story \&#39;$oldManName\&#39;&#39; _progress_side_stories[0] $side_stories_steps[0]&gt;&gt;
 &lt;&lt;statistic &#39;Side story \&#39;Husband\&#39;&#39; _progress_side_stories[1] $side_stories_steps[1]&gt;&gt;
-&lt;&lt;statistic &#39;Random events found&#39; _progress_random_events _count_random_events&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="StoryInit" tags="" position="1100,1100" size="100,100">&lt;!-- Characters --&gt;
+&lt;&lt;statistic &#39;Random events found&#39; _progress_random_events _count_random_events&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="StoryInit" tags="" position="350,1600" size="100,100">&lt;!-- Characters --&gt;
 &lt;&lt;set $settings_avatar to &#39;assets/avatars/avatar_mc_1.jpg&#39;&gt;&gt;
 &lt;&lt;set $settings_avatar_gf to &#39;assets/avatars/avatar_gf_1.jpg&#39;&gt;&gt;
 
@@ -2104,7 +2755,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;set $sideStoriesDay to [0, 0]&gt;&gt;
 
 &lt;!-- Exploration counters --&gt;
-&lt;&lt;set $exp_hallway_floor to [0, 0]&gt;&gt;
+&lt;&lt;set $exp_hallway_floor to [0, 0, 0, 0]&gt;&gt;
 
 &lt;!-- Random event variables --&gt;
 &lt;&lt;set $rnd_num_scenes_elevator to 2&gt;&gt;
@@ -2113,17 +2764,26 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;set $rnd_num_scenes_lobby to 1&gt;&gt;
 &lt;&lt;set $rnd_num_scenes_patient_room to 1&gt;&gt;
 &lt;&lt;set $rnd_num_scenes_hospital_room to 2&gt;&gt;
+&lt;&lt;set $rnd_num_scenes_maternity_patient_room to 1&gt;&gt;
+&lt;&lt;set $rnd_num_scenes_nurses_station to 1&gt;&gt;
+&lt;&lt;set $rnd_num_scenes_oncology_exam_room to 1&gt;&gt;
+&lt;&lt;set $rnd_num_scenes_oncology_patient_room to 1&gt;&gt;
 &lt;&lt;set $rnd_chance_multiplier to 4&gt;&gt; &lt;!-- x means 1 in x times you enter the location, it will have a random event --&gt;
 
 &lt;!-- stats --&gt;
 &lt;&lt;set $main_story_steps to 16&gt;&gt;
 &lt;&lt;set $side_stories_steps to [2, 1]&gt;&gt;
+
 &lt;&lt;set $rnd_elevator_scenes to []&gt;&gt;
 &lt;&lt;set $rnd_exam_room_scenes to []&gt;&gt;
 &lt;&lt;set $rnd_delivery_room_scenes to []&gt;&gt;
 &lt;&lt;set $rnd_lobby_scenes to []&gt;&gt;
 &lt;&lt;set $rnd_patient_room_scenes to []&gt;&gt;
 &lt;&lt;set $rnd_hospital_room_scenes to []&gt;&gt;
+&lt;&lt;set $rnd_nurses_station_scenes to []&gt;&gt;
+&lt;&lt;set $rnd_maternity_patient_room_scenes to []&gt;&gt;
+&lt;&lt;set $rnd_oncology_exam_room_scenes to []&gt;&gt;
+&lt;&lt;set $rnd_oncology_patient_room_scenes to []&gt;&gt;
 
 &lt;!-- Energy --&gt;
 &lt;&lt;set $maxEnergy to 9&gt;&gt;
@@ -2145,8 +2805,8 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;set $random_event to 0&gt;&gt;
 &lt;&lt;set $hospital_current_floor to &#39;2nd floor&#39;&gt;&gt;
 &lt;&lt;set $num_revival to 0&gt;&gt;
-&lt;&lt;set $has_clues to false&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="StoryAuthor" tags="" position="1225,1100" size="100,100">Phantasos</tw-passagedata><tw-passagedata pid="91" name="PassageHeader" tags="" position="100,1225" size="100,100">&lt;!-- Call updatemeter on every passage load so as to account for page refresh/reload to be visually correct --&gt;
-&lt;&lt;updatemeter &#39;energy&#39; `$energy/$maxEnergy`&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="PassageFooter" tags="" position="225,1225" size="100,100"></tw-passagedata><tw-passagedata pid="93" name="StoryCaption" tags="" position="350,1225" size="100,100">&lt;div class=&quot;row&quot;&gt;
+&lt;&lt;set $has_clues to false&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="StoryAuthor" tags="" position="475,1600" size="100,100">Phantasos</tw-passagedata><tw-passagedata pid="125" name="PassageHeader" tags="" position="600,1600" size="100,100">&lt;!-- Call updatemeter on every passage load so as to account for page refresh/reload to be visually correct --&gt;
+&lt;&lt;updatemeter &#39;energy&#39; `$energy/$maxEnergy`&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="PassageFooter" tags="" position="725,1600" size="100,100"></tw-passagedata><tw-passagedata pid="127" name="StoryCaption" tags="" position="850,1600" size="100,100">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;Day:&lt;/div&gt;
   &lt;div class=&quot;column&quot;&gt;&lt;&lt;live $currentDay&gt;&gt;&lt;/div&gt;
 &lt;/div&gt; 
@@ -2155,9 +2815,9 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
   &lt;div class=&quot;column&quot;&gt;&lt;&lt;live $willpower&gt;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;br/&gt;
-&lt;&lt;showmeter &#39;energy&#39; &quot;Energy: `$energy / $maxEnergy`&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="StoryMenu" tags="" position="475,1225" size="100,100">[[Stats]]
+&lt;&lt;showmeter &#39;energy&#39; &quot;Energy: `$energy / $maxEnergy`&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="StoryMenu" tags="" position="975,1600" size="100,100">[[Stats]]
 [[Hints]]
-[[Settings]]</tw-passagedata><tw-passagedata pid="95" name="Hints" tags="" position="600,1225" size="100,100">&lt;&lt;if $progress_main_story &lt;= 2&gt;&gt;
+[[Settings]]</tw-passagedata><tw-passagedata pid="129" name="Hints" tags="" position="1100,1600" size="100,100">&lt;&lt;if $progress_main_story &lt;= 2&gt;&gt;
     &lt;&lt;include Hints_Intro&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;&lt;include Hints_Header&gt;&gt;
@@ -2195,7 +2855,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include Hints_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="Hints_Header" tags="" position="725,1225" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;include Hints_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Hints_Header" tags="" position="1225,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
     Preparing to think about your situation, you focus your thoughts.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2213,49 +2873,49 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;mc thinking&gt;&gt;
     When I was in that place between life and death, I saw an angel who warned me the accident was not an accident at all. Not only that, it seems it&#39;s not only me, those around me are in danger as well.
     There may also be somebody purposely keeping me in a coma. Strangely enough, I have not seen anybody suspicious yet.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="Hints_Footer" tags="" position="850,1225" size="100,100">&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="Hints_Intro" tags="" position="975,1225" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Hints_Footer" tags="" position="100,1725" size="100,100">&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Hints_Intro" tags="" position="225,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
     Once you progress far enough in the main story, you will be able to gather your thoughts and think about the future here. If you ever feel stuck, this may help you to progress again.
 &lt;&lt;/narrate&gt;&gt;
 
-/* History */</tw-passagedata><tw-passagedata pid="99" name="Hints_2" tags="" position="1100,1225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+/* History */</tw-passagedata><tw-passagedata pid="133" name="Hints_2" tags="" position="350,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I overheard a conversation between a policeman and a receptionist. Looks like the police are indeed looking into my accident, thinking it was no accident after all. I had been hesitant to believe it earlier as everything that happened just seemed too surreal, but I guess I&#39;ll have to start believing it and try to find out more.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="Hints_3" tags="" position="1225,1225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Hints_3" tags="" position="475,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I overheard another conversation between the policeman and the receptionist. Could the mafia really be involved in my accident like he said?
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Hints_4" tags="" position="100,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Hints_4" tags="" position="600,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     My mother and little sister visited me. While thinking about the past, I realized my uncle died in an accident last year that seemed to have similar circumstances as mine. Could he have been targeted too?
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Hints_8" tags="" position="225,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="136" name="Hints_8" tags="" position="725,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I followed the nurse who changed my serum and she injected the sac with something she brought from the outside. So my serum is actually being tampered with! This is most likely what is keeping me from waking up.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="Hints_15" tags="" position="350,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Hints_15" tags="" position="850,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     A mysterious man came to my room. He only looked at me for a bit and then left. When I went to the lobby and overheard the receptionist and policeman talking, I learned that this man is most likely one of the higher-ups in the mafia. What does such a person have to do with me?
 &lt;&lt;/mc&gt;&gt;
 
-/* Future */</tw-passagedata><tw-passagedata pid="104" name="Hints_Plans" tags="" position="475,1350" size="100,100">&lt;&lt;narrate&gt;&gt;
+/* Future */</tw-passagedata><tw-passagedata pid="138" name="Hints_Plans" tags="" position="975,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
     Having recalled everything you know, you try to think about the next course of action
-&lt;&lt;/narrate&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Hints_Plans_Unknown" tags="" position="600,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/narrate&gt;&gt;</tw-passagedata><tw-passagedata pid="139" name="Hints_Plans_Unknown" tags="" position="1100,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I don&#39;t really have an idea on how to proceed, I should probably explore a bit.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="Hints_Plans_3" tags="" position="725,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="140" name="Hints_Plans_3" tags="" position="1225,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I should check the lobby in a few days, maybe the policeman will come back.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Hints_Plans_5" tags="" position="850,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="Hints_Plans_5" tags="" position="100,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I should check the lobby in a few days, maybe the policeman will come back.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Hints_Plans_6" tags="" position="975,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="142" name="Hints_Plans_6" tags="" position="225,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     The officer asked the receptionist to keep an eye out for suspicious people. I may as well do the same although I doubt anyone would be stupid enough to waltz into my room if they were involved.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="Hints_Plans_7" tags="" position="1100,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Hints_Plans_7" tags="" position="350,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     The only thing going into my body is serum. The nurse should be back in a few days to swap it again. I should follow her at that time to try and find out.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Hints_Plans_8" tags="" position="1225,1350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="144" name="Hints_Plans_8" tags="" position="475,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Following the nurse after she changed my serum did not yield any results. I should try to follow her from the entrance in a few days when she has to come change it again.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Hints_Plans_9" tags="" position="100,1475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Hints_Plans_9" tags="" position="600,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I should follow the nurse a few more times to see if she&#39;s tampering with other people&#39;s serum.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Hints_Plans_10" tags="" position="225,1475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Hints_Plans_10" tags="" position="725,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I followed the nurse again, but she did not tamper with any serum. I should follow her again to verify I&#39;m the only one she targets.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Hints_Plans_11" tags="" position="350,1475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Hints_Plans_11" tags="" position="850,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Now that I verified that she only tampers with my serum, I should try to interfere when she tries again.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Hints_Plans_12" tags="" position="475,1475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Hints_Plans_12" tags="" position="975,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I may have failed in taking over the nurse, but I can still take over somebody nearby to interfere. Let&#39;s wait for her again when my serum needs replenishing.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Hints_Plans_15" tags="" position="600,1475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Hints_Plans_15" tags="" position="1100,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     A mysterious man came into my room, just staring at me for a while and then left. I should try to follow him to the lobby to learn more.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Hints_Plans_17" tags="" position="725,1475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Hints_Plans_17" tags="" position="1225,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I&#39;ve gathered all the information I can inside the hospital. I should make sure I&#39;m strong enough and go out into the world to gather more.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="Main_Story" tags="" position="850,1475" size="100,100">&lt;&lt;mainstory_include 1 0 &#39;Hospital_Lobby&#39;&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Main_Story" tags="" position="100,1975" size="100,100">&lt;&lt;mainstory_include 1 0 &#39;Hospital_Lobby&#39;&gt;&gt;
 &lt;&lt;mainstory_include 2 0 &#39;Hospital_Room&#39;&gt;&gt;
 &lt;&lt;mainstory_include 3 2 &#39;Hospital_Lobby&#39;&gt;&gt;
 &lt;&lt;mainstory_include 4 1 &#39;Hospital_Room&#39;&gt;&gt;
@@ -2270,7 +2930,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;mainstory_include 13 1 &#39;Hospital_Room&#39;&gt;&gt;
 &lt;&lt;mainstory_include 14 1 &#39;Hospital_Room&#39;&gt;&gt;
 &lt;&lt;mainstory_include 15 0 &#39;Hospital_Lobby&#39;&gt;&gt;
-&lt;&lt;mainstory_include 16 0 &#39;Hospital_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Main_Story_Text_Scene_1" tags="" position="975,1475" size="100,100">&lt;&lt;button [[A police officer walks up to the reception desk|Main_Story_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Main_Story_Text_Scene_2" tags="" position="1100,1475" size="100,100">&lt;&lt;button [[You think about the exchange in the lobby|Main_Story_Scene_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="Main_Story_Text_Scene_3" tags="" position="1225,1475" size="100,100">&lt;&lt;button [[The police officer is back|Main_Story_Scene_3]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Main_Story_Text_Scene_4" tags="" position="100,1600" size="100,100">&lt;&lt;button [[Your mother and little sister are sitting beside your bed|Main_Story_Scene_4]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Main_Story_Text_Scene_5" tags="" position="225,1600" size="100,100">&lt;&lt;button [[The police officer is back for another visit|Main_Story_Scene_5]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Main_Story_Text_Scene_6" tags="" position="350,1600" size="100,100">&lt;&lt;button [[You hover over your body, frustrated by your lack of progress|Main_Story_Scene_6]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Main_Story_Text_Scene_7" tags="" position="475,1600" size="100,100">&lt;&lt;button [[The nurse is replacing your serum again|Main_Story_Scene_7]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Main_Story_Text_Scene_8" tags="" position="600,1600" size="100,100">&lt;&lt;button [[You wait at the front entrance until the nurse shows up|Main_Story_Scene_8]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Main_Story_Text_Scene_9" tags="" position="725,1600" size="100,100">&lt;&lt;button [[You wait at the front entrance again until the nurse shows up|Main_Story_Scene_9]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Main_Story_Text_Scene_10" tags="" position="850,1600" size="100,100">&lt;&lt;button [[You wait at the front entrance again until the nurse shows up|Main_Story_Scene_10]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Main_Story_Text_Scene_11" tags="" position="975,1600" size="100,100">&lt;&lt;button [[Today is the day when the nurse has to change your serum again|Main_Story_Scene_11]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Main_Story_Text_Scene_12" tags="" position="1100,1600" size="100,100">&lt;&lt;button [[The nurse has to change your serum again during her shift|Main_Story_Scene_12]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Main_Story_Text_Scene_13" tags="" position="1225,1600" size="100,100">&lt;&lt;button [[You feel helpless as you can&#39;t find a way to get more information|Main_Story_Scene_13]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Main_Story_Text_Scene_14" tags="" position="100,1725" size="100,100">&lt;&lt;button [[You are in your room, taking a nap|Main_Story_Scene_14]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Main_Story_Text_Scene_15" tags="" position="225,1725" size="100,100">&lt;&lt;button [[The receptionist is reporting the mysterious man|Main_Story_Scene_15]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="133" name="Main_Story_Text_Scene_16" tags="" position="350,1725" size="100,100">&lt;&lt;button [[You contemplate about the mystery man|Main_Story_Scene_16]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Main_Story_Scene_1" tags="" position="475,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_include 16 0 &#39;Hospital_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Main_Story_Text_Scene_1" tags="" position="225,1975" size="100,100">&lt;&lt;button [[A police officer walks up to the reception desk|Main_Story_Scene_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Main_Story_Text_Scene_2" tags="" position="350,1975" size="100,100">&lt;&lt;button [[You think about the exchange in the lobby|Main_Story_Scene_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="Main_Story_Text_Scene_3" tags="" position="475,1975" size="100,100">&lt;&lt;button [[The police officer is back|Main_Story_Scene_3]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="155" name="Main_Story_Text_Scene_4" tags="" position="600,1975" size="100,100">&lt;&lt;button [[Your mother and little sister are sitting beside your bed|Main_Story_Scene_4]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="156" name="Main_Story_Text_Scene_5" tags="" position="725,1975" size="100,100">&lt;&lt;button [[The police officer is back for another visit|Main_Story_Scene_5]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="157" name="Main_Story_Text_Scene_6" tags="" position="850,1975" size="100,100">&lt;&lt;button [[You hover over your body, frustrated by your lack of progress|Main_Story_Scene_6]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="158" name="Main_Story_Text_Scene_7" tags="" position="975,1975" size="100,100">&lt;&lt;button [[The nurse is replacing your serum again|Main_Story_Scene_7]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="159" name="Main_Story_Text_Scene_8" tags="" position="1100,1975" size="100,100">&lt;&lt;button [[You wait at the front entrance until the nurse shows up|Main_Story_Scene_8]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="Main_Story_Text_Scene_9" tags="" position="1225,1975" size="100,100">&lt;&lt;button [[You wait at the front entrance again until the nurse shows up|Main_Story_Scene_9]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="161" name="Main_Story_Text_Scene_10" tags="" position="100,2100" size="100,100">&lt;&lt;button [[You wait at the front entrance again until the nurse shows up|Main_Story_Scene_10]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="162" name="Main_Story_Text_Scene_11" tags="" position="225,2100" size="100,100">&lt;&lt;button [[Today is the day when the nurse has to change your serum again|Main_Story_Scene_11]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="163" name="Main_Story_Text_Scene_12" tags="" position="350,2100" size="100,100">&lt;&lt;button [[The nurse has to change your serum again during her shift|Main_Story_Scene_12]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Main_Story_Text_Scene_13" tags="" position="475,2100" size="100,100">&lt;&lt;button [[You feel helpless as you can&#39;t find a way to get more information|Main_Story_Scene_13]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Main_Story_Text_Scene_14" tags="" position="600,2100" size="100,100">&lt;&lt;button [[You are in your room, taking a nap|Main_Story_Scene_14]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="166" name="Main_Story_Text_Scene_15" tags="" position="725,2100" size="100,100">&lt;&lt;button [[The receptionist is reporting the mysterious man|Main_Story_Scene_15]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Main_Story_Text_Scene_16" tags="" position="850,2100" size="100,100">&lt;&lt;button [[You contemplate about the mystery man|Main_Story_Scene_16]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Main_Story_Scene_1" tags="" position="975,2100" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the lobby, you see a policeman walking up to the reception desk.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2370,7 +3030,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Having had this realization, you resolve yourself to taking over more people in order to train yourself and get stronger. You realize this may be invaluable in getting to the bottom of this mystery.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[You move away from the entrance|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Main_Story_Scene_10" tags="" position="600,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You move away from the entrance|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="169" name="Main_Story_Scene_10" tags="" position="1100,2100" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Let&#39;s wait for the nurse again. Nothing happened yesterday, let&#39;s see if I have more luck today.
 &lt;&lt;/mc&gt;&gt;
 
@@ -2398,7 +3058,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Nothing again. I really am the only one she&#39;s targeting. Tomorrow should be my turn again, I should try to interfere when she tampers with the serum.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="136" name="Main_Story_Scene_11" tags="" position="725,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="170" name="Main_Story_Scene_11" tags="" position="1225,2100" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Today, my serum needs changing again, it&#39;s time to try and interfere.
 &lt;&lt;/mc&gt;&gt;
 
@@ -2443,7 +3103,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     No matter, in another few days, she has to do it again. At that time, I&#39;ll take over somebody outside this room and come in.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Your plans made, you return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Main_Story_Scene_12" tags="" position="850,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[Your plans made, you return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Main_Story_Scene_12" tags="" position="100,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Today, my serum needs changing again. Time to interfere!
 &lt;&lt;/mc&gt;&gt;
 
@@ -2567,7 +3227,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;mainstory_button [[Feeling helpless and frustrated, you return to the lobby|Hospital_Lobby]]&gt;&gt;
     &lt;&lt;set $maxEnergy++&gt;&gt;
     &lt;&lt;set $maxWillpower++&gt;&gt;
-&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Main_Story_Scene_13" tags="" position="975,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="172" name="Main_Story_Scene_13" tags="" position="225,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     You are in your room, trying to think of a way to get out of your current predicament.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2595,7 +3255,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     At this point, I can only rely on the police and hope they get a breakthrough in their investigation. Other than that, the only thing I can do for now is keep exploring and hope for some information to be gained.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Let&#39;s go back to exploring|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="139" name="Main_Story_Scene_14" tags="" position="1100,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Let&#39;s go back to exploring|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="173" name="Main_Story_Scene_14" tags="" position="350,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     You are in your room, lazily floating around and taking a nap. At some point, you feel like somebody&#39;s watching you and you wake up. When you open your eyes, you see an unfamiliar man standing in your room.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2646,7 +3306,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     That was fast. Although I was a bit slow in following, I got to the entrance quite quickly, but still couldn&#39;t catch up.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Having failed the pursuit, you now find yourself in the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="140" name="Main_Story_Scene_15" tags="" position="1225,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Having failed the pursuit, you now find yourself in the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="174" name="Main_Story_Scene_15" tags="" position="475,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you roam around in the lobby, you see the receptionist calling somebody. Overhearing the conversation, you realize she&#39;s calling the policeman about the mysterious man you saw in your room.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2851,7 +3511,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     The policeman does not stay long and soon leaves the room.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[You watch the policeman leave, staying behind in your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="Main_Story_Scene_16" tags="" position="100,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[You watch the policeman leave, staying behind in your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="175" name="Main_Story_Scene_16" tags="" position="600,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you drift over your body, you think about recent events.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2891,7 +3551,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;mainstory_button [[Back to room|Hospital_Room]]&gt;&gt;
     &lt;&lt;set $maxWillpower to 30&gt;&gt;
-&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="142" name="Main_Story_Scene_2" tags="" position="225,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="176" name="Main_Story_Scene_2" tags="" position="725,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     Upon returning to your room, you think about the exchange you witnessed in the lobby between the policeman and the receptionist.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2922,7 +3582,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Alternatively, I can possess people to find out more. Unfortunately when taking over people I can only hear some surface thoughts, so it&#39;s not like I can read people&#39;s minds to find out more. When I do possess people, I&#39;ll have to try and wheedle out some information from other people.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Having set a course of action, you are ready to discover everything|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Main_Story_Scene_3" tags="" position="350,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Having set a course of action, you are ready to discover everything|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="177" name="Main_Story_Scene_3" tags="" position="850,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the lobby, you see the policeman walking up to the reception desk again.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3015,7 +3675,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     The receptionist starts tending to the next person, the conversation seemingly forgotten.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="144" name="Main_Story_Scene_4" tags="" position="475,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="178" name="Main_Story_Scene_4" tags="" position="975,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering your room, you see your mother and your little sister. You can&#39;t help but smile a bit.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3139,7 +3799,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     See you soon mom, $littlesisName. I promise I will do my best to wake up.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Your mom and little sister leave your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Main_Story_Scene_5" tags="" position="600,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Your mom and little sister leave your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="179" name="Main_Story_Scene_5" tags="" position="1100,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the lobby, you see the policeman walking up to the reception desk again.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3258,7 +3918,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Well, I should probably keep an eye out as well. So far I have not seen any suspicious people, but who knows. Although would anybody really be so stupid as to waltz in my room when they were involved in my accident?
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Main_Story_Scene_6" tags="" position="725,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="180" name="Main_Story_Scene_6" tags="" position="1225,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     These last few days, I haven&#39;t been able to gather more information. Even though I have been roaming around everywhere in this hospital, I can&#39;t seem to find any clues. Am I missing something?
 &lt;&lt;/mc&gt;&gt;
 
@@ -3302,7 +3962,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     No matter, in a few days, she should come back here to replace the serum again, I will have to follow her at that time.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You return to your room, feeling you might have found a clue|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Main_Story_Scene_7" tags="" position="850,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[You return to your room, feeling you might have found a clue|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="181" name="Main_Story_Scene_7" tags="" position="100,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You are in your room, waiting for the nurse to arrive, when the door opens.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3351,7 +4011,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     No, I can&#39;t give up yet. If there is anything wrong with the serum, I should find out if I follow her from the start of her shift until she changes my serum. In a few days she will have to come again. I should wait at the entrance and follow her from there.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Fully grasping your final clue, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Main_Story_Scene_8" tags="" position="975,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[Fully grasping your final clue, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="182" name="Main_Story_Scene_8" tags="" position="225,2350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     The nurse should be coming back today to change my serum. All I can do for now is wait for her to enter. I just hope she&#39;s not already here or enters through some other door. She did leave here last time though, so I think my odds are good.
 &lt;&lt;/mc&gt;&gt;
 
@@ -3408,7 +4068,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/narrate&gt;&gt;
 
 &lt;&lt;mc thinking&gt;&gt;
-    Somebody actually has it in for me. How is that even possible, what did I ever do that would warrant such a thing?
+    Somebody actually has it out for me. How is that even possible, what did I ever do that would warrant such a thing?
 &lt;&lt;/mc&gt;&gt;
 
 &lt;&lt;narrate&gt;&gt;
@@ -3468,7 +4128,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     I can&#39;t take over just anybody, so it might very well fail. However, I have to try, otherwise I&#39;ll never get anywhere.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Having decided on a course of action, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Main_Story_Scene_9" tags="" position="1100,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[Having decided on a course of action, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="183" name="Main_Story_Scene_9" tags="" position="350,2350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Let&#39;s wait for the nurse again. She changed my serum only yesterday, so she does not have to change it today, but I should still see if she tampers with others.
 &lt;&lt;/mc&gt;&gt;
 
@@ -3496,7 +4156,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Nothing today, huh? Well, no matter, I should follow her again tomorrow. At that time, if she does nothing to the serums either, I can safely assume I&#39;m the only one being targeted.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Side_Stories_Scene_1_1" tags="" position="1225,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="184" name="Side_Stories_Scene_1_1" tags="" position="475,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering a patient&#39;s room, you notice an astral body just like yourself floating above a bed.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3552,7 +4212,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Thank you lad, maybe we&#39;ll see each other again, someday, somewhere.
 &lt;&lt;/oldman&gt;&gt;
 
-&lt;&lt;sidestories_button 1 [[Saying your goodbyes, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Side_Stories_Scene_1_2" tags="" position="100,1975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 1 [[Saying your goodbyes, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="185" name="Side_Stories_Scene_1_2" tags="" position="600,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You decided to go see $oldManName, only to have him floating above his bed again, looking almost entirely transparent.
     Shocked by this change, you decide to approach him.
 &lt;&lt;/narrate&gt;&gt;
@@ -3611,7 +4271,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/narrate&gt;&gt;
 
 &lt;&lt;button [[You decide to play it safe and not help|Side_Stories_Scene_1_2_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[You decide to try to help him|Side_Stories_Scene_1_2_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Side_Stories_Scene_1_2_1" tags="" position="225,1975" size="100,100">&lt;&lt;mc&gt;&gt;
+&lt;&lt;button [[You decide to try to help him|Side_Stories_Scene_1_2_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="186" name="Side_Stories_Scene_1_2_1" tags="" position="725,2350" size="100,100">&lt;&lt;mc&gt;&gt;
     I&#39;m sorry, I wish there was something I could do.
 &lt;&lt;/mc&gt;&gt;
 
@@ -3634,7 +4294,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     As the woman is shouting, medical personnel rush in. You decide it might be a good time to leave the room.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;sidestories_button 1 [[Guilt-ridden, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Side_Stories_Scene_1_2_2" tags="" position="350,1975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 1 [[Guilt-ridden, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="187" name="Side_Stories_Scene_1_2_2" tags="" position="850,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     Thinking about how you would feel in his situation, you feel like you need to help him.
     You&#39;re still apprehensive, not knowing what will happen to you, but having made up your mind, you feel a bit calmer.
     You decide to speak up.
@@ -3682,7 +4342,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Alright, I&#39;ll do my best!
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[You take a deep breath and possess his body|Side_Stories_Scene_1_2_3]] $energy-11&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="Side_Stories_Scene_1_2_3" tags="" position="475,1975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take a deep breath and possess his body|Side_Stories_Scene_1_2_3]] $energy-11&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="188" name="Side_Stories_Scene_1_2_3" tags="" position="975,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     Like many times before, you enter somebody&#39;s body without any resistance
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3848,7 +4508,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 1 [[Saddened by today&#39;s events, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;
     &lt;&lt;set $num_revival++&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="155" name="Side_Stories_Scene_2_1" tags="" position="600,1975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="189" name="Side_Stories_Scene_2_1" tags="" position="1100,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the delivery room, a man faints. His wife, in the middle of giving labour, does not seem happy.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3857,7 +4517,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/mc&gt;&gt;
 
 &lt;&lt;button [[You decide this is not for you and bow out|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;energy_button [[You have nothing better to do and stay to help out|Side_Stories_Scene_2_1_1]] $energy-5&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="156" name="Side_Stories_Scene_2_1_1" tags="" position="725,1975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You have nothing better to do and stay to help out|Side_Stories_Scene_2_1_1]] $energy-5&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="190" name="Side_Stories_Scene_2_1_1" tags="" position="1225,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You float towards the man&#39;s unconscious body and possess him.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4083,12 +4743,12 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     I&#39;m glad he woke up in time to witness the birth. From the looks of it, he&#39;s got this. It doesn&#39;t look like he&#39;ll pass out again, so I should leave them in this beautiful moment.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;sidestories_button 2 [[Satisfied, you leave the delivery room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="157" name="Side_Stories" tags="" position="850,1975" size="100,100">&lt;&lt;sidestories_include 1 1 0 &#39;Hospital_Patient_Room&#39;&gt;&gt;
+&lt;&lt;sidestories_button 2 [[Satisfied, you leave the delivery room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="191" name="Side_Stories" tags="" position="100,2475" size="100,100">&lt;&lt;sidestories_include 1 1 0 &#39;Hospital_Patient_Room&#39;&gt;&gt;
 &lt;&lt;sidestories_include 1 2 3 &#39;Hospital_Patient_Room&#39;&gt;&gt;
 
-&lt;&lt;sidestories_include 2 1 0 &#39;Hospital_Delivery_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="158" name="Side_Stories_Text_Scene_1_1" tags="" position="975,1975" size="100,100">&lt;&lt;button [[You see a astral body floating above a patient&#39;s bed|Side_Stories_Scene_1_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="159" name="Side_Stories_Text_Scene_1_2" tags="" position="1100,1975" size="100,100">&lt;&lt;energy_willpower_check_button [[The old man&#39;s astral body is here again|Side_Stories_Scene_1_2]] $energy-11 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
+&lt;&lt;sidestories_include 2 1 0 &#39;Hospital_Delivery_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="192" name="Side_Stories_Text_Scene_1_1" tags="" position="225,2475" size="100,100">&lt;&lt;button [[You see a astral body floating above a patient&#39;s bed|Side_Stories_Scene_1_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="193" name="Side_Stories_Text_Scene_1_2" tags="" position="350,2475" size="100,100">&lt;&lt;energy_willpower_check_button [[The old man&#39;s astral body is here again|Side_Stories_Scene_1_2]] $energy-11 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
 
-&lt;!-- Side story 2 --&gt;</tw-passagedata><tw-passagedata pid="160" name="Side_Stories_Text_Scene_2_1" tags="" position="1225,1975" size="100,100">&lt;&lt;energy_willpower_check_button [[As you look in, a man faints|Side_Stories_Scene_2_1]] $energy-5 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="161" name="Start" tags="" position="100,2100" size="100,100">&lt;div class=&quot;title&quot;&gt;
+&lt;!-- Side story 2 --&gt;</tw-passagedata><tw-passagedata pid="194" name="Side_Stories_Text_Scene_2_1" tags="" position="475,2475" size="100,100">&lt;&lt;energy_willpower_check_button [[As you look in, a man faints|Side_Stories_Scene_2_1]] $energy-5 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="195" name="Start" tags="" position="600,2475" size="100,100">&lt;div class=&quot;title&quot;&gt;
 Welcome to &#39;Lucid Coma&#39;!
 &lt;/div&gt;
 
@@ -4099,18 +4759,20 @@ Welcome to &#39;Lucid Coma&#39;!
     Any resemblance to actual persons, living or dead, or actual events is purely coincidental. The characters, events, and situations depicted in this work are fictional and any similarities to real persons, living or dead, or actual events are purely coincidental and unintended.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;button [[I understand and am ready to start the game|Start_Game]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="162" name="Start_Game" tags="" position="225,2100" size="100,100">&lt;div class=&quot;subtitle&quot;&gt;
+&lt;&lt;button [[I understand and am ready to start the game|Start_Game]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="196" name="Start_Game" tags="" position="725,2475" size="100,100">&lt;div class=&quot;subtitle&quot;&gt;
 Let&#39;s start with some information on how the game is constructed
 &lt;/div&gt;
+
+&lt;&lt;dev&gt;&gt;
+    Hello there, and welcome to &#39;Lucid Coma&#39;. You can call me &#39;$devName&#39; and I am your developer and here to get you started. Don&#39;t worry, I won&#39;t be making much of an appearance except for some explanations, so just bear with me for a little while.
+&lt;&lt;/dev&gt;&gt;
 
 &lt;&lt;dev&gt;&gt;
     On the left hand side, there is a bar with some helpful information. You can collapse or expand it for a better gaming experience. You can also use it to view your progress or some hints on how to proceed. In addition, you can change your settings to your liking. Finally, you can save and load or even restart the game here.
 &lt;&lt;/dev&gt;&gt;
 
 &lt;&lt;dev&gt;&gt;
-    Whenever you see a box like this one, it means somebody is speaking.
-    Their portrait will be to the left, and their name at the top.
-    Everything in the box will be the things they say.
+    Whenever you see a box like this one, with an image to the left and a colored bar, it means somebody is speaking. The character&#39;s portrait will be to the left, and their name at the top. Everything in the box will be the things they say.
 &lt;&lt;/dev&gt;&gt;
 
 &lt;&lt;dev thinking&gt;&gt;
@@ -4118,16 +4780,16 @@ Let&#39;s start with some information on how the game is constructed
 &lt;&lt;/dev&gt;&gt;
 
 &lt;&lt;narrate&gt;&gt;
-    A box like this one is used to narrate.
+    A box like this one, with a simple white border is used to narrate.
 &lt;&lt;/narrate&gt;&gt;
 
 &lt;&lt;dev&gt;&gt;
     Simple, isn&#39;t it?
     There is actually a bit more to it, but I&#39;ll explain that after the intro.
-    You can also skip the intro, but bear in mind that you will lose a part of the story making it hard to understand what is going on.
+    You can also skip the intro, but bear in mind that you&#39;ll lose a part of the story, making it hard to understand what&#39;s going on.
 &lt;&lt;/dev&gt;&gt;
 
-&lt;&lt;button [[Let&#39;s get started|First_Setup]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="163" name="First_Setup" tags="" position="350,2100" size="100,100">&lt;&lt;dev&gt;&gt;
+&lt;&lt;button [[Let&#39;s get started|First_Setup]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="First_Setup" tags="" position="850,2475" size="100,100">&lt;&lt;dev&gt;&gt;
     First and foremost, let&#39;s select the avatar for the main character.
 &lt;&lt;/dev&gt;&gt;
 
@@ -4150,7 +4812,7 @@ Let&#39;s start with some information on how the game is constructed
 &lt;&lt;button [[Play the intro|Intro_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button [[Skip the intro|Intro_Skip]]&gt;&gt;
     &lt;&lt;set $maxEnergy to 10&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Avatar_Selection_Button_Widget" tags="widget" position="475,2100" size="100,100">&lt;&lt;widget &#39;avatar_selection&#39;&gt;&gt;
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="198" name="Avatar_Selection_Button_Widget" tags="widget" position="975,2475" size="100,100">&lt;&lt;widget &#39;avatar_selection&#39;&gt;&gt;
     &lt;div class=&quot;column-avatar&quot;&gt;
         &lt;&lt;set $imgSrc to &quot;&lt;img src=&quot;+$args[1]+&quot;&gt;&quot;&gt;&gt;
         &lt;&lt;link $imgSrc&gt;&gt;
@@ -4159,7 +4821,7 @@ Let&#39;s start with some information on how the game is constructed
         &lt;&lt;/link&gt;&gt;
     &lt;/div&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Energy_Button_Widget" tags="widget" position="600,2100" size="100,100">&lt;&lt;widget &#39;energy_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="199" name="Energy_Button_Widget" tags="widget" position="1100,2475" size="100,100">&lt;&lt;widget &#39;energy_button&#39; container&gt;&gt;
     &lt;!-- Calculate energy usage --&gt;
     &lt;&lt;set _energy_consumption to $energy-$args[1]&gt;&gt;
     &lt;&lt;if _energy_consumption &gt; 0&gt;&gt;
@@ -4191,7 +4853,7 @@ Let&#39;s start with some information on how the game is constructed
             &lt;&lt;update&gt;&gt;
         &lt;&lt;/button&gt;&gt;
     &lt;&lt;/disable&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="166" name="Energy_Willpower_Check_Button_Widget" tags="widget" position="725,2100" size="100,100">&lt;&lt;widget &quot;energy_willpower_check_button&quot; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="200" name="Energy_Willpower_Check_Button_Widget" tags="widget" position="1225,2475" size="100,100">&lt;&lt;widget &quot;energy_willpower_check_button&quot; container&gt;&gt;
     &lt;!-- Calculate energy usage --&gt;
     &lt;&lt;set _energy_consumption to $energy-$args[1]&gt;&gt;
     &lt;&lt;if _energy_consumption &gt; 0&gt;&gt;
@@ -4233,38 +4895,38 @@ Let&#39;s start with some information on how the game is constructed
             &lt;&lt;update&gt;&gt;
         &lt;&lt;/button&gt;&gt;
     &lt;&lt;/disable&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Hints_Include_Widget" tags="widget" position="850,2100" size="100,100">&lt;&lt;widget &#39;hints_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="201" name="Hints_Include_Widget" tags="widget" position="100,2600" size="100,100">&lt;&lt;widget &#39;hints_include&#39;&gt;&gt;
     &lt;&lt;if $progress_main_story &gt; $args[0]&gt;&gt;
         &lt;&lt;set _scene to &quot;Hints_&quot;+$args[0]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Hints_Plans_Include_Widget" tags="widget" position="975,2100" size="100,100">&lt;&lt;widget &#39;hints_plans_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="202" name="Hints_Plans_Include_Widget" tags="widget" position="225,2600" size="100,100">&lt;&lt;widget &#39;hints_plans_include&#39;&gt;&gt;
     &lt;&lt;if $progress_main_story == $args[0]&gt;&gt;
         &lt;&lt;set $has_clues to true&gt;&gt;
         &lt;&lt;set _scene to &quot;Hints_Plans_&quot;+$args[0]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="169" name="Mainstory_Button_Widget" tags="widget" position="1100,2100" size="100,100">&lt;&lt;widget &#39;mainstory_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="203" name="Mainstory_Button_Widget" tags="widget" position="350,2600" size="100,100">&lt;&lt;widget &#39;mainstory_button&#39; container&gt;&gt;
     &lt;&lt;button $args[0]&gt;&gt;
         _contents
         &lt;&lt;set $progress_main_story++&gt;&gt;
         &lt;&lt;set $mainStoryDay to $currentDay&gt;&gt;
     &lt;&lt;/button&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="170" name="Mainstory_Include_Widget" tags="widget" position="1225,2100" size="100,100">&lt;&lt;widget &#39;mainstory_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="204" name="Mainstory_Include_Widget" tags="widget" position="475,2600" size="100,100">&lt;&lt;widget &#39;mainstory_include&#39;&gt;&gt;
     &lt;&lt;if $progress_main_story == $args[0] and $mainStoryDay + $args[1] &lt;= $currentDay and passage() == $args[2]&gt;&gt;
         &lt;&lt;set _scene to &quot;Main_Story_Text_Scene_&quot;+$args[0]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
         &lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Random_Scenes_Button_Widget" tags="widget" position="100,2225" size="100,100">&lt;&lt;widget &#39;random_scenes_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="205" name="Random_Scenes_Button_Widget" tags="widget" position="600,2600" size="100,100">&lt;&lt;widget &#39;random_scenes_button&#39; container&gt;&gt;
     &lt;&lt;button $args[2]&gt;&gt;
         _contents
         &lt;&lt;if !$args[1].includes($args[0])&gt;&gt;
             &lt;&lt;set $args[1].push($args[0])&gt;&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/button&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="172" name="Random_Scenes_Include_Widget" tags="widget" position="225,2225" size="100,100">&lt;&lt;widget &#39;random_scenes_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="206" name="Random_Scenes_Include_Widget" tags="widget" position="725,2600" size="100,100">&lt;&lt;widget &#39;random_scenes_include&#39;&gt;&gt;
     &lt;&lt;set _random_event to random(0, ($args[0] * $rnd_chance_multiplier) - 1);&gt;&gt;
     &lt;&lt;for _i to 0; _i lt $args[0]; _i++&gt;&gt;
         &lt;&lt;if _random_event == _i&gt;&gt;
@@ -4273,20 +4935,20 @@ Let&#39;s start with some information on how the game is constructed
             &lt;br&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/for&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="173" name="Sidestories_Button_Widget" tags="widget" position="350,2225" size="100,100">&lt;&lt;widget &#39;sidestories_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="207" name="Sidestories_Button_Widget" tags="widget" position="850,2600" size="100,100">&lt;&lt;widget &#39;sidestories_button&#39; container&gt;&gt;
     &lt;&lt;button $args[1]&gt;&gt;
         _contents
         &lt;&lt;set $progress_side_stories[$args[0]-1]++&gt;&gt;
         &lt;&lt;set $sideStoriesDay[$args[0]-1] to $currentDay&gt;&gt;
     &lt;&lt;/button&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="174" name="Sidestories_Include_Widget" tags="widget" position="475,2225" size="100,100">&lt;&lt;widget &#39;sidestories_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="208" name="Sidestories_Include_Widget" tags="widget" position="975,2600" size="100,100">&lt;&lt;widget &#39;sidestories_include&#39;&gt;&gt;
     &lt;&lt;if $progress_side_stories[$args[0]-1] == $args[1] and $sideStoriesDay[$args[0]-1] + $args[2] &lt;= $currentDay and passage() == $args[3]&gt;&gt;
         &lt;&lt;set _scene to &quot;Side_Stories_Text_Scene_&quot;+$args[0]+&quot;_&quot;+$args[1]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
         &lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="175" name="Update_Willpower_Widget" tags="widget" position="600,2225" size="100,100">&lt;&lt;widget &#39;update_willpower&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="209" name="Update_Willpower_Widget" tags="widget" position="1100,2600" size="100,100">&lt;&lt;widget &#39;update_willpower&#39;&gt;&gt;
     &lt;&lt;set _willpower to $args[0]&gt;&gt;
     &lt;&lt;if _willpower &gt; $maxWillpower&gt;&gt;
         &lt;&lt;set _willpower to $maxWillpower&gt;&gt;
