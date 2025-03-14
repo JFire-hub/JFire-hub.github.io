@@ -155,7 +155,7 @@ $(document).on(":passagedisplay", function (eventObject) {
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002// --><tw-storydata name="Lucid Coma" startnode="256" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.quest-button::before{font-family:sc-icons!important;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-rendering:auto;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:.6em;content:"\f071"}.main-quest-button::before{color:#ff0}.side-quest-button::before{color:#32cd32}.image{margin-top:15px;margin-bottom:15px;text-align:center}.image>img{max-width:100%;max-height:100%}#menu-story li i[id|=menu-item]::before{font-family:sc-icons!important;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-rendering:auto;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#menu-item-help::before,#menu-item-hints::before,#menu-item-settings::before,#menu-item-stats::before{margin-right:.35em}#menu-item-hints::before{content:"\f0EB"}#menu-item-stats::before{content:"\f0C9"}#menu-item-help::before{content:"\f059"}#menu-item-settings::before{content:"\f7D9"}.column{float:left;width:48%;margin:0 1%;text-align:left}.column:first-child{text-align:right}.column-avatar{float:left;width:12%;margin:0 1%;text-align:left}.column-avatar>a>img{width:100%}.column-avatar:first-child{margin-left:2%}.column-avatar:last-child{margin-right:2%}.row:after{content:"";display:table;clear:both}.title{text-align:center;text-decoration:underline;font-weight:700;font-size:x-large;margin-bottom:20px}.subtitle{text-align:center;margin-bottom:20px}.macro-button{border:1px #a194e6 solid;border-radius:10px;background-color:#3320a4;color:#fff;margin:10px auto;width:80%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.textbox{text-align:center}.textbox>input{width:80%;text-align:center}.narrating{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto}.narrating>p{padding:.5em;margin:0}.say{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto;display:grid;grid-template-columns:15fr 85fr;grid-gap:0px}.say>img{max-width:100%;margin:auto}.say>div>p:first-of-type{font-weight:700;padding:.2em 0 .2em 1em;margin:0;border-bottom:1px solid #eee}.say>div>p:last-of-type{padding:.5em .5em .5em 1em;margin:0}.story-image{margin-top:15px;margin-bottom:15px;text-align:center;width:100%;content:"";display:table;clear:both}.story-image>div{width:45%;margin:0 1%;float:left;text-align:right}.story-image>div:last-of-type{float:right;text-align:left}.story-image>div>img{-webkit-animation:fadeIn 4s;-o-animation:fadeIn 4s;animation:fadeIn 4s}.story-image>div:first-of-type>img,.story-image>div:last-of-type>img{max-width:100%;max-height:350px}.story-image>div:last-of-type>img{-webkit-animation:fadeIn2 5.5s;-o-animation:fadeIn2 5.5s;animation:fadeIn2 5.5s}.story-image>div.single-image{width:100%;margin:0;float:left;text-align:center}.story-image>div.single-image>img{-webkit-animation:fadeIn 4s;-o-animation:fadeIn 4s;animation:fadeIn 4s}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fadeIn2{0%{opacity:0}25%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn2{0%{opacity:0}25%{opacity:0}100%{opacity:1}}@keyframes fadeIn2{0%{opacity:0}25%{opacity:0}100%{opacity:1}}.video{width:100%}</style><script role="script" id="twine-user-script" type="text/twine-javascript">"use strict";function _typeof2(t){return _typeof2="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},_typeof2(t)}Config.passages.nobr=!0,function(){var t="disabled",e=["button","fieldset","input","menuitem","optgroup","option","select","textarea"];function a(e,a){return e instanceof $||(e=$(e)),e.ariaDisabled(void 0===a||!!a),function(e){e.ariaIsDisabled()?e.addClass(t):e.removeClass(t)}(e),e}Macro.add("disable",{tags:null,handler:function(){var t,s,i,n=$(document.createElement("span")).addClass("macro-"+this.name).wiki(this.payload[0].contents);try{t=this.args.raw.trim()?!!Scripting.evalJavaScript(this.args.full):void 0}catch(t){return this.error("bad evaluation: "+t.message)}a((s=n,(i=$(s).find(e.join(",")).first())[0]||(i=$(s).children().eq(0))[0]?i:$(s)),t),$(this.output).append(n)}})}(),Macro.add("fadein",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).hide().delay(e).fadeIn(t)}}),Macro.add("fadeout",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).delay(e).fadeOut(t)}}),Macro.add("image",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],s=$(document.createElement("div")).addClass("image"),a&&(s=s.attr("style",a)),s.append($(document.createElement("img")).attr("src",e)),s.appendTo(t)}}),$(document).on(":liveupdate",(function(){$(".macro-live").trigger(":liveupdateinternal")})),Macro.add(["update","upd"],{handler:function(){$(document).trigger(":liveupdate")}}),Macro.add(["live","l","lh"],{skipArgs:!0,handler:function(){if(0===this.args.full.length)return this.error("no expression specified");try{var t=this.args.full,e=toStringOrDefault(Scripting.evalJavaScript(t),null);if(null!==e){var a="lh"===this.name,s=$("<span></span>").addClass("macro-live").wiki(a?Util.escape(e):e).appendTo(this.output);s.on(":liveupdateinternal",this.createShadowWrapper((function(e){var i=toStringOrDefault(Scripting.evalJavaScript(t),null);s.empty().wiki(a?Util.escape(i):i)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),Macro.add(["liveblock","lb"],{tags:null,handler:function(){try{var t=this.payload[0].contents.trim();if(t){var e=$("<span></span>").addClass("macro-live macro-live-block").wiki(t).appendTo(this.output);e.on(":liveupdateinternal",this.createShadowWrapper((function(a){e.empty().wiki(t)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),function(){var t=!0,e=!1,a=!1,s={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},i=["center","left","right"],n=["swing","linear"];function r(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var a=clone(s);this.settings=Object.assign(a,t),this.settings.align=r(this.settings.align),this.settings.easing=r(this.settings.easing),i.includes(this.settings.align)||(this.settings.align="center"),n.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var c=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),u=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(c),h=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),d=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(h).appendTo(c);this.$element=c,this.$bars={top:h,bottom:d},this.$label=u,u.css("font-size",parseInt(c.css("height"),10)<parseInt($(".passage").css("font-size"),10)?c.css("height"):$(".passage").css("font-size")),u.css("line-height",c.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,a,s){if(!l.has(t)||e){Object.assign(a,{id:t});var i=new l(a,s);return l._list.set(t,i),i}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function a(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(a,Engine.minDomActionDelay):a(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"===_typeof2(t)&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var a=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"===_typeof2(e)&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&a.addClass(e.classes),e.attr&&"object"===_typeof2(e.attr)&&a.attr(e.attr)),t.append(a.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!a)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],s=null,i=null,n=null,r=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(s=this.payload.find((function(t){return"colors"===t.name})),i=this.payload.find((function(t){return"sizing"===t.name})),n=this.payload.find((function(t){return"animation"===t.name})),r=this.payload.find((function(t){return"label"===t.name})));var o={};if(s){if(!s.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(s.args.length){case 1:o.empty=s.args[0],o.full="transparent";break;case 2:o.full=s.args[0],o.empty=s.args[1];break;default:o.full=s.args[0],o.empty=s.args[1],o.back=s.args[2]}}if(i){if(!i.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=i.args[0],i.args[1]&&(o.height=i.args[1])}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof n.args[0]||n.args[0]){if("string"!=typeof n.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(n.args[0])}else o.animate=0;n.args[1]&&["swing","linear"].includes(n.args[1])&&(o.easing=n.args[1])}if(r){var c=r.args[0];if(!c||"string"!=typeof c)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=c.trim(),r.args[1]&&"string"==typeof r.args[1]&&(o.text=r.args[1]),r.args[2]&&"string"==typeof r.args[2]&&(o.align=r.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}(),Macro.add("narrate",{tags:null,handler:function(){var t,e,a;t=this.output,e=this.payload[0].contents,a=$(document.createElement("div")).addClass("narrating"),e=(e=(e=e.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>"),a.append($(document.createElement("p")).wiki(e)),a.appendTo(t)}}),function(){var t=new Map;function e(e,a,s,i){if(void 0===s&&a&&(s=a,a=null),State.length)throw new Error("addCharacter() -> must be called before story starts");e&&s?(t.has(e)&&console.error('addCharacter() -> overwriting character "'+e+'"'),t.set(e,{displayName:a,image:s,color:i})):console.error("addCharacter() -> invalid arguments")}function a(e,a,s,i,n){var r=$(document.createElement("div")).addClass(Util.slugify(a)+" say"),o=$(document.createElement("div")),l=t.has(a)?t.get(a):null,c=l.color;c&&(r=r.css("border-color",c)),i&&i.startsWith("$")&&(i=State.variables[i.substring(1)]);var u=l?l.image:null;u&&u.startsWith("$")&&(u=State.variables[u.substring(1)]);var h=$(document.createElement("img")).attr("src",i||u||"");h.attr("src")&&h.attr("src").trim()&&r.append(h);var d=a.toUpperFirst();l&&l.displayName&&(d=l.displayName),s=(s=(s=s.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>");var g=$(document.createElement("p"));c&&(g=(g=g.css("border-bottom-color",c)).css("background-color",c));var m=$(document.createElement("p"));return n&&m.css("font-style","italic"),o.append(g.wiki(d)).append(m.wiki(s)),r.append(o),e&&(e instanceof $||(e=$(e)),r.appendTo(e)),r}setup.say=a,setup.addCharacter=e,Macro.add("character",{handler:function(){e(this.args[0],this.args[1],this.args[2],this.args[3])}}),$(document).one(":passagestart",(function(){var e=Array.from(t.keys());e.push("say"),Macro.add(e,{tags:null,handler:function(){"say"!==this.name?a(this.output,this.name,this.payload[0].contents,null,this.args[0]):a(this.output,this.args[0],this.payload[0].contents,this.args[1],this.args[2])}})}))}(),Macro.add("statistic",{handler:function(){var t,e,a,s,i;t=this.output,e=this.args[0],a=this.args[1],s=this.args[2],(i=$(document.createElement("div")).addClass("row")).append($(document.createElement("div")).addClass("column").wiki(e+":")),i.append($(document.createElement("div")).addClass("column").wiki(a+" / "+s)),i.appendTo(t)}}),Macro.add("story-image",{handler:function(){!function(t,e,a){var s=$(document.createElement("div")).addClass("story-image");if(e){var i=$(document.createElement("div"));a||i.addClass("single-image"),i.append($(document.createElement("img")).attr("src",e)),s.append(i)}if(a){var n=$(document.createElement("div"));n.append($(document.createElement("img")).attr("src",a)),s.append(n)}s.appendTo(t)}(this.output,this.args[0],this.args[1],this.args[2])}}),Macro.add("video",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],(s=$(document.createElement("video")).attr("controls","").attr("playsinline","").addClass("video")).append($(document.createElement("source")).attr("src",e).attr("type",a)),s.appendTo(t)}});</script><tw-passagedata pid="1" name="Stay_In_Body" tags="" position="100,100" size="100,100">&lt;&lt;narrate&gt;&gt;
+	<!-- UUID://84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002// --><tw-storydata name="Lucid Coma" startnode="259" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="84F4E81B-5CEE-41F0-96F0-FE1E9EFCB002" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.image{margin-top:15px;margin-bottom:15px;text-align:center}.image>img{max-width:100%;max-height:100%}#menu-story li i[id|=menu-item]::before{font-family:sc-icons!important;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-rendering:auto;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#menu-item-help::before,#menu-item-hints::before,#menu-item-settings::before,#menu-item-stats::before{margin-right:.35em}#menu-item-hints::before{content:"\f0EB"}#menu-item-stats::before{content:"\f0C9"}#menu-item-help::before{content:"\f059"}#menu-item-settings::before{content:"\f7D9"}.column{float:left;width:48%;margin:0 1%;text-align:left}.column:first-child{text-align:right}.column-avatar{float:left;width:12%;margin:0 1%;text-align:left}.column-avatar>a>img{width:100%}.column-avatar:first-child{margin-left:2%}.column-avatar:last-child{margin-right:2%}.row:after{content:"";display:table;clear:both}.title{text-align:center;text-decoration:underline;font-weight:700;font-size:x-large;margin-bottom:20px}.subtitle{text-align:center;margin-bottom:20px}.macro-button{border:1px #a194e6 solid;border-radius:10px;background-color:#3320a4;color:#fff;margin:10px auto;width:80%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.textbox{text-align:center}.textbox>input{width:80%;text-align:center}.narrating{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto}.narrating>p{padding:.5em;margin:0}.quest-button::before{font-family:sc-icons!important;font-style:normal;font-weight:400;font-variant:normal;line-height:1;text-rendering:auto;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:.6em;content:"\f071"}.main-quest-button::before{color:#ff0}.side-quest-button::before{color:#32cd32}.say{margin-top:15px;margin-bottom:15px;border:1px solid #eee;overflow:auto;display:grid;grid-template-columns:15fr 85fr;grid-gap:0px}.say>img{max-width:100%;margin:auto}.say>div>p:first-of-type{font-weight:700;padding:.2em 0 .2em 1em;margin:0;border-bottom:1px solid #eee}.say>div>p:last-of-type{padding:.5em .5em .5em 1em;margin:0}.story-image{margin-top:15px;margin-bottom:15px;text-align:center;width:100%;content:"";display:table;clear:both}.story-image>div{width:45%;margin:0 1%;float:left;text-align:right}.story-image>div:last-of-type{float:right;text-align:left}.story-image>div>img{-webkit-animation:fadeIn 4s;-o-animation:fadeIn 4s;animation:fadeIn 4s}.story-image>div:first-of-type>img,.story-image>div:last-of-type>img{max-width:100%;max-height:350px}.story-image>div:last-of-type>img{-webkit-animation:fadeIn2 5.5s;-o-animation:fadeIn2 5.5s;animation:fadeIn2 5.5s}.story-image>div.single-image{width:100%;margin:0;float:left;text-align:center}.story-image>div.single-image>img{-webkit-animation:fadeIn 4s;-o-animation:fadeIn 4s;animation:fadeIn 4s}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fadeIn2{0%{opacity:0}25%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn2{0%{opacity:0}25%{opacity:0}100%{opacity:1}}@keyframes fadeIn2{0%{opacity:0}25%{opacity:0}100%{opacity:1}}.video{width:100%}</style><script role="script" id="twine-user-script" type="text/twine-javascript">"use strict";function _typeof2(t){return _typeof2="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},_typeof2(t)}Config.passages.nobr=!0,function(){var t="disabled",e=["button","fieldset","input","menuitem","optgroup","option","select","textarea"];function a(e,a){return e instanceof $||(e=$(e)),e.ariaDisabled(void 0===a||!!a),function(e){e.ariaIsDisabled()?e.addClass(t):e.removeClass(t)}(e),e}Macro.add("disable",{tags:null,handler:function(){var t,s,i,n=$(document.createElement("span")).addClass("macro-"+this.name).wiki(this.payload[0].contents);try{t=this.args.raw.trim()?!!Scripting.evalJavaScript(this.args.full):void 0}catch(t){return this.error("bad evaluation: "+t.message)}a((s=n,(i=$(s).find(e.join(",")).first())[0]||(i=$(s).children().eq(0))[0]?i:$(s)),t),$(this.output).append(n)}})}(),Macro.add("fadein",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).hide().delay(e).fadeIn(t)}}),Macro.add("fadeout",{tags:null,handler:function(){var t,e,a=$(document.createElement("span")),s=this.payload[0].contents;if(0===this.args.length)return this.error("no arguments given");t=Util.fromCssTime(this.args[0]),e=this.args.length>1?Util.fromCssTime(this.args[1]):0,a.wiki(s).addClass("macro-"+this.name).appendTo(this.output).delay(e).fadeOut(t)}}),Macro.add("image",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],s=$(document.createElement("div")).addClass("image"),a&&(s=s.attr("style",a)),s.append($(document.createElement("img")).attr("src",e)),s.appendTo(t)}}),$(document).on(":liveupdate",(function(){$(".macro-live").trigger(":liveupdateinternal")})),Macro.add(["update","upd"],{handler:function(){$(document).trigger(":liveupdate")}}),Macro.add(["live","l","lh"],{skipArgs:!0,handler:function(){if(0===this.args.full.length)return this.error("no expression specified");try{var t=this.args.full,e=toStringOrDefault(Scripting.evalJavaScript(t),null);if(null!==e){var a="lh"===this.name,s=$("<span></span>").addClass("macro-live").wiki(a?Util.escape(e):e).appendTo(this.output);s.on(":liveupdateinternal",this.createShadowWrapper((function(e){var i=toStringOrDefault(Scripting.evalJavaScript(t),null);s.empty().wiki(a?Util.escape(i):i)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),Macro.add(["liveblock","lb"],{tags:null,handler:function(){try{var t=this.payload[0].contents.trim();if(t){var e=$("<span></span>").addClass("macro-live macro-live-block").wiki(t).appendTo(this.output);e.on(":liveupdateinternal",this.createShadowWrapper((function(a){e.empty().wiki(t)})))}}catch(t){return this.error("bad evaluation: "+("object"===_typeof(t)?t.message:t))}}}),function(){var t=!0,e=!1,a=!1,s={full:"#2ECC40",empty:"#FF4136",back:"#DDDDDD",height:"12px",width:"180px",animate:400,easing:"swing",text:"#111111",label:"",align:"center"},i=["center","left","right"],n=["swing","linear"];function r(t,e){return t&&"string"==typeof t&&(t=t.toLowerCase().trim())?t:e||""}function o(t){return t<.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var a=clone(s);this.settings=Object.assign(a,t),this.settings.align=r(this.settings.align),this.settings.easing=r(this.settings.easing),i.includes(this.settings.align)||(this.settings.align="center"),n.includes(this.settings.easing)||(this.settings.easing="swing"),e=Number(e),Number.isNaN(e)&&(e=1),e=Math.clamp(e,0,1),this.value=e;var c=$(document.createElement("div")).addClass("chapel-meter").attr({"data-val":e,"data-label":this.settings.label}).css({position:"relative","background-color":this.settings.back,height:this.settings.height,width:this.settings.width,overflow:"hidden"}),u=$(document.createElement("div")).addClass("meter-label").css({top:0,right:0,"font-size":this.settings.height,"font-weight":"bold","line-height":"100%",width:"100%",height:"100%","vertical-align":"middle","text-align":this.settings.align,color:this.settings.text,"z-index":1,position:"relative",bottom:"100%"}).wiki(this.settings.label).appendTo(c),h=$(document.createElement("div")).addClass("meter-top").css({"background-color":this.settings.full,opacity:o(this.value),width:"100%",height:"100%","z-index":0}),d=$(document.createElement("div")).addClass("meter-bottom").css({position:"absolute",top:0,left:0,"background-color":this.settings.empty,opacity:1,width:100*this.value+"%",height:"100%","z-index":0}).append(h).appendTo(c);this.$element=c,this.$bars={top:h,bottom:d},this.$label=u,u.css("font-size",parseInt(c.css("height"),10)<parseInt($(".passage").css("font-size"),10)?c.css("height"):$(".passage").css("font-size")),u.css("line-height",c.css("height"))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&&l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&&l._list.delete(t)},add:function(t,a,s){if(!l.has(t)||e){Object.assign(a,{id:t});var i=new l(a,s);return l._list.set(t,i),i}console.error('Meter "'+t+'" already exists.')},_emit:function(t,e){l.is(t)&&t.$element.trigger({type:":"+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function a(){e.$label.empty().wiki(e.settings.label),e.$label.css("font-size",parseInt(e.$element.css("height"),10)<parseInt(e.$element.parent().css("font-size"),10)?e.$element.css("height"):e.$element.parent().css("font-size")),e.$label.css("line-height",e.$element.css("height"))}return t?setTimeout(a,Engine.minDomActionDelay):a(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+"%"},this.settings.animate,this.settings.easing,(function(){l._emit(t,"meter-animation-complete")})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,"meter-animation-start"),this._color()._width()._label()},val:function(t){return void 0!==t&&(t=Number(t),Number.isNaN(t)&&(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&&"object"===_typeof2(t)&&Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var a=$(document.createElement("span"));return t instanceof jQuery||(t=$(t)),t[0]||console.warn("meter#place() -> no valid target"),e&&"object"===_typeof2(e)&&(e.classes&&(Array.isArray(e.classes)||"string"==typeof e.classes)&&a.addClass(e.classes),e.attr&&"object"===_typeof2(e.attr)&&a.attr(e.attr)),t.append(a.append(this.$element)),this._label(!0),this},on:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.on(t,e),this):this},one:function(t,e){return"function"!=typeof e?this:t&&"string"==typeof t&&t.trim()?(t=t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "),this.$element.one(t,e),this):this},off:function(t){return t=t&&"string"==typeof t&&t.trim()?t.split(" ").map((function(t){return(t=t.split(".")[0])+".userland"})).join(" "):".userland",this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper("new setup.Meter("+JSON.stringify(this.settings)+", "+this.value+")")}}),setup.Meter=l,t&&(window.Meter=window.Meter||l),Macro.add("newmeter",{tags:["colors","sizing","animation","label"],handler:function(){if(State.length>0&&!a)return this.error("The `<<newmeter>>` macro must be called in your `StoryInit` special passage. Seriously. No excuses. --Love, Chapel");if(this.args.length<1)return this.error("The `<<newmeter>>` macro requires at least one argument: a meter name.");var t=this.args[0],s=null,i=null,n=null,r=null;if("string"!=typeof t)return this.error("Invalid meter name.");if(t=t.trim(),l.has(t)&&!e)return this.error('Cannot clobber the existing meter "'+t+'".');this.payload.length&&(s=this.payload.find((function(t){return"colors"===t.name})),i=this.payload.find((function(t){return"sizing"===t.name})),n=this.payload.find((function(t){return"animation"===t.name})),r=this.payload.find((function(t){return"label"===t.name})));var o={};if(s){if(!s.args.length)return this.error("No arguments passed to the `<<colors>>` tag.");switch(s.args.length){case 1:o.empty=s.args[0],o.full="transparent";break;case 2:o.full=s.args[0],o.empty=s.args[1];break;default:o.full=s.args[0],o.empty=s.args[1],o.back=s.args[2]}}if(i){if(!i.args.length)return this.error("No arguments passed to the `<<sizing>>` tag.");o.width=i.args[0],i.args[1]&&(o.height=i.args[1])}if(n){if(!n.args.length)return this.error("No arguments passed to the `<<animation>>` tag.");if("boolean"!=typeof n.args[0]||n.args[0]){if("string"!=typeof n.args[0])return this.error("The argument to the `<<animation>>` tag should be `true`, `false`, or a valid CSS time value.");o.animate=Util.fromCssTime(n.args[0])}else o.animate=0;n.args[1]&&["swing","linear"].includes(n.args[1])&&(o.easing=n.args[1])}if(r){var c=r.args[0];if(!c||"string"!=typeof c)return this.error("The labelText argument for the `<<label>>` tag is required.");o.label=c.trim(),r.args[1]&&"string"==typeof r.args[1]&&(o.text=r.args[1]),r.args[2]&&"string"==typeof r.args[2]&&(o.align=r.args[2])}l.add(t,o,this.args[1])}}),Macro.add("showmeter",{handler:function(){if(this.args.length<1)return this.error("This macro requires at least one argument: the meter's name.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');"number"==typeof this.args[1]&&e.val(this.args[1]),e.place(this.output,{classes:"macro-"+this.name,attr:{id:"meter-"+Util.slugify(t)}})}}),Macro.add("updatemeter",{handler:function(){if(this.args.length<2)return this.error("This macro requires two arguments: the meter's name and a value.");var t=this.args[0];if("string"!=typeof t)return this.error("Invalid meter name.");t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error('The meter "'+t+'" does not exist.');e.val(this.args[1])}})}(),Macro.add("narrate",{tags:null,handler:function(){var t,e,a;t=this.output,e=this.payload[0].contents,a=$(document.createElement("div")).addClass("narrating"),e=(e=(e=e.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>"),a.append($(document.createElement("p")).wiki(e)),a.appendTo(t)}}),function(){var t=new Map;function e(e,a,s,i){if(void 0===s&&a&&(s=a,a=null),State.length)throw new Error("addCharacter() -> must be called before story starts");e&&s?(t.has(e)&&console.error('addCharacter() -> overwriting character "'+e+'"'),t.set(e,{displayName:a,image:s,color:i})):console.error("addCharacter() -> invalid arguments")}function a(e,a,s,i,n){var r=$(document.createElement("div")).addClass(Util.slugify(a)+" say"),o=$(document.createElement("div")),l=t.has(a)?t.get(a):null,c=l.color;c&&(c.startsWith("$")&&(c=c.indexOf("[")<0?State.variables[c.substring(1)]:State.variables[c.substring(1,c.indexOf("["))][c.substring(c.indexOf("[")+1,c.indexOf("]"))]),r=r.css("border-color",c)),i&&i.startsWith("$")&&(i=State.variables[i.substring(1)]);var u=l?l.image:null;u&&u.startsWith("$")&&(u=State.variables[u.substring(1)]);var h=$(document.createElement("img")).attr("src",i||u||"");h.attr("src")&&h.attr("src").trim()&&r.append(h);var d=a.toUpperFirst();l&&l.displayName&&(d=l.displayName),s=(s=(s=s.replace(/^\s+|\s+$/g,"")).replace(/\s\s+/g,"    ")).replaceAll("    ","<br>");var g=$(document.createElement("p"));c&&(g=(g=g.css("border-bottom-color",c)).css("background-color",c));var m=$(document.createElement("p"));return n&&m.css("font-style","italic"),o.append(g.wiki(d)).append(m.wiki(s)),r.append(o),e&&(e instanceof $||(e=$(e)),r.appendTo(e)),r}setup.say=a,setup.addCharacter=e,Macro.add("character",{handler:function(){e(this.args[0],this.args[1],this.args[2],this.args[3])}}),$(document).one(":passagestart",(function(){var e=Array.from(t.keys());e.push("say"),Macro.add(e,{tags:null,handler:function(){"say"!==this.name?a(this.output,this.name,this.payload[0].contents,null,this.args[0]):a(this.output,this.args[0],this.payload[0].contents,this.args[1],this.args[2])}})}))}(),Macro.add("statistic",{handler:function(){var t,e,a,s,i;t=this.output,e=this.args[0],a=this.args[1],s=this.args[2],(i=$(document.createElement("div")).addClass("row")).append($(document.createElement("div")).addClass("column").wiki(e+":")),i.append($(document.createElement("div")).addClass("column").wiki(a+" / "+s)),i.appendTo(t)}}),Macro.add("story-image",{handler:function(){!function(t,e,a){var s=$(document.createElement("div")).addClass("story-image");if(e){var i=$(document.createElement("div"));a||i.addClass("single-image"),i.append($(document.createElement("img")).attr("src",e)),s.append(i)}if(a){var n=$(document.createElement("div"));n.append($(document.createElement("img")).attr("src",a)),s.append(n)}s.appendTo(t)}(this.output,this.args[0],this.args[1],this.args[2])}}),Macro.add("video",{handler:function(){var t,e,a,s;t=this.output,e=this.args[0],a=this.args[1],(s=$(document.createElement("video")).attr("controls","").attr("playsinline","").addClass("video")).append($(document.createElement("source")).attr("src",e).attr("type",a)),s.appendTo(t)}});</script><tw-passagedata pid="1" name="Stay_In_Body" tags="" position="100,100" size="100,100">&lt;&lt;narrate&gt;&gt;
     You decide to tough it out and stay in your body.
     Agonizing pain continues to buffet your body and you find yourself slowly fading away into nothingness.
 &lt;&lt;/narrate&gt;&gt;
@@ -2641,8 +2641,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
 &lt;&lt;else&gt;&gt;
     &lt;&lt;include Help_Intro&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Help_Info" tags="" position="975,1475" size="100,100">&lt;&lt;dev&gt;&gt;
+&lt;&lt;include Back&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Help_Info" tags="" position="975,1475" size="100,100">&lt;&lt;dev&gt;&gt;
     The main character, $mcName, can take over the body of some people.
     Whenever he does, the textbox will change like the one below where the main character has taken over the body of the doctor.
 &lt;&lt;/dev&gt;&gt;
@@ -2683,10 +2682,10 @@ Now that you have seen the intro, let&#39;s explain a few more things.
     Whether or not you can resurrect will depend on your actions as some actions will allow you to revive one more time. If you don&#39;t have any revival chances left, dying will result in you going to paradise (end).
 &lt;&lt;/dev&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Help_Intro" tags="" position="1100,1475" size="100,100">&lt;&lt;narrate&gt;&gt;
     This section will become available after the intro.
-&lt;&lt;/narrate&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="Settings" tags="" position="1225,1475" size="100,100">&lt;&lt;include Settings_Avatar&gt;&gt;
+&lt;&lt;/narrate&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="Back" tags="" position="1225,1475" size="100,100">&lt;&lt;button &quot;Back&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Engine.backward();&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Settings" tags="" position="100,1600" size="100,100">&lt;&lt;include Settings_Avatar&gt;&gt;
 &lt;&lt;include Settings_Girlfriend&gt;&gt;
 &lt;br&gt;
-&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="Settings_Avatar" tags="" position="100,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;include Back&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Settings_Avatar" tags="" position="225,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
     The image below is the currently selected avatar for the main character. Select one of the avatars below this picture to change it.
 &lt;&lt;/narrate&gt;&gt;
 &lt;&lt;liveblock&gt;&gt;
@@ -2707,7 +2706,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
         &lt;&lt;avatar_selection &#39;settings_avatar&#39; &#39;assets/avatars/avatar_mc_13.jpg&#39;&gt;&gt;
         &lt;&lt;avatar_selection &#39;settings_avatar&#39; &#39;assets/avatars/avatar_mc_14.jpg&#39;&gt;&gt;
     &lt;/div&gt; 
-&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Settings_Girlfriend" tags="" position="225,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Settings_Girlfriend" tags="" position="350,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
     The image below is the currently selected avatar for the ex-girlfriend of the character. Select one of the avatars below this picture to change it.
 &lt;&lt;/narrate&gt;&gt;
 &lt;&lt;liveblock&gt;&gt;
@@ -2728,7 +2727,7 @@ Now that you have seen the intro, let&#39;s explain a few more things.
         &lt;&lt;avatar_selection &#39;settings_avatar_gf&#39; &#39;assets/avatars/avatar_gf_13.jpg&#39;&gt;&gt;
         &lt;&lt;avatar_selection &#39;settings_avatar_gf&#39; &#39;assets/avatars/avatar_gf_14.jpg&#39;&gt;&gt;
     &lt;/div&gt; 
-&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Sleep" tags="" position="350,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/liveblock&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Sleep" tags="" position="475,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
 You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2743,9 +2742,9 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;energy_button [[You wake up, feeling refreshed|Hospital_Room]] $maxEnergy&gt;&gt;
     &lt;&lt;set $currentDay to $currentDay + 1&gt;&gt;
-&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Stats" tags="" position="475,1600" size="100,100">&lt;&lt;include Progress&gt;&gt;
+&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Stats" tags="" position="600,1600" size="100,100">&lt;&lt;include Progress&gt;&gt;
 &lt;br&gt;
-&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="Progress" tags="" position="600,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;include Back&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Progress" tags="" position="725,1600" size="100,100">&lt;&lt;narrate&gt;&gt;
     Here you can find statistics about the progress in the game.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2760,7 +2759,92 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;statistic &#39;Side story \&#39;Ex-girlfriend\&#39;&#39; _progress_side_stories[2] $side_stories_steps[2]&gt;&gt;
 &lt;&lt;statistic &#39;Side story \&#39;Father\&#39;&#39; _progress_side_stories[3] $side_stories_steps[3]&gt;&gt;
 &lt;&lt;statistic &#39;Side story \&#39;Cancer patient\&#39;&#39; _progress_side_stories[4] $side_stories_steps[4]&gt;&gt;
-&lt;&lt;statistic &#39;Random events found&#39; _progress_random_events _count_random_events&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="StoryInit" tags="" position="725,1600" size="100,100">&lt;!-- Characters --&gt;
+&lt;&lt;statistic &#39;Random events found&#39; _progress_random_events _count_random_events&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="StoryInit" tags="" position="850,1600" size="100,100">&lt;!-- Energy --&gt;
+&lt;&lt;set $maxEnergy to 9&gt;&gt;
+&lt;&lt;set $energy to $maxEnergy&gt;&gt;
+&lt;&lt;newmeter energy&gt;&gt;
+    &lt;&lt;sizing 100% 20px&gt;&gt;
+    &lt;&lt;colors &#39;blue&#39; &#39;red&#39; &#39;black&#39;&gt;&gt;
+    &lt;&lt;label &#39;Energy: $energy / $maxEnergy&#39; &#39;yellow&#39; center&gt;&gt;
+&lt;&lt;/newmeter&gt;&gt;
+
+&lt;!-- Characters --&gt;
+&lt;&lt;character &#39;dev&#39;             &#39;$devName&#39;                    &#39;assets/misc/dev.jpg&#39;                                     &#39;$dev_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;mc&#39;              &#39;$mcName&#39;                     &#39;$settings_avatar&#39;                                        &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;gf&#39;              &#39;$gfName&#39;                     &#39;$settings_avatar_gf&#39;                                     &#39;$female_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;mom&#39;             &#39;$momName&#39;                    &#39;assets/characters/mother/mother_profile.jpg&#39;             &#39;$female_textbox_colors[1]&#39;&gt;&gt;
+&lt;&lt;character &#39;littlesis&#39;       &#39;$littlesisName&#39;              &#39;assets/characters/littlesister/littlesister_profile.jpg&#39; &#39;$female_textbox_colors[2]&#39;&gt;&gt;
+&lt;&lt;character &#39;bigsis&#39;          &#39;$bigsisName&#39;                 &#39;assets/characters/bigsister/bigsister_profile.jpg&#39;       &#39;$female_textbox_colors[3]&#39;&gt;&gt;
+&lt;&lt;character &#39;doc&#39;             &#39;$docName&#39;                    &#39;assets/misc/doctor_profile.jpg&#39;                          &#39;$male_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;doc_mc&#39;          &#39;$mcName ($docName)&#39;          &#39;assets/misc/doctor_profile.jpg&#39;                          &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;doc2_mc&#39;         &#39;$mcName ($doc2Name)&#39;         &#39;assets/misc/doctor_profile.jpg&#39;                          &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;angel&#39;           &#39;$angelName&#39;                  &#39;assets/characters/angel.jpg&#39;                             &#39;$female_textbox_colors[4]&#39;&gt;&gt;
+&lt;&lt;character &#39;patient1&#39;        &#39;$patient1Name&#39;               &#39;assets/misc/patient1_profile.jpg&#39;                        &#39;$female_textbox_colors[5]&#39;&gt;&gt;
+&lt;&lt;character &#39;policeman&#39;       &#39;$policemanName&#39;              &#39;assets/misc/policeman_profile.jpg&#39;                       &#39;$male_textbox_colors[1]&#39;&gt;&gt;
+&lt;&lt;character &#39;receptionist&#39;    &#39;$receptionistName&#39;           &#39;assets/misc/receptionist_profile.jpg&#39;                    &#39;$female_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;nurse_mc&#39;        &#39;$mcName (nurse)&#39;             &#39;assets/misc/malenurse_profile.jpg&#39;                       &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;janitor_mc&#39;      &#39;$mcName ($janitorName)&#39;      &#39;assets/misc/janitor_profile.jpg&#39;                         &#39;$male_textbox_colors[2]&#39;&gt;&gt;
+&lt;&lt;character &#39;oldman&#39;          &#39;$oldManName&#39;                 &#39;assets/misc/oldman_profile.jpg&#39;                          &#39;$male_textbox_colors[3]&#39;&gt;&gt;
+&lt;&lt;character &#39;oldman_mc&#39;       &#39;$mcName ($oldManName)&#39;       &#39;assets/misc/oldman_profile.jpg&#39;                          &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;oldwoman&#39;        &#39;$oldWomanName&#39;               &#39;assets/misc/oldwoman_profile.jpg&#39;                        &#39;$female_textbox_colors[1]&#39;&gt;&gt;
+&lt;&lt;character &#39;man1&#39;            &#39;$man1Name&#39;                   &#39;assets/misc/man1_profile.jpg&#39;                            &#39;$male_textbox_colors[4]&#39;&gt;&gt;
+&lt;&lt;character &#39;man1_mc&#39;         &#39;$mcName ($man1Name)&#39;         &#39;assets/misc/man1_profile.jpg&#39;                            &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;woman1&#39;          &#39;$woman1Name&#39;                 &#39;assets/misc/woman1_profile.jpg&#39;                          &#39;$female_textbox_colors[2]&#39;&gt;&gt;
+&lt;&lt;character &#39;cancer&#39;          &#39;$cancerName&#39;                 &#39;assets/misc/cancer_patient_profile.jpg&#39;                  &#39;$female_textbox_colors[3]&#39;&gt;&gt;
+&lt;&lt;character &#39;cancerfriend_mc&#39; &#39;$mcName ($cancerFriendName)&#39; &#39;assets/misc/cancer_patient_friend_profile.jpg&#39;           &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;cancer2_mc&#39;      &#39;$mcName ($cancer2Name)&#39;      &#39;assets/misc/cancer_patient2_profile.jpg&#39;                 &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;newfather_mc&#39;    &#39;$mcName ($newFatherName)&#39;    &#39;assets/misc/newfather_profile.jpg&#39;                       &#39;$mc_textbox_color&#39;&gt;&gt;
+&lt;&lt;character &#39;newmother&#39;       &#39;$newMotherName&#39;              &#39;assets/misc/newmother_profile.jpg&#39;                       &#39;$female_textbox_colors[4]&#39;&gt;&gt;
+&lt;&lt;character &#39;patient2&#39;        &#39;$patient2Name&#39;               &#39;assets/misc/patient2_profile.jpg&#39;                        &#39;$male_textbox_colors[5]&#39;&gt;&gt;
+&lt;&lt;character &#39;strangeman&#39;      &#39;$strangeManName&#39;             &#39;assets/misc/strangeman_profile.jpg&#39;                      &#39;$male_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;child&#39;           &#39;$childName&#39;                  &#39;assets/misc/child_profile.jpg&#39;                           &#39;$female_textbox_colors[5]&#39;&gt;&gt;
+&lt;&lt;character &#39;childmom&#39;        &#39;$childMomName&#39;               &#39;assets/misc/childmom_profile.jpg&#39;                        &#39;$female_textbox_colors[2]&#39;&gt;&gt;
+&lt;&lt;character &#39;childdad&#39;        &#39;$childDadName&#39;               &#39;assets/misc/childdad_profile.jpg&#39;                        &#39;$male_textbox_colors[1]&#39;&gt;&gt;
+&lt;&lt;character &#39;comamom&#39;         &#39;$comaMomName&#39;                &#39;assets/misc/comamom_profile.jpg&#39;                         &#39;$female_textbox_colors[3]&#39;&gt;&gt;
+&lt;&lt;character &#39;comadad&#39;         &#39;$comaDadName&#39;                &#39;assets/misc/comadad_profile.jpg&#39;                         &#39;$male_textbox_colors[2]&#39;&gt;&gt;
+&lt;&lt;character &#39;coffeemom&#39;       &#39;$coffeeMomName&#39;              &#39;assets/misc/coffeemom_profile.webp&#39;                      &#39;$female_textbox_colors[4]&#39;&gt;&gt;
+&lt;&lt;character &#39;coffeedad&#39;       &#39;$coffeeDadName&#39;              &#39;assets/misc/coffeedad_profile.jpg&#39;                       &#39;$male_textbox_colors[3]&#39;&gt;&gt;
+&lt;&lt;character &#39;coffeedaughter&#39;  &#39;$coffeeDaughterName&#39;         &#39;assets/misc/coffeedaughter_profile.jpg&#39;                  &#39;$female_textbox_colors[5]&#39;&gt;&gt;
+&lt;&lt;character &#39;visitor_mc&#39;      &#39;$mcName ($visitorName)&#39;      &#39;assets/misc/visitor_profile.jpg&#39;                         &#39;$mc_textbox_color&#39;&gt;&gt;
+
+&lt;&lt;character &#39;rnd_man1&#39;      &#39;Man 1&#39;                   &#39;assets/misc/avatar_man.jpg&#39;                              &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_man2&#39;      &#39;Man 2&#39;                   &#39;assets/misc/avatar_man.jpg&#39;                              &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_woman1&#39;    &#39;Woman 1&#39;                 &#39;assets/misc/avatar_woman.jpg&#39;                            &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_woman2&#39;    &#39;Woman 2&#39;                 &#39;assets/misc/avatar_woman.jpg&#39;                            &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_man&#39;       &#39;Man&#39;                     &#39;assets/misc/avatar_man.jpg&#39;                              &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_woman&#39;     &#39;Woman&#39;                   &#39;assets/misc/avatar_woman.jpg&#39;                            &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_nurse&#39;     &#39;Nurse&#39;                   &#39;assets/misc/femalenurse2_profile.jpg&#39;                    &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_nurse1&#39;    &#39;Nurse 1&#39;                 &#39;assets/misc/femalenurse1_profile.jpg&#39;                    &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_nurse2&#39;    &#39;Nurse 2&#39;                 &#39;assets/misc/femalenurse2_profile.jpg&#39;                    &#39;$random_textbox_colors[0]&#39;&gt;&gt;
+&lt;&lt;character &#39;rnd_doc&#39;       &#39;Doctor&#39;                  &#39;assets/misc/doctor_profile.jpg&#39;                          &#39;$random_textbox_colors[0]&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="StoryAuthor" tags="" position="975,1600" size="100,100">Phantasos</tw-passagedata><tw-passagedata pid="129" name="PassageHeader" tags="" position="1100,1600" size="100,100">&lt;!-- Make sure all variables are loaded correctly --&gt;
+&lt;&lt;if !$versionNumber&gt;&gt;
+  &lt;&lt;include SetupParameters_0_1_0&gt;&gt;
+  &lt;&lt;set $versionNumber to &quot;0.1.0&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;!-- Call updatemeter on every passage load so as to account for page refresh/reload to be visually correct --&gt;
+&lt;&lt;updatemeter &#39;energy&#39; `$energy/$maxEnergy`&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="PassageFooter" tags="" position="1225,1600" size="100,100"></tw-passagedata><tw-passagedata pid="131" name="StoryCaption" tags="" position="100,1725" size="100,100">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;Day:&lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;&lt;&lt;live $currentDay&gt;&gt;&lt;/div&gt;
+&lt;/div&gt; 
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;Willpower:&lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;&lt;&lt;live $willpower&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;&lt;showmeter &#39;energy&#39; &quot;Energy: `$energy / $maxEnergy`&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="StoryMenu" tags="" position="225,1725" size="100,100">&lt;&lt;link &#39;&lt;i id=&quot;menu-item-hints&quot;/&gt;Hints&#39; &quot;Hints&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;&lt;i id=&quot;menu-item-stats&quot;/&gt;Stats&#39; &quot;Stats&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;&lt;i id=&quot;menu-item-help&quot;/&gt;Help&#39; &quot;Help&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;&lt;i id=&quot;menu-item-settings&quot;/&gt;Settings&#39; &quot;Settings&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="133" name="StorySubtitle" tags="" position="350,1725" size="100,100">Version $versionNumber</tw-passagedata><tw-passagedata pid="134" name="SetupParameters_0_1_0" tags="" position="475,1725" size="100,100">&lt;!-- Setup variables for version 0.1.0 --&gt;
+
+&lt;!-- Character colors --&gt;
+&lt;&lt;set $dev_textbox_color to &#39;#22870c&#39;&gt;&gt;
+&lt;&lt;set $mc_textbox_color to &#39;#102594&#39;&gt;&gt;
+&lt;&lt;set $male_textbox_colors to [&#39;#881cd2&#39;, &#39;#1ed8cf&#39;, &#39;#758af0&#39;, &#39;#2545e7&#39;, &#39;#1dd784&#39;, &#39;#15975c&#39;]&gt;&gt;
+&lt;&lt;set $female_textbox_colors to [ &#39;#f41919&#39;, &#39;#f4711a&#39;, &#39;#f41a5c&#39;, &#39;#f41a9d&#39;, &#39;#eb34db&#39;, &#39;#e35812&#39;]&gt;&gt;
+&lt;&lt;set $random_textbox_colors to [&#39;#a6a6a6&#39;]&gt;&gt;
+
+&lt;!-- Character names --&gt;
 &lt;&lt;set $settings_avatar to &#39;assets/avatars/avatar_mc_1.jpg&#39;&gt;&gt;
 &lt;&lt;set $settings_avatar_gf to &#39;assets/avatars/avatar_gf_1.jpg&#39;&gt;&gt;
 
@@ -2797,61 +2881,6 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;set $coffeeDadName to &#39;Father&#39;&gt;&gt;
 &lt;&lt;set $coffeeDaughterName to &#39;Daughter&#39;&gt;&gt;
 &lt;&lt;set $visitorName to &#39;Andrew&#39;&gt;&gt;
-
-&lt;&lt;set $dev_textbox_color to &#39;#22870c&#39;&gt;&gt;
-&lt;&lt;set $mc_textbox_color to &#39;#102594&#39;&gt;&gt;
-&lt;&lt;set $male_textbox_colors to [&#39;#881cd2&#39;, &#39;#1ed8cf&#39;, &#39;#758af0&#39;, &#39;#2545e7&#39;, &#39;#1dd784&#39;, &#39;#15975c&#39;]&gt;&gt;
-&lt;&lt;set $female_textbox_colors to [ &#39;#f41919&#39;, &#39;#f4711a&#39;, &#39;#f41a5c&#39;, &#39;#f41a9d&#39;, &#39;#eb34db&#39;, &#39;#e35812&#39;]&gt;&gt;
-&lt;&lt;set $random_textbox_color to &#39;#a6a6a6&#39;&gt;&gt;
-
-&lt;&lt;character &#39;dev&#39;             &#39;$devName&#39;                    &#39;assets/misc/dev.jpg&#39;                                     $dev_textbox_color&gt;&gt;
-&lt;&lt;character &#39;mc&#39;              &#39;$mcName&#39;                     &#39;$settings_avatar&#39;                                        $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;gf&#39;              &#39;$gfName&#39;                     &#39;$settings_avatar_gf&#39;                                     $female_textbox_colors[0]&gt;&gt;
-&lt;&lt;character &#39;mom&#39;             &#39;$momName&#39;                    &#39;assets/characters/mother/mother_profile.jpg&#39;             $female_textbox_colors[1]&gt;&gt;
-&lt;&lt;character &#39;littlesis&#39;       &#39;$littlesisName&#39;              &#39;assets/characters/littlesister/littlesister_profile.jpg&#39; $female_textbox_colors[2]&gt;&gt;
-&lt;&lt;character &#39;bigsis&#39;          &#39;$bigsisName&#39;                 &#39;assets/characters/bigsister/bigsister_profile.jpg&#39;       $female_textbox_colors[3]&gt;&gt;
-&lt;&lt;character &#39;doc&#39;             &#39;$docName&#39;                    &#39;assets/misc/doctor_profile.jpg&#39;                          $male_textbox_colors[0]&gt;&gt;
-&lt;&lt;character &#39;doc_mc&#39;          &#39;$mcName ($docName)&#39;          &#39;assets/misc/doctor_profile.jpg&#39;                          $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;doc2_mc&#39;         &#39;$mcName ($doc2Name)&#39;         &#39;assets/misc/doctor_profile.jpg&#39;                          $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;angel&#39;           &#39;$angelName&#39;                  &#39;assets/characters/angel.jpg&#39;                             $female_textbox_colors[4]&gt;&gt;
-&lt;&lt;character &#39;patient1&#39;        &#39;$patient1Name&#39;               &#39;assets/misc/patient1_profile.jpg&#39;                        $female_textbox_colors[5]&gt;&gt;
-&lt;&lt;character &#39;policeman&#39;       &#39;$policemanName&#39;              &#39;assets/misc/policeman_profile.jpg&#39;                       $male_textbox_colors[1]&gt;&gt;
-&lt;&lt;character &#39;receptionist&#39;    &#39;$receptionistName&#39;           &#39;assets/misc/receptionist_profile.jpg&#39;                    $female_textbox_colors[0]&gt;&gt;
-&lt;&lt;character &#39;nurse_mc&#39;        &#39;$mcName (nurse)&#39;             &#39;assets/misc/malenurse_profile.jpg&#39;                       $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;janitor_mc&#39;      &#39;$mcName ($janitorName)&#39;      &#39;assets/misc/janitor_profile.jpg&#39;                         $male_textbox_colors[2]&gt;&gt;
-&lt;&lt;character &#39;oldman&#39;          &#39;$oldManName&#39;                 &#39;assets/misc/oldman_profile.jpg&#39;                          $male_textbox_colors[3]&gt;&gt;
-&lt;&lt;character &#39;oldman_mc&#39;       &#39;$mcName ($oldManName)&#39;       &#39;assets/misc/oldman_profile.jpg&#39;                          $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;oldwoman&#39;        &#39;$oldWomanName&#39;               &#39;assets/misc/oldwoman_profile.jpg&#39;                        $female_textbox_colors[1]&gt;&gt;
-&lt;&lt;character &#39;man1&#39;            &#39;$man1Name&#39;                   &#39;assets/misc/man1_profile.jpg&#39;                            $male_textbox_colors[4]&gt;&gt;
-&lt;&lt;character &#39;man1_mc&#39;         &#39;$mcName ($man1Name)&#39;         &#39;assets/misc/man1_profile.jpg&#39;                            $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;woman1&#39;          &#39;$woman1Name&#39;                 &#39;assets/misc/woman1_profile.jpg&#39;                          $female_textbox_colors[2]&gt;&gt;
-&lt;&lt;character &#39;cancer&#39;          &#39;$cancerName&#39;                 &#39;assets/misc/cancer_patient_profile.jpg&#39;                  $female_textbox_colors[3]&gt;&gt;
-&lt;&lt;character &#39;cancerfriend_mc&#39; &#39;$mcName ($cancerFriendName)&#39; &#39;assets/misc/cancer_patient_friend_profile.jpg&#39;           $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;cancer2_mc&#39;      &#39;$mcName ($cancer2Name)&#39;      &#39;assets/misc/cancer_patient2_profile.jpg&#39;                 $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;newfather_mc&#39;    &#39;$mcName ($newFatherName)&#39;    &#39;assets/misc/newfather_profile.jpg&#39;                       $mc_textbox_color&gt;&gt;
-&lt;&lt;character &#39;newmother&#39;       &#39;$newMotherName&#39;              &#39;assets/misc/newmother_profile.jpg&#39;                       $female_textbox_colors[4]&gt;&gt;
-&lt;&lt;character &#39;patient2&#39;        &#39;$patient2Name&#39;               &#39;assets/misc/patient2_profile.jpg&#39;                        $male_textbox_colors[5]&gt;&gt;
-&lt;&lt;character &#39;strangeman&#39;      &#39;$strangeManName&#39;             &#39;assets/misc/strangeman_profile.jpg&#39;                      $male_textbox_colors[0]&gt;&gt;
-&lt;&lt;character &#39;child&#39;           &#39;$childName&#39;                  &#39;assets/misc/child_profile.jpg&#39;                           $female_textbox_colors[5]&gt;&gt;
-&lt;&lt;character &#39;childmom&#39;        &#39;$childMomName&#39;               &#39;assets/misc/childmom_profile.jpg&#39;                        $female_textbox_colors[2]&gt;&gt;
-&lt;&lt;character &#39;childdad&#39;        &#39;$childDadName&#39;               &#39;assets/misc/childdad_profile.jpg&#39;                        $male_textbox_colors[1]&gt;&gt;
-&lt;&lt;character &#39;comamom&#39;         &#39;$comaMomName&#39;                &#39;assets/misc/comamom_profile.jpg&#39;                         $female_textbox_colors[3]&gt;&gt;
-&lt;&lt;character &#39;comadad&#39;         &#39;$comaDadName&#39;                &#39;assets/misc/comadad_profile.jpg&#39;                         $male_textbox_colors[2]&gt;&gt;
-&lt;&lt;character &#39;coffeemom&#39;       &#39;$coffeeMomName&#39;              &#39;assets/misc/coffeemom_profile.webp&#39;                      $female_textbox_colors[4]&gt;&gt;
-&lt;&lt;character &#39;coffeedad&#39;       &#39;$coffeeDadName&#39;              &#39;assets/misc/coffeedad_profile.jpg&#39;                       $male_textbox_colors[3]&gt;&gt;
-&lt;&lt;character &#39;coffeedaughter&#39;  &#39;$coffeeDaughterName&#39;         &#39;assets/misc/coffeedaughter_profile.jpg&#39;                  $female_textbox_colors[5]&gt;&gt;
-&lt;&lt;character &#39;visitor_mc&#39;      &#39;$mcName ($visitorName)&#39;      &#39;assets/misc/visitor_profile.jpg&#39;                         $mc_textbox_color&gt;&gt;
-
-&lt;&lt;character &#39;rnd_man1&#39;      &#39;Man 1&#39;                   &#39;assets/misc/avatar_man.jpg&#39;                              $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_man2&#39;      &#39;Man 2&#39;                   &#39;assets/misc/avatar_man.jpg&#39;                              $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_woman1&#39;    &#39;Woman 1&#39;                 &#39;assets/misc/avatar_woman.jpg&#39;                            $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_woman2&#39;    &#39;Woman 2&#39;                 &#39;assets/misc/avatar_woman.jpg&#39;                            $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_man&#39;       &#39;Man&#39;                     &#39;assets/misc/avatar_man.jpg&#39;                              $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_woman&#39;     &#39;Woman&#39;                   &#39;assets/misc/avatar_woman.jpg&#39;                            $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_nurse&#39;     &#39;Nurse&#39;                   &#39;assets/misc/femalenurse2_profile.jpg&#39;                    $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_nurse1&#39;    &#39;Nurse 1&#39;                 &#39;assets/misc/femalenurse1_profile.jpg&#39;                    $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_nurse2&#39;    &#39;Nurse 2&#39;                 &#39;assets/misc/femalenurse2_profile.jpg&#39;                    $random_textbox_color&gt;&gt;
-&lt;&lt;character &#39;rnd_doc&#39;       &#39;Doctor&#39;                  &#39;assets/misc/doctor_profile.jpg&#39;                          $random_textbox_color&gt;&gt;
 
 &lt;!-- Story progress variables --&gt;
 &lt;&lt;set $progress_main_story to 1&gt;&gt;
@@ -2890,15 +2919,6 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;set $rnd_oncology_exam_room_scenes to []&gt;&gt;
 &lt;&lt;set $rnd_oncology_patient_room_scenes to []&gt;&gt;
 
-&lt;!-- Energy --&gt;
-&lt;&lt;set $maxEnergy to 9&gt;&gt;
-&lt;&lt;set $energy to $maxEnergy&gt;&gt;
-&lt;&lt;newmeter energy&gt;&gt;
-    &lt;&lt;sizing 100% 20px&gt;&gt;
-    &lt;&lt;colors &#39;blue&#39; &#39;red&#39; &#39;black&#39;&gt;&gt;
-    &lt;&lt;label &#39;Energy: $energy / $maxEnergy&#39; &#39;yellow&#39; center&gt;&gt;
-&lt;&lt;/newmeter&gt;&gt;
-
 &lt;!-- Willpower --&gt;
 &lt;&lt;set $maxWillpower to 19&gt;&gt;
 &lt;&lt;set $willpower to 5&gt;&gt;
@@ -2911,20 +2931,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;set $hospital_current_floor to &#39;2nd floor&#39;&gt;&gt;
 &lt;&lt;set $num_revival to 0&gt;&gt;
 &lt;&lt;set $has_clues to false&gt;&gt;
-&lt;&lt;set $intro_done to false&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="StoryAuthor" tags="" position="850,1600" size="100,100">Phantasos</tw-passagedata><tw-passagedata pid="128" name="PassageHeader" tags="" position="975,1600" size="100,100">&lt;!-- Call updatemeter on every passage load so as to account for page refresh/reload to be visually correct --&gt;
-&lt;&lt;updatemeter &#39;energy&#39; `$energy/$maxEnergy`&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="PassageFooter" tags="" position="1100,1600" size="100,100"></tw-passagedata><tw-passagedata pid="130" name="StoryCaption" tags="" position="1225,1600" size="100,100">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;column&quot;&gt;Day:&lt;/div&gt;
-  &lt;div class=&quot;column&quot;&gt;&lt;&lt;live $currentDay&gt;&gt;&lt;/div&gt;
-&lt;/div&gt; 
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;column&quot;&gt;Willpower:&lt;/div&gt;
-  &lt;div class=&quot;column&quot;&gt;&lt;&lt;live $willpower&gt;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;br/&gt;
-&lt;&lt;showmeter &#39;energy&#39; &quot;Energy: `$energy / $maxEnergy`&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="StoryMenu" tags="" position="100,1725" size="100,100">&lt;&lt;link &#39;&lt;i id=&quot;menu-item-hints&quot;/&gt;Hints&#39; &quot;Hints&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &#39;&lt;i id=&quot;menu-item-stats&quot;/&gt;Stats&#39; &quot;Stats&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &#39;&lt;i id=&quot;menu-item-help&quot;/&gt;Help&#39; &quot;Help&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &#39;&lt;i id=&quot;menu-item-settings&quot;/&gt;Settings&#39; &quot;Settings&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Hints" tags="" position="225,1725" size="100,100">&lt;&lt;if $progress_main_story &lt;= 2&gt;&gt;
+&lt;&lt;set $intro_done to false&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Hints" tags="" position="600,1725" size="100,100">&lt;&lt;if $progress_main_story &lt;= 2&gt;&gt;
     &lt;&lt;include Hints_Intro&gt;&gt;
 &lt;&lt;else&gt;&gt;
     &lt;&lt;include Hints_Header&gt;&gt;
@@ -2964,7 +2971,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include Hints_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="133" name="Hints_Header" tags="" position="350,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;include Hints_Footer&gt;&gt;</tw-passagedata><tw-passagedata pid="136" name="Hints_Header" tags="" position="725,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
     Preparing to think about your situation, you focus your thoughts.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -2982,53 +2989,53 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;mc thinking&gt;&gt;
     When I was in that place between life and death, I saw an angel who warned me the accident was not an accident at all. Not only that, it seems it&#39;s not only me, those around me are in danger as well.
     There may also be somebody purposely keeping me in a coma. Strangely enough, I have not seen anybody suspicious yet.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="Hints_Footer" tags="" position="475,1725" size="100,100">&lt;&lt;button &quot;Back&quot; `previous()`&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="135" name="Hints_Intro" tags="" position="600,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Hints_Footer" tags="" position="850,1725" size="100,100">&lt;&lt;include Back&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Hints_Intro" tags="" position="975,1725" size="100,100">&lt;&lt;narrate&gt;&gt;
     Once you progress far enough in the main story, you will be able to gather your thoughts and think about the future here. If you ever feel stuck, this may help you to progress again.
 &lt;&lt;/narrate&gt;&gt;
 
-/* History */</tw-passagedata><tw-passagedata pid="136" name="Hints_2" tags="" position="725,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+/* History */</tw-passagedata><tw-passagedata pid="139" name="Hints_2" tags="" position="1100,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I overheard a conversation between a policeman and a receptionist. Looks like the police are indeed looking into my accident, thinking it was no accident after all. I had been hesitant to believe it earlier as everything that happened just seemed too surreal, but I guess I&#39;ll have to start believing it and try to find out more.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Hints_3" tags="" position="850,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="140" name="Hints_3" tags="" position="1225,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I overheard another conversation between the policeman and the receptionist. Could the mafia really be involved in my accident like he said?
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Hints_4" tags="" position="975,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="Hints_4" tags="" position="100,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     My mother and little sister visited me. While thinking about the past, I realized my uncle died in an accident last year that seemed to have similar circumstances as mine. Could he have been targeted too?
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="139" name="Hints_9" tags="" position="1100,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="142" name="Hints_9" tags="" position="225,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I followed the nurse who changed my serum and she injected the sac with something she brought from the outside. So my serum is actually being tampered with! This is most likely what is keeping me from waking up.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="140" name="Hints_17" tags="" position="1225,1725" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Hints_17" tags="" position="350,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     A mysterious man came to my room. He only looked at me for a bit and then left. When I went to the lobby and overheard the receptionist and policeman talking, I learned that this man is most likely one of the higher-ups in the mafia. What does such a person have to do with me?
 &lt;&lt;/mc&gt;&gt;
 
-/* Future */</tw-passagedata><tw-passagedata pid="141" name="Hints_Plans" tags="" position="100,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
+/* Future */</tw-passagedata><tw-passagedata pid="144" name="Hints_Plans" tags="" position="475,1850" size="100,100">&lt;&lt;narrate&gt;&gt;
     Having recalled everything you know, you try to think about the next course of action
-&lt;&lt;/narrate&gt;&gt;</tw-passagedata><tw-passagedata pid="142" name="Hints_Plans_Unknown" tags="" position="225,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/narrate&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Hints_Plans_Unknown" tags="" position="600,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I don&#39;t really have an idea on how to proceed, I should probably explore a bit.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Hints_Plans_3" tags="" position="350,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Hints_Plans_3" tags="" position="725,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I should check the lobby in a few days, maybe the policeman will come back.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="144" name="Hints_Plans_5" tags="" position="475,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Hints_Plans_5" tags="" position="850,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I should check the lobby in a few days, maybe the policeman will come back.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Hints_Plans_6" tags="" position="600,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Hints_Plans_6" tags="" position="975,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     The officer asked the receptionist to keep an eye out for suspicious people. I may as well do the same although I doubt anyone would be stupid enough to waltz into my room if they were involved.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Hints_Plans_7" tags="" position="725,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Hints_Plans_7" tags="" position="1100,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     The only thing going into my body is serum. The nurse should be back in a few days to swap it again. I should follow her at that time to try and find out.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Hints_Plans_8" tags="" position="850,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Hints_Plans_8" tags="" position="1225,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Following the nurse after she changed my serum did not yield any results. I should try to follow her from the entrance in a few days when she has to come change it again.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Hints_Plans_9" tags="" position="975,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Hints_Plans_9" tags="" position="100,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Following the nurse after she changed my serum did not yield any results. I should try to follow her from the entrance in a few days when she has to come change it again.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Hints_Plans_10" tags="" position="1100,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Hints_Plans_10" tags="" position="225,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I should follow the nurse a few more times to see if she&#39;s tampering with other people&#39;s serum.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Hints_Plans_11" tags="" position="1225,1850" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Hints_Plans_11" tags="" position="350,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I followed the nurse again, but she did not tamper with any serum. I should follow her again to verify I&#39;m the only one she targets.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Hints_Plans_12" tags="" position="100,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="Hints_Plans_12" tags="" position="475,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Now that I verified that she only tampers with my serum, I should try to interfere when she tries again.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Hints_Plans_13" tags="" position="225,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="155" name="Hints_Plans_13" tags="" position="600,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I may have failed in taking over the nurse, but I can still take over somebody nearby to interfere. Let&#39;s wait for her again when my serum needs replenishing.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Hints_Plans_14" tags="" position="350,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="156" name="Hints_Plans_14" tags="" position="725,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I may have failed in taking over the nurse, but I can still take over somebody nearby to interfere. Let&#39;s wait for her again when my serum needs replenishing.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="Hints_Plans_17" tags="" position="475,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="157" name="Hints_Plans_17" tags="" position="850,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     A mysterious man came into my room, just staring at me for a while and then left. I should try to follow him to the lobby to learn more.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="155" name="Hints_Plans_19" tags="" position="600,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="158" name="Hints_Plans_19" tags="" position="975,1975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     I&#39;ve gathered all the information I can inside the hospital. I should make sure I&#39;m strong enough and go out into the world to gather more.
-&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="156" name="Main_Story" tags="" position="725,1975" size="100,100">&lt;&lt;mainstory_include 1 0 &#39;Hospital_Lobby&#39;&gt;&gt;
+&lt;&lt;/mc&gt;&gt;</tw-passagedata><tw-passagedata pid="159" name="Main_Story" tags="" position="1100,1975" size="100,100">&lt;&lt;mainstory_include 1 0 &#39;Hospital_Lobby&#39;&gt;&gt;
 &lt;&lt;mainstory_include 2 0 &#39;Hospital_Room&#39;&gt;&gt;
 &lt;&lt;mainstory_include 3 2 &#39;Hospital_Lobby&#39;&gt;&gt;
 &lt;&lt;mainstory_include 4 1 &#39;Hospital_Room&#39;&gt;&gt;
@@ -3045,7 +3052,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;mainstory_include 15 1 &#39;Hospital_Room&#39;&gt;&gt;
 &lt;&lt;mainstory_include 16 1 &#39;Hospital_Room&#39;&gt;&gt;
 &lt;&lt;mainstory_include 17 0 &#39;Hospital_Lobby&#39;&gt;&gt;
-&lt;&lt;mainstory_include 18 0 &#39;Hospital_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="157" name="Main_Story_Text_Scene_1" tags="" position="850,1975" size="100,100">&lt;&lt;quest_button &quot;A police officer walks up to the reception desk&quot; &quot;Main_Story_Scene_1&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="158" name="Main_Story_Text_Scene_2" tags="" position="975,1975" size="100,100">&lt;&lt;quest_button &quot;You think about the exchange in the lobby&quot; &quot;Main_Story_Scene_2&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="159" name="Main_Story_Text_Scene_3" tags="" position="1100,1975" size="100,100">&lt;&lt;quest_button &quot;The police officer is back&quot; &quot;Main_Story_Scene_3&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="Main_Story_Text_Scene_4" tags="" position="1225,1975" size="100,100">&lt;&lt;quest_button &quot;Your mother and little sister are sitting beside your bed&quot; &quot;Main_Story_Scene_4&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="161" name="Main_Story_Text_Scene_5" tags="" position="100,2100" size="100,100">&lt;&lt;quest_button &quot;The police officer is back for another visit&quot; &quot;Main_Story_Scene_5&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="162" name="Main_Story_Text_Scene_6" tags="" position="225,2100" size="100,100">&lt;&lt;quest_button &quot;You hover over your body, frustrated by your lack of progress&quot; &quot;Main_Story_Scene_6&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="163" name="Main_Story_Text_Scene_7" tags="" position="350,2100" size="100,100">&lt;&lt;quest_button &quot;The nurse is replacing your serum again&quot; &quot;Main_Story_Scene_7&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Main_Story_Text_Scene_8" tags="" position="475,2100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend has come for a visit&quot; &quot;Main_Story_Scene_8&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Main_Story_Text_Scene_9" tags="" position="600,2100" size="100,100">&lt;&lt;quest_button &quot;You wait at the front entrance until the nurse shows up&quot; &quot;Main_Story_Scene_9&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="166" name="Main_Story_Text_Scene_10" tags="" position="725,2100" size="100,100">&lt;&lt;quest_button &quot;You wait at the front entrance again until the nurse shows up&quot; &quot;Main_Story_Scene_10&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Main_Story_Text_Scene_11" tags="" position="850,2100" size="100,100">&lt;&lt;quest_button &quot;You wait at the front entrance again until the nurse shows up&quot; &quot;Main_Story_Scene_11&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Main_Story_Text_Scene_12" tags="" position="975,2100" size="100,100">&lt;&lt;quest_button &quot;Today is the day when the nurse has to change your serum again&quot; &quot;Main_Story_Scene_12&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="169" name="Main_Story_Text_Scene_13" tags="" position="1100,2100" size="100,100">&lt;&lt;quest_button &quot;As you wander the lobby, you spot your ex-girlfriend&quot; &quot;Main_Story_Scene_13&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="170" name="Main_Story_Text_Scene_14" tags="" position="1225,2100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;The nurse has to change your serum again during her shift&quot; &quot;Main_Story_Scene_14&quot; $energy-6 15&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Main_Story_Text_Scene_15" tags="" position="100,2225" size="100,100">&lt;&lt;quest_button &quot;You feel helpless as you can&#39;t find a way to get more information&quot; &quot;Main_Story_Scene_15&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="172" name="Main_Story_Text_Scene_16" tags="" position="225,2225" size="100,100">&lt;&lt;quest_button &quot;You are in your room, taking a nap&quot; &quot;Main_Story_Scene_16&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="173" name="Main_Story_Text_Scene_17" tags="" position="350,2225" size="100,100">&lt;&lt;quest_button &quot;The receptionist is reporting the mysterious man&quot; &quot;Main_Story_Scene_17&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="174" name="Main_Story_Text_Scene_18" tags="" position="475,2225" size="100,100">&lt;&lt;quest_button &quot;You contemplate about the mystery man&quot; &quot;Main_Story_Scene_18&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="175" name="Main_Story_Scene_1" tags="" position="600,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_include 18 0 &#39;Hospital_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="Main_Story_Text_Scene_1" tags="" position="1225,1975" size="100,100">&lt;&lt;quest_button &quot;A police officer walks up to the reception desk&quot; &quot;Main_Story_Scene_1&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="161" name="Main_Story_Text_Scene_2" tags="" position="100,2100" size="100,100">&lt;&lt;quest_button &quot;You think about the exchange in the lobby&quot; &quot;Main_Story_Scene_2&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="162" name="Main_Story_Text_Scene_3" tags="" position="225,2100" size="100,100">&lt;&lt;quest_button &quot;The police officer is back&quot; &quot;Main_Story_Scene_3&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="163" name="Main_Story_Text_Scene_4" tags="" position="350,2100" size="100,100">&lt;&lt;quest_button &quot;Your mother and little sister are sitting beside your bed&quot; &quot;Main_Story_Scene_4&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Main_Story_Text_Scene_5" tags="" position="475,2100" size="100,100">&lt;&lt;quest_button &quot;The police officer is back for another visit&quot; &quot;Main_Story_Scene_5&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Main_Story_Text_Scene_6" tags="" position="600,2100" size="100,100">&lt;&lt;quest_button &quot;You hover over your body, frustrated by your lack of progress&quot; &quot;Main_Story_Scene_6&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="166" name="Main_Story_Text_Scene_7" tags="" position="725,2100" size="100,100">&lt;&lt;quest_button &quot;The nurse is replacing your serum again&quot; &quot;Main_Story_Scene_7&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Main_Story_Text_Scene_8" tags="" position="850,2100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend has come for a visit&quot; &quot;Main_Story_Scene_8&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="168" name="Main_Story_Text_Scene_9" tags="" position="975,2100" size="100,100">&lt;&lt;quest_button &quot;You wait at the front entrance until the nurse shows up&quot; &quot;Main_Story_Scene_9&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="169" name="Main_Story_Text_Scene_10" tags="" position="1100,2100" size="100,100">&lt;&lt;quest_button &quot;You wait at the front entrance again until the nurse shows up&quot; &quot;Main_Story_Scene_10&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="170" name="Main_Story_Text_Scene_11" tags="" position="1225,2100" size="100,100">&lt;&lt;quest_button &quot;You wait at the front entrance again until the nurse shows up&quot; &quot;Main_Story_Scene_11&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Main_Story_Text_Scene_12" tags="" position="100,2225" size="100,100">&lt;&lt;quest_button &quot;Today is the day when the nurse has to change your serum again&quot; &quot;Main_Story_Scene_12&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="172" name="Main_Story_Text_Scene_13" tags="" position="225,2225" size="100,100">&lt;&lt;quest_button &quot;As you wander the lobby, you spot your ex-girlfriend&quot; &quot;Main_Story_Scene_13&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="173" name="Main_Story_Text_Scene_14" tags="" position="350,2225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;The nurse has to change your serum again during her shift&quot; &quot;Main_Story_Scene_14&quot; $energy-6 15&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="174" name="Main_Story_Text_Scene_15" tags="" position="475,2225" size="100,100">&lt;&lt;quest_button &quot;You feel helpless as you can&#39;t find a way to get more information&quot; &quot;Main_Story_Scene_15&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="175" name="Main_Story_Text_Scene_16" tags="" position="600,2225" size="100,100">&lt;&lt;quest_button &quot;You are in your room, taking a nap&quot; &quot;Main_Story_Scene_16&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="176" name="Main_Story_Text_Scene_17" tags="" position="725,2225" size="100,100">&lt;&lt;quest_button &quot;The receptionist is reporting the mysterious man&quot; &quot;Main_Story_Scene_17&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="177" name="Main_Story_Text_Scene_18" tags="" position="850,2225" size="100,100">&lt;&lt;quest_button &quot;You contemplate about the mystery man&quot; &quot;Main_Story_Scene_18&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="178" name="Main_Story_Scene_1" tags="" position="975,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the lobby, you see a policeman walking up to the reception desk.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3147,7 +3154,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Having had this realization, you resolve yourself to taking over more people in order to train yourself and get stronger. You realize this may be invaluable in getting to the bottom of this mystery.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[You move away from the entrance|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="176" name="Main_Story_Scene_10" tags="" position="725,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You move away from the entrance|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="179" name="Main_Story_Scene_10" tags="" position="1100,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Let&#39;s wait for the nurse again. She changed my serum only yesterday, so she does not have to change it today, but I should still see if she tampers with others.
 &lt;&lt;/mc&gt;&gt;
 
@@ -3177,7 +3184,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Nothing today, huh? Well, no matter, I should follow her again tomorrow. At that time, if she does nothing to the serums either, I can safely assume I&#39;m the only one being targeted.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="177" name="Main_Story_Scene_11" tags="" position="850,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="180" name="Main_Story_Scene_11" tags="" position="1225,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Let&#39;s wait for the nurse again. Nothing happened yesterday, let&#39;s see if I have more luck today.
 &lt;&lt;/mc&gt;&gt;
 
@@ -3207,7 +3214,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Nothing again. I really am the only one she&#39;s targeting. Tomorrow should be my turn again, I should try to interfere when she tampers with the serum.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="178" name="Main_Story_Scene_12" tags="" position="975,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You exit the serum room and return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="181" name="Main_Story_Scene_12" tags="" position="100,2350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Today, my serum needs changing again, it&#39;s time to try and interfere.
 &lt;&lt;/mc&gt;&gt;
 
@@ -3254,7 +3261,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     No matter, in another few days, she has to do it again. At that time, I&#39;ll take over somebody outside this room and come in.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Your plans made, you return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="179" name="Main_Story_Scene_13" tags="" position="1100,2225" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Your plans made, you return to the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="182" name="Main_Story_Scene_13" tags="" position="225,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you wander in the lobby, you see $gfName entering. Smiling, you approach her. Knowing full well she can&#39;t hear you, you go up to greet her.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3356,7 +3363,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     You settle down, lost in thought. A while later, $gfName gets up and leaves.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[You watch her go, still lost in thought|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="180" name="Main_Story_Scene_14" tags="" position="1225,2225" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You watch her go, still lost in thought|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="183" name="Main_Story_Scene_14" tags="" position="350,2350" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     Today, my serum needs changing again. Time to interfere!
 &lt;&lt;/mc&gt;&gt;
 
@@ -3382,7 +3389,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     However, just as you think you&#39;re about to go further out to find somebody, a janitor passes by. You quickly take over.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[You take over the janitor|Main_Story_Scene_14_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="181" name="Main_Story_Scene_14_1" tags="" position="100,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take over the janitor|Main_Story_Scene_14_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="184" name="Main_Story_Scene_14_1" tags="" position="475,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     The takeover proceeds smoothly as you take control of the janitor
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3409,7 +3416,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Alright, let&#39;s try it with the doctor.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[You take over the doctor|Main_Story_Scene_14_2]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="182" name="Main_Story_Scene_14_2" tags="" position="225,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take over the doctor|Main_Story_Scene_14_2]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="185" name="Main_Story_Scene_14_2" tags="" position="600,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     Like with the janitor before, you now possess the doctor.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3486,7 +3493,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;mainstory_button [[Feeling helpless and frustrated, you return to the lobby|Hospital_Lobby]]&gt;&gt;
     &lt;&lt;set $maxEnergy++&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="183" name="Main_Story_Scene_15" tags="" position="350,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="186" name="Main_Story_Scene_15" tags="" position="725,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You are in your room, trying to think of a way to get out of your current predicament.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3514,7 +3521,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     At this point, I can only rely on the police and hope they get a breakthrough in their investigation. Other than that, the only thing I can do for now is keep exploring and hope for some information to be gained.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Let&#39;s go back to exploring|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="184" name="Main_Story_Scene_16" tags="" position="475,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Let&#39;s go back to exploring|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="187" name="Main_Story_Scene_16" tags="" position="850,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     You are in your room, lazily floating around and taking a nap. At some point, you feel like somebody&#39;s watching you and you wake up. When you open your eyes, you see an unfamiliar man standing in your room.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3565,7 +3572,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     That was fast. Although I was a bit slow in following, I got to the entrance quite quickly, but still couldn&#39;t catch up.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Having failed the pursuit, you now find yourself in the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="185" name="Main_Story_Scene_17" tags="" position="600,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Having failed the pursuit, you now find yourself in the lobby|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="188" name="Main_Story_Scene_17" tags="" position="975,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you roam around in the lobby, you see the receptionist calling somebody. Overhearing the conversation, you realize she&#39;s calling the policeman about the mysterious man you saw in your room.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3772,7 +3779,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     The policeman does not stay long and soon leaves the room.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[You watch the policeman leave, staying behind in your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="186" name="Main_Story_Scene_18" tags="" position="725,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[You watch the policeman leave, staying behind in your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="189" name="Main_Story_Scene_18" tags="" position="1100,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you drift over your body, you think about recent events.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3812,7 +3819,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;mainstory_button [[Back to room|Hospital_Room]]&gt;&gt;
     &lt;&lt;set $maxWillpower to 20&gt;&gt;
-&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="187" name="Main_Story_Scene_2" tags="" position="850,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="190" name="Main_Story_Scene_2" tags="" position="1225,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
     Upon returning to your room, you think about the exchange you witnessed in the lobby between the policeman and the receptionist.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3843,7 +3850,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Alternatively, I can possess people to find out more. Unfortunately when taking over people I can only hear some surface thoughts, so it&#39;s not like I can read people&#39;s minds to find out more. When I do possess people, I&#39;ll have to try and wheedle out some information from other people.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Having set a course of action, you are ready to discover everything|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="188" name="Main_Story_Scene_3" tags="" position="975,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Having set a course of action, you are ready to discover everything|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="191" name="Main_Story_Scene_3" tags="" position="100,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the lobby, you see the policeman walking up to the reception desk again.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -3938,7 +3945,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     The receptionist starts tending to the next person, the conversation seemingly forgotten.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="189" name="Main_Story_Scene_4" tags="" position="1100,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="192" name="Main_Story_Scene_4" tags="" position="225,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering your room, you see your mother and your little sister. You can&#39;t help but smile a bit.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4061,7 +4068,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     See you soon mom, $littlesisName. I promise I will do my best to wake up.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Your mom and little sister leave your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="190" name="Main_Story_Scene_5" tags="" position="1225,2350" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Your mom and little sister leave your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="193" name="Main_Story_Scene_5" tags="" position="350,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the lobby, you see the policeman walking up to the reception desk again.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4182,7 +4189,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Well, I should probably keep an eye out as well. So far I have not seen any suspicious people, but who knows. Although would anybody really be so stupid as to waltz in my room when they were involved in my accident?
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="191" name="Main_Story_Scene_6" tags="" position="100,2475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[You walk away from the desk|Hospital_Lobby]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="194" name="Main_Story_Scene_6" tags="" position="475,2475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     These last few days, I haven&#39;t been able to gather more information. Even though I have been roaming around everywhere in this hospital, I can&#39;t seem to find any clues. Am I missing something?
 &lt;&lt;/mc&gt;&gt;
 
@@ -4228,7 +4235,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     No matter, in a few days, she should come back here to replace the serum again, I will have to follow her at that time.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[You return to your room, feeling you might have found a clue|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="192" name="Main_Story_Scene_7" tags="" position="225,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[You return to your room, feeling you might have found a clue|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="195" name="Main_Story_Scene_7" tags="" position="600,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
     You are in your room, waiting for the nurse to arrive, when the door opens.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4279,7 +4286,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     No, I can&#39;t give up yet. If there is anything wrong with the serum, I should find out if I follow her from the start of her shift until she changes my serum. In a few days she will have to come again. I should wait at the entrance and follow her from there.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Fully grasping your final clue, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="193" name="Main_Story_Scene_8" tags="" position="350,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Fully grasping your final clue, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="196" name="Main_Story_Scene_8" tags="" position="725,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you are relaxing in your bed, the door opens, admitting your ex-girlfriend $gfName.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4403,7 +4410,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     She tucks her book back into her backpack and prepares to leave. Before she does, she looks at your body and softly caresses your cheek, looking sad.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;mainstory_button [[Coming to her senses, she leaves the room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="194" name="Main_Story_Scene_9" tags="" position="475,2475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;mainstory_button [[Coming to her senses, she leaves the room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="Main_Story_Scene_9" tags="" position="850,2475" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     The nurse should be coming back today to change my serum. All I can do for now is wait for her to enter. I just hope she&#39;s not already here or enters through some other door. She did leave here last time though, so I think my odds are good.
 &lt;&lt;/mc&gt;&gt;
 
@@ -4522,7 +4529,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     I can&#39;t take over just anybody, so it might very well fail. However, I have to try, otherwise I&#39;ll never get anywhere.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;mainstory_button [[Having decided on a course of action, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="195" name="Side_Stories_Scene_1_1" tags="" position="600,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;mainstory_button [[Having decided on a course of action, you return to your room|Hospital_Room]]&gt;&gt;&lt;&lt;/mainstory_button&gt;&gt;</tw-passagedata><tw-passagedata pid="198" name="Side_Stories_Scene_1_1" tags="" position="975,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering a patient&#39;s room, you notice an astral body just like yourself floating above a bed.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4580,7 +4587,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Thank you lad, maybe we&#39;ll see each other again, someday, somewhere.
 &lt;&lt;/oldman&gt;&gt;
 
-&lt;&lt;sidestories_button 1 [[Saying your goodbyes, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="196" name="Side_Stories_Scene_1_2" tags="" position="725,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 1 [[Saying your goodbyes, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="199" name="Side_Stories_Scene_1_2" tags="" position="1100,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
     You decided to go see $oldManName, only to have him floating above his bed again, looking almost entirely transparent.
     Shocked by this change, you decide to approach him.
 &lt;&lt;/narrate&gt;&gt;
@@ -4641,7 +4648,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/narrate&gt;&gt;
 
 &lt;&lt;button [[You decide to play it safe and not help|Side_Stories_Scene_1_2_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[You decide to try to help him|Side_Stories_Scene_1_2_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="197" name="Side_Stories_Scene_1_2_1" tags="" position="850,2475" size="100,100">&lt;&lt;mc&gt;&gt;
+&lt;&lt;button [[You decide to try to help him|Side_Stories_Scene_1_2_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="200" name="Side_Stories_Scene_1_2_1" tags="" position="1225,2475" size="100,100">&lt;&lt;mc&gt;&gt;
     I&#39;m sorry, I wish there was something I could do.
 &lt;&lt;/mc&gt;&gt;
 
@@ -4664,7 +4671,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     As the woman is shouting, medical personnel rush in. You decide it might be a good time to leave the room.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;sidestories_button 1 [[Guilt-ridden, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="198" name="Side_Stories_Scene_1_2_2" tags="" position="975,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 1 [[Guilt-ridden, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="201" name="Side_Stories_Scene_1_2_2" tags="" position="100,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     Thinking about how you would feel in his situation, you feel like you need to help him.
     You&#39;re still apprehensive, not knowing what will happen to you, but having made up your mind, you feel a bit calmer.
     You decide to speak up.
@@ -4712,7 +4719,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Alright, I&#39;ll do my best!
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[You take a deep breath and possess his body|Side_Stories_Scene_1_2_3]] $energy-11&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="199" name="Side_Stories_Scene_1_2_3" tags="" position="1100,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take a deep breath and possess his body|Side_Stories_Scene_1_2_3]] $energy-11&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="202" name="Side_Stories_Scene_1_2_3" tags="" position="225,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     Like many times before, you enter somebody&#39;s body without any resistance.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4878,7 +4885,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 1 [[Saddened by today&#39;s events, you leave the room|Hospital_Hallway_Floor_1]]&gt;&gt;
     &lt;&lt;set $num_revival++&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="200" name="Side_Stories_Scene_2_1" tags="" position="1225,2475" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="203" name="Side_Stories_Scene_2_1" tags="" position="350,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     When entering the delivery room, a man faints. His wife, in the middle of giving labour, does not seem happy.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -4889,7 +4896,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/mc&gt;&gt;
 
 &lt;&lt;button [[You decide this is not for you and bow out|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;energy_button [[You have nothing better to do and stay to help out|Side_Stories_Scene_2_1_1]] $energy-5&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="201" name="Side_Stories_Scene_2_1_1" tags="" position="100,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You have nothing better to do and stay to help out|Side_Stories_Scene_2_1_1]] $energy-5&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="204" name="Side_Stories_Scene_2_1_1" tags="" position="475,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     You float towards the man&#39;s unconscious body and possess him.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -5115,7 +5122,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     I&#39;m glad he woke up in time to witness the birth. From the looks of it, he&#39;s got this. It doesn&#39;t look like he&#39;ll pass out again, so I should leave them in this beautiful moment.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;sidestories_button 2 [[Satisfied, you leave the delivery room|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="202" name="Side_Stories_Scene_3_1" tags="" position="225,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 2 [[Satisfied, you leave the delivery room|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="205" name="Side_Stories_Scene_3_1" tags="" position="600,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you walk in the hallway, you spot your ex-girlfriend as she greets another patient not far from your room.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -5317,7 +5324,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Still, she&#39;s hurting, not knowing what will happen. I wish I could let her know somehow. Unfortunately I can&#39;t let her know. While I can take over people, I can&#39;t get them to say: &quot;Hey, it&#39;s $mcName, I&#39;ve just taken over this body&quot;, my control is not that great. And even if I could, there is no way she would believe me.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;sidestories_button 3 [[Lost in thought, you enter your room|Hospital_Room]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="203" name="Side_Stories_Scene_3_2" tags="" position="350,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 3 [[Lost in thought, you enter your room|Hospital_Room]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="206" name="Side_Stories_Scene_3_2" tags="" position="725,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     You&#39;re in your room when $gfName enters. A slight smile touches your lips upon seeing her. You look on as she seats herself next to your bed.
     For a time, all is quiet.
 &lt;&lt;/narrate&gt;&gt;
@@ -5368,7 +5375,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Determined, you go over to him.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[Upon coming close, you take over his body|Side_Stories_Scene_2_2_1]] $energy-7&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="204" name="Side_Stories_Scene_2_2_1" tags="" position="475,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[Upon coming close, you take over his body|Side_Stories_Scene_2_2_1]] $energy-7&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="207" name="Side_Stories_Scene_2_2_1" tags="" position="850,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     You take over his body without any issue.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -5577,7 +5584,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 3 [[When you&#39;re sure she has left, you return to your room|Hospital_Room]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="205" name="Side_Stories_Scene_3_3" tags="" position="600,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="208" name="Side_Stories_Scene_3_3" tags="" position="975,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     Roaming the lobby, you see $gfName sitting on a bench. She has her hands tightly clasped in her lap, staring at the floor.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -5751,7 +5758,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     What was that all about? And how did he even know her name? Who is he?
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;sidestories_button 3 [[Lost in thought, you don&#39;t even notice her leaving|Hospital_Lobby]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="206" name="Side_Stories_Scene_3_4" tags="" position="725,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 3 [[Lost in thought, you don&#39;t even notice her leaving|Hospital_Lobby]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="209" name="Side_Stories_Scene_3_4" tags="" position="1100,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     Passing through the hallway, you spot $gfName walking towards your room. Suddenly she stops, noticing a small child standing near a wall, looking around, clearly lost.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -5997,7 +6004,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     She watches them walk off, a small smile still on her face.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;sidestories_button 3 [[You watch them too for a while, before leaving|Hospital_Hallway_Floor_2]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="207" name="Side_Stories_Scene_3_5" tags="" position="850,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 3 [[You watch them too for a while, before leaving|Hospital_Hallway_Floor_2]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="210" name="Side_Stories_Scene_3_5" tags="" position="1225,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
     You see $gfName, preparing to leave.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6167,7 +6174,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     The family nods. They gather the items of the ritual and leave the room. $gfName stays a little while longer and then leaves too.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;sidestories_button 3 [[You remain in your room, filled with a sense of wonder|Hospital_Room]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="208" name="Side_Stories_Scene_3_6" tags="" position="975,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 3 [[You remain in your room, filled with a sense of wonder|Hospital_Room]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="211" name="Side_Stories_Scene_3_6" tags="" position="100,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     You see $gfName sitting beside your bed, looking sad and tired.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6226,7 +6233,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     No, I have to do something, I can&#39;t bear to see her like that.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[Steeling your resolve, you enter back into your own body|Side_Stories_Scene_3_6_1]] $energy-6&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="209" name="Side_Stories_Scene_3_6_1" tags="" position="1100,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[Steeling your resolve, you enter back into your own body|Side_Stories_Scene_3_6_1]] $energy-6&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="212" name="Side_Stories_Scene_3_6_1" tags="" position="225,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     Unlike with other people, where you feel some resistance upon taking over their body, you feel no resistance at all, taking over your body without any issues.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6338,7 +6345,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 3 [[Still recovering, you watch her leave your room|Hospital_Room]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="210" name="Side_Stories_Scene_3_7" tags="" position="1225,2600" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="213" name="Side_Stories_Scene_3_7" tags="" position="350,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     Entering the lobby, you see $gfName by the coffee station, absently stirring her drink.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6520,7 +6527,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Hang in there, $mcName. I&#39;m here. And I&#39;m not going anywhere.
 &lt;&lt;/gf&gt;&gt;
 
-&lt;&lt;sidestories_button 3 [[You watch the elevator doors close, taking her away|Hospital_Lobby]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="211" name="Side_Stories_Scene_3_8" tags="" position="100,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 3 [[You watch the elevator doors close, taking her away|Hospital_Lobby]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="214" name="Side_Stories_Scene_3_8" tags="" position="475,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     $gfName sits next to your bed, her hand resting gently on yours, her fingers tracing the lines of your palm, as though trying to feel some connection. The door creaks open, and you look up to see your mother standing in the doorway. She looks like she hasn&#39;t slept in days, her eyes red-rimmed, her posture slumped under the weight of the worry and exhaustion that seems to hang over her like a fog.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6730,7 +6737,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     You decide to leave them be for now.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;sidestories_button 3 [[You leave the room|Hospital_Hallway_Floor_2]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="212" name="Side_Stories_Scene_3_9" tags="" position="225,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 3 [[You leave the room|Hospital_Hallway_Floor_2]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="215" name="Side_Stories_Scene_3_9" tags="" position="600,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     You find yourself in the hallway towards your room. It is late in the evening when you see $gfName leaving your room. She looks anxious and exhausted.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6768,7 +6775,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Hurrying, you search for somebody to take over and offer help. Just around the corner, you find another late visitor walking the corridor, coffee in hand. Without a second thought, you move towards him.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[You take control of his body|Side_Stories_Scene_3_9_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="213" name="Side_Stories_Scene_3_9_1" tags="" position="350,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take control of his body|Side_Stories_Scene_3_9_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="216" name="Side_Stories_Scene_3_9_1" tags="" position="725,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     This time, the takeover does not happen easily. You feel a lot of resistance. You are reminded you can&#39;t just take over anyone, but you don&#39;t dwell on it. $gfName needs help and there&#39;s nobody else around. You have to persevere.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6937,7 +6944,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 3 [[Tired, you go back to your room|Hospital_Room]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="214" name="Side_Stories_Scene_4_1" tags="" position="475,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="217" name="Side_Stories_Scene_4_1" tags="" position="850,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you wander the maternity ward, you spot a couple about to feed their newborn for the first time.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -6967,7 +6974,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     You move in to take over the father while he still hovers around the mother and their newborn.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_1_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="215" name="Side_Stories_Scene_4_1_1" tags="" position="600,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_1_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="218" name="Side_Stories_Scene_4_1_1" tags="" position="975,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     You take over his body without any issue.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7185,7 +7192,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     I&#39;m sure he&#39;ll be fine now.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;sidestories_button 4 [[Pleased about your actions, you decide to leave|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="216" name="Side_Stories_Scene_4_2" tags="" position="725,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 4 [[Pleased about your actions, you decide to leave|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="219" name="Side_Stories_Scene_4_2" tags="" position="1100,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you wander the maternity ward, you spot a couple with their newborn about to take their first family portrait. You realize they&#39;re $newFatherName and $newMotherName who you saw and helped earlier.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7215,7 +7222,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     You move in to take over the father, his eyes still drooping.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_2_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="217" name="Side_Stories_Scene_4_2_1" tags="" position="850,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_2_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="220" name="Side_Stories_Scene_4_2_1" tags="" position="1225,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
     As always, you take over his body without any issue.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7487,7 +7494,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 4 [[Chuckling, you decide to leave|Hospital_Hallway_Floor_3]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="218" name="Side_Stories_Scene_4_3" tags="" position="975,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="221" name="Side_Stories_Scene_4_3" tags="" position="100,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     You pop in into the maternity ward once more, seeing $newFatherName and $newMotherName sitting beside their baby&#39;s crib. As you watch on, $newFatherName is falling asleep.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7509,7 +7516,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     You move in to take over the father, almost completely asleep now.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_3_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="219" name="Side_Stories_Scene_4_3_1" tags="" position="1100,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_3_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="222" name="Side_Stories_Scene_4_3_1" tags="" position="225,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     As always, you take over his body without any issue.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7707,7 +7714,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     He may very well fall asleep again, but with them sitting peacefully like this, it shouldn&#39;t cause any issues.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;sidestories_button 4 [[Contently, you leave the room|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="220" name="Side_Stories_Scene_4_4" tags="" position="1225,2725" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;sidestories_button 4 [[Contently, you leave the room|Hospital_Hallway_Floor_3]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="223" name="Side_Stories_Scene_4_4" tags="" position="350,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     You decide to see how $newFatherName and $newMotherName are doing. When you enter their room, you see $newFatherName looking back and forth between a fresh diaper and their newborn. You laugh at how awkward he seems. $newMotherName looks on, not much more at ease, but trying to look composed.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7729,7 +7736,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Shaking your head, you prepare to take over his body.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[You move in and take over|Side_Stories_Scene_4_4_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="221" name="Side_Stories_Scene_4_4_1" tags="" position="100,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You move in and take over|Side_Stories_Scene_4_4_1]] $energy-3&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="224" name="Side_Stories_Scene_4_4_1" tags="" position="475,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     Like many times before, you take over his body without any issue.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7961,7 +7968,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 4 [[Smiling, you leave them|Hospital_Hallway_Floor_3]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="222" name="Side_Stories_Scene_4_5" tags="" position="225,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="225" name="Side_Stories_Scene_4_5" tags="" position="600,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     When you pass by their room, you see $newFatherName and $newMotherName sitting side by side on the bed, holding their baby.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -7983,7 +7990,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     You slowly close the distance between you and watch $newFatherName while he&#39;s fighting sleep.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_5_1]] $energy-5&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="223" name="Side_Stories_Scene_4_5_1" tags="" position="350,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You take over his body|Side_Stories_Scene_4_5_1]] $energy-5&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="226" name="Side_Stories_Scene_4_5_1" tags="" position="725,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     As many times before, you take over smoothly.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8152,7 +8159,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 4 [[You turn around and leave|Hospital_Hallway_Floor_3]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="224" name="Side_Stories_Scene_5_1" tags="" position="475,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="227" name="Side_Stories_Scene_5_1" tags="" position="850,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you look into a room of a cancer patient, you see somebody readying a razor.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8170,7 +8177,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Maybe I should take over and help out.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[Hoping to be of help, you take over|Side_Stories_Scene_5_1_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="225" name="Side_Stories_Scene_5_1_1" tags="" position="600,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[Hoping to be of help, you take over|Side_Stories_Scene_5_1_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="228" name="Side_Stories_Scene_5_1_1" tags="" position="975,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     Like many times before, you enter somebody&#39;s body without any resistance.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8266,7 +8273,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 5 [[Slowly, you leave the room|Hospital_Hallway_Floor_4]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="226" name="Side_Stories_Scene_5_2" tags="" position="725,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="229" name="Side_Stories_Scene_5_2" tags="" position="1100,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     As you pass by a room, you see the patient you helped shave sitting in a chair near the window, looking down.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8284,7 +8291,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Doesn&#39;t look like he realizes her mood. Let&#39;s help out a bit.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[You move to take over the cancer patient|Side_Stories_Scene_5_2_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="227" name="Side_Stories_Scene_5_2_1" tags="" position="850,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[You move to take over the cancer patient|Side_Stories_Scene_5_2_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="230" name="Side_Stories_Scene_5_2_1" tags="" position="1225,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
     Like many times before, you enter somebody&#39;s body without any resistance.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8408,7 +8415,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 5 [[You leave the room|Hospital_Hallway_Floor_4]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="228" name="Side_Stories_Scene_5_3" tags="" position="975,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="231" name="Side_Stories_Scene_5_3" tags="" position="100,2975" size="100,100">&lt;&lt;narrate&gt;&gt;
     Looking into the room, you see a familiar face receiving chemotherapy. Her &#39;shaving friend&#39; is sitting beside her, looking uncomfortable.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8418,7 +8425,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Oh, I remember him. He was just as uncomfortable during the shaving. Maybe I can help out a bit again, they look like they could use it.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[Deciding to help out a bit, you take over the friend|Side_Stories_Scene_5_3_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="229" name="Side_Stories_Scene_5_3_1" tags="" position="1100,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[Deciding to help out a bit, you take over the friend|Side_Stories_Scene_5_3_1]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="232" name="Side_Stories_Scene_5_3_1" tags="" position="225,2975" size="100,100">&lt;&lt;narrate&gt;&gt;
     Just like before, you take over without any issues.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8571,7 +8578,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 5 [[A job well done, you leave them|Hospital_Hallway_Floor_4]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="230" name="Side_Stories_Scene_5_4" tags="" position="1225,2850" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="233" name="Side_Stories_Scene_5_4" tags="" position="350,2975" size="100,100">&lt;&lt;narrate&gt;&gt;
     You&#39;re shocked to see the state $cancerName is in. From everything in the room, you can see she hasn&#39;t got much time left in this world. Her friend is beside her again, trying but failing to speak.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8586,7 +8593,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;/narrate&gt;&gt;
 
 &lt;&lt;button [[You decide you should not interfere|Side_Stories_Scene_5_4_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[You decide to try to help them|Side_Stories_Scene_5_4_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="231" name="Side_Stories_Scene_5_4_1" tags="" position="100,2975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;button [[You decide to try to help them|Side_Stories_Scene_5_4_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="234" name="Side_Stories_Scene_5_4_1" tags="" position="475,2975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     No, it&#39;s not my place to interfere. What if I said anything wrong? What if I ruin these last moments
 &lt;&lt;/mc&gt;&gt;
 
@@ -8602,7 +8609,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     Unfortunately, your window of opportunity has passed, $cancerName closes her eyes and slowly but surely her breath becomes more shallow before stopping completely. As you hear the heart monitor flatline, you leave the room, all but running away.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;sidestories_button 5 [[Full of guilt, you leave the room|Hospital_Hallway_Floor_4]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="232" name="Side_Stories_Scene_5_4_2" tags="" position="225,2975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
+&lt;&lt;sidestories_button 5 [[Full of guilt, you leave the room|Hospital_Hallway_Floor_4]]&gt;&gt;&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="235" name="Side_Stories_Scene_5_4_2" tags="" position="600,2975" size="100,100">&lt;&lt;mc thinking&gt;&gt;
     It may be not my place to interfere, but it really looks like they still have things to say to each other.
 &lt;&lt;/mc&gt;&gt;
 
@@ -8614,7 +8621,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
     I can&#39;t hesitate any longer. If I don&#39;t move now, it&#39;ll be too late to do anything.
 &lt;&lt;/mc&gt;&gt;
 
-&lt;&lt;energy_button [[Firming your resolve, you take control|Side_Stories_Scene_5_4_3]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="233" name="Side_Stories_Scene_5_4_3" tags="" position="350,2975" size="100,100">&lt;&lt;narrate&gt;&gt;
+&lt;&lt;energy_button [[Firming your resolve, you take control|Side_Stories_Scene_5_4_3]] $energy-4&gt;&gt;&lt;&lt;/energy_button&gt;&gt;</tw-passagedata><tw-passagedata pid="236" name="Side_Stories_Scene_5_4_3" tags="" position="725,2975" size="100,100">&lt;&lt;narrate&gt;&gt;
     You enter $cancerFriendName without any issues.
 &lt;&lt;/narrate&gt;&gt;
 
@@ -8738,7 +8745,7 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 
 &lt;&lt;sidestories_button 5 [[Silently, you leave the room|Hospital_Hallway_Floor_4]]&gt;&gt;
     &lt;&lt;update_willpower $willpower+1&gt;&gt;
-&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="234" name="Side_Stories" tags="" position="475,2975" size="100,100">&lt;&lt;sidestories_include 1 1 0 &#39;Hospital_Patient_Room&#39;&gt;&gt;
+&lt;&lt;/sidestories_button&gt;&gt;</tw-passagedata><tw-passagedata pid="237" name="Side_Stories" tags="" position="850,2975" size="100,100">&lt;&lt;sidestories_include 1 1 0 &#39;Hospital_Patient_Room&#39;&gt;&gt;
 &lt;&lt;sidestories_include 1 2 2 &#39;Hospital_Patient_Room&#39;&gt;&gt;
 
 &lt;&lt;sidestories_include 2 1 0 &#39;Hospital_Delivery_Room&#39;&gt;&gt;
@@ -8762,21 +8769,21 @@ You go to sleep recovering &lt;&lt;print $maxEnergy - $energy&gt;&gt; energy.
 &lt;&lt;sidestories_include 5 1 0 &#39;Hospital_Oncology_Patient_Room&#39;&gt;&gt;
 &lt;&lt;sidestories_include 5 2 1 &#39;Hospital_Oncology_Patient_Room&#39;&gt;&gt;
 &lt;&lt;sidestories_include 5 3 1 &#39;Hospital_Oncology_Exam_Room&#39;&gt;&gt;
-&lt;&lt;sidestories_include 5 4 2 &#39;Hospital_Oncology_Patient_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="235" name="Side_Stories_Text_Scene_1_1" tags="" position="600,2975" size="100,100">&lt;&lt;quest_button &quot;You see a astral body floating above a patient&#39;s bed&quot; &quot;Side_Stories_Scene_1_1&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="236" name="Side_Stories_Text_Scene_1_2" tags="" position="725,2975" size="100,100">&lt;&lt;energy_willpower_check_button &quot;The old man&#39;s astral body is here again&quot; &quot;Side_Stories_Scene_1_2&quot; $energy-11 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
+&lt;&lt;sidestories_include 5 4 2 &#39;Hospital_Oncology_Patient_Room&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="238" name="Side_Stories_Text_Scene_1_1" tags="" position="975,2975" size="100,100">&lt;&lt;quest_button &quot;You see a astral body floating above a patient&#39;s bed&quot; &quot;Side_Stories_Scene_1_1&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="239" name="Side_Stories_Text_Scene_1_2" tags="" position="1100,2975" size="100,100">&lt;&lt;energy_willpower_check_button &quot;The old man&#39;s astral body is here again&quot; &quot;Side_Stories_Scene_1_2&quot; $energy-11 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
 
-&lt;!-- Side story 2 --&gt;</tw-passagedata><tw-passagedata pid="237" name="Side_Stories_Text_Scene_2_1" tags="" position="850,2975" size="100,100">&lt;&lt;energy_willpower_check_button &quot;As you look in, a man faints&quot; &quot;Side_Stories_Scene_2_1&quot; $energy-5 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
+&lt;!-- Side story 2 --&gt;</tw-passagedata><tw-passagedata pid="240" name="Side_Stories_Text_Scene_2_1" tags="" position="1225,2975" size="100,100">&lt;&lt;energy_willpower_check_button &quot;As you look in, a man faints&quot; &quot;Side_Stories_Scene_2_1&quot; $energy-5 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
 
-&lt;!-- Side story 3 --&gt;</tw-passagedata><tw-passagedata pid="238" name="Side_Stories_Text_Scene_3_1" tags="" position="975,2975" size="100,100">&lt;&lt;set $last to previous()&gt;&gt;
+&lt;!-- Side story 3 --&gt;</tw-passagedata><tw-passagedata pid="241" name="Side_Stories_Text_Scene_3_1" tags="" position="100,3100" size="100,100">&lt;&lt;set $last to previous()&gt;&gt;
 &lt;&lt;if $last != &#39;Hospital_Room&#39;&gt;&gt;&lt;!-- Can&#39;t come from room, would not make sense as you missed GF visiting you --&gt;
     &lt;&lt;quest_button &quot;You see your ex-girlfriend talk to another patient&quot; &quot;Side_Stories_Scene_3_1&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="239" name="Side_Stories_Text_Scene_3_2" tags="" position="1100,2975" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Your ex-girlfriend comes into your room&quot; &quot;Side_Stories_Scene_3_2&quot; $energy-7 7&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="240" name="Side_Stories_Text_Scene_3_3" tags="" position="1225,2975" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is sitting on a bench&quot; &quot;Side_Stories_Scene_3_3&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="241" name="Side_Stories_Text_Scene_3_4" tags="" position="100,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend walking through the hallway&quot; &quot;Side_Stories_Scene_3_4&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="242" name="Side_Stories_Text_Scene_3_5" tags="" position="225,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is back for a visit&quot; &quot;Side_Stories_Scene_3_5&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="243" name="Side_Stories_Text_Scene_3_6" tags="" position="350,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Your ex-girlfriend is sitting beside your bed&quot; &quot;Side_Stories_Scene_3_6&quot; $energy-6 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="244" name="Side_Stories_Text_Scene_3_7" tags="" position="475,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is grabbing some coffee&quot; &quot;Side_Stories_Scene_3_7&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="245" name="Side_Stories_Text_Scene_3_8" tags="" position="600,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is sitting beside your bed&quot; &quot;Side_Stories_Scene_3_8&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="246" name="Side_Stories_Text_Scene_3_9" tags="" position="725,3100" size="100,100">&lt;&lt;set $last to previous()&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="242" name="Side_Stories_Text_Scene_3_2" tags="" position="225,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Your ex-girlfriend comes into your room&quot; &quot;Side_Stories_Scene_3_2&quot; $energy-7 7&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="243" name="Side_Stories_Text_Scene_3_3" tags="" position="350,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is sitting on a bench&quot; &quot;Side_Stories_Scene_3_3&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="244" name="Side_Stories_Text_Scene_3_4" tags="" position="475,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend walking through the hallway&quot; &quot;Side_Stories_Scene_3_4&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="245" name="Side_Stories_Text_Scene_3_5" tags="" position="600,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is back for a visit&quot; &quot;Side_Stories_Scene_3_5&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="246" name="Side_Stories_Text_Scene_3_6" tags="" position="725,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Your ex-girlfriend is sitting beside your bed&quot; &quot;Side_Stories_Scene_3_6&quot; $energy-6 0&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="247" name="Side_Stories_Text_Scene_3_7" tags="" position="850,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is grabbing some coffee&quot; &quot;Side_Stories_Scene_3_7&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="248" name="Side_Stories_Text_Scene_3_8" tags="" position="975,3100" size="100,100">&lt;&lt;quest_button &quot;Your ex-girlfriend is sitting beside your bed&quot; &quot;Side_Stories_Scene_3_8&quot;&gt;&gt;&lt;&lt;/quest_button&gt;&gt;</tw-passagedata><tw-passagedata pid="249" name="Side_Stories_Text_Scene_3_9" tags="" position="1100,3100" size="100,100">&lt;&lt;set $last to previous()&gt;&gt;
 &lt;&lt;if $last != &#39;Hospital_Room&#39;&gt;&gt;&lt;!-- Can&#39;t come from room, would not make sense as you missed GF visiting you --&gt;
     &lt;&lt;energy_willpower_check_button &quot;You see your ex-girlfriend leaving your room&quot; &quot;Side_Stories_Scene_3_9&quot; $energy-3 13&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;!-- Side story 4 --&gt;</tw-passagedata><tw-passagedata pid="247" name="Side_Stories_Text_Scene_4_1" tags="" position="850,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A mother is feeding her baby&quot; &quot;Side_Stories_Scene_4_1&quot; $energy-3 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="248" name="Side_Stories_Text_Scene_4_2" tags="" position="975,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A family is talking pictures with their newborn&quot; &quot;Side_Stories_Scene_4_2&quot; $energy-5 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="249" name="Side_Stories_Text_Scene_4_3" tags="" position="1100,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Two parents are sitting quietly with their baby&quot; &quot;Side_Stories_Scene_4_3&quot; $energy-5 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="250" name="Side_Stories_Text_Scene_4_4" tags="" position="1225,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Two parents are changing a diaper&quot; &quot;Side_Stories_Scene_4_4&quot; $energy-3 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="251" name="Side_Stories_Text_Scene_4_5" tags="" position="100,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Two parents are sitting together, looking exhausted&quot; &quot;Side_Stories_Scene_4_5&quot; $energy-5 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
+&lt;!-- Side story 4 --&gt;</tw-passagedata><tw-passagedata pid="250" name="Side_Stories_Text_Scene_4_1" tags="" position="1225,3100" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A mother is feeding her baby&quot; &quot;Side_Stories_Scene_4_1&quot; $energy-3 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="251" name="Side_Stories_Text_Scene_4_2" tags="" position="100,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A family is talking pictures with their newborn&quot; &quot;Side_Stories_Scene_4_2&quot; $energy-5 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="252" name="Side_Stories_Text_Scene_4_3" tags="" position="225,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Two parents are sitting quietly with their baby&quot; &quot;Side_Stories_Scene_4_3&quot; $energy-5 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="253" name="Side_Stories_Text_Scene_4_4" tags="" position="350,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Two parents are changing a diaper&quot; &quot;Side_Stories_Scene_4_4&quot; $energy-3 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="254" name="Side_Stories_Text_Scene_4_5" tags="" position="475,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;Two parents are sitting together, looking exhausted&quot; &quot;Side_Stories_Scene_4_5&quot; $energy-5 5&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;
 
-&lt;!-- Side story 5 --&gt;</tw-passagedata><tw-passagedata pid="252" name="Side_Stories_Text_Scene_5_1" tags="" position="225,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A man is readying a razor&quot; &quot;Side_Stories_Scene_5_1&quot; $energy-4 6&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="253" name="Side_Stories_Text_Scene_5_2" tags="" position="350,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A patient looks out of the window, looking down&quot; &quot;Side_Stories_Scene_5_2&quot; $energy-4 6&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="254" name="Side_Stories_Text_Scene_5_3" tags="" position="475,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A patient is having chemotherapy&quot; &quot;Side_Stories_Scene_5_3&quot; $energy-4 6&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="255" name="Side_Stories_Text_Scene_5_4" tags="" position="600,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A sad scene enters your eyes&quot; &quot;Side_Stories_Scene_5_4&quot; $energy-4 15&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="256" name="Start" tags="" position="725,3225" size="100,100">&lt;div class=&quot;title&quot;&gt;
+&lt;!-- Side story 5 --&gt;</tw-passagedata><tw-passagedata pid="255" name="Side_Stories_Text_Scene_5_1" tags="" position="600,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A man is readying a razor&quot; &quot;Side_Stories_Scene_5_1&quot; $energy-4 6&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="256" name="Side_Stories_Text_Scene_5_2" tags="" position="725,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A patient looks out of the window, looking down&quot; &quot;Side_Stories_Scene_5_2&quot; $energy-4 6&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="257" name="Side_Stories_Text_Scene_5_3" tags="" position="850,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A patient is having chemotherapy&quot; &quot;Side_Stories_Scene_5_3&quot; $energy-4 6&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="258" name="Side_Stories_Text_Scene_5_4" tags="" position="975,3225" size="100,100">&lt;&lt;energy_willpower_check_button &quot;A sad scene enters your eyes&quot; &quot;Side_Stories_Scene_5_4&quot; $energy-4 15&gt;&gt;&lt;&lt;/energy_willpower_check_button&gt;&gt;</tw-passagedata><tw-passagedata pid="259" name="Start" tags="" position="1100,3225" size="100,100">&lt;div class=&quot;title&quot;&gt;
 Welcome to &#39;Lucid Coma&#39;!
 &lt;/div&gt;
 
@@ -8787,7 +8794,7 @@ Welcome to &#39;Lucid Coma&#39;!
     Any resemblance to actual persons, living or dead, or actual events is purely coincidental. The characters, events, and situations depicted in this work are fictional and any similarities to real persons, living or dead, or actual events are purely coincidental and unintended.
 &lt;&lt;/narrate&gt;&gt;
 
-&lt;&lt;button [[I understand and am ready to start the game|Start_Game]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="257" name="Start_Game" tags="" position="850,3225" size="100,100">&lt;div class=&quot;subtitle&quot;&gt;
+&lt;&lt;button [[I understand and am ready to start the game|Start_Game]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="260" name="Start_Game" tags="" position="1225,3225" size="100,100">&lt;div class=&quot;subtitle&quot;&gt;
 Let&#39;s start with some information on how the game is constructed
 &lt;/div&gt;
 
@@ -8817,7 +8824,7 @@ Let&#39;s start with some information on how the game is constructed
     You can also skip the intro, but bear in mind that you&#39;ll lose a part of the story, making it hard to understand what&#39;s going on.
 &lt;&lt;/dev&gt;&gt;
 
-&lt;&lt;button [[Let&#39;s get started|First_Setup]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="258" name="First_Setup" tags="" position="975,3225" size="100,100">&lt;&lt;dev&gt;&gt;
+&lt;&lt;button [[Let&#39;s get started|First_Setup]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="261" name="First_Setup" tags="" position="100,3350" size="100,100">&lt;&lt;dev&gt;&gt;
     First and foremost, let&#39;s select the avatar for the main character.
 &lt;&lt;/dev&gt;&gt;
 
@@ -8838,7 +8845,7 @@ Let&#39;s start with some information on how the game is constructed
 &lt;&lt;/dev&gt;&gt;
 
 &lt;&lt;button [[Play the intro|Intro_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[Skip the intro|Intro_Skip]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="259" name="Avatar_Selection_Button_Widget" tags="widget" position="1100,3225" size="100,100">&lt;&lt;widget &#39;avatar_selection&#39;&gt;&gt;
+&lt;&lt;button [[Skip the intro|Intro_Skip]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="262" name="Avatar_Selection_Button_Widget" tags="widget" position="225,3350" size="100,100">&lt;&lt;widget &#39;avatar_selection&#39;&gt;&gt;
     &lt;div class=&quot;column-avatar&quot;&gt;
         &lt;&lt;set $imgSrc to &quot;&lt;img src=&quot;+$args[1]+&quot;&gt;&quot;&gt;&gt;
         &lt;&lt;link $imgSrc&gt;&gt;
@@ -8847,7 +8854,7 @@ Let&#39;s start with some information on how the game is constructed
         &lt;&lt;/link&gt;&gt;
     &lt;/div&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="260" name="Energy_Button_Widget" tags="widget" position="1225,3225" size="100,100">&lt;&lt;widget &#39;energy_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="263" name="Energy_Button_Widget" tags="widget" position="350,3350" size="100,100">&lt;&lt;widget &#39;energy_button&#39; container&gt;&gt;
     &lt;!-- Calculate energy usage --&gt;
     &lt;&lt;set _energy_consumption to $energy-$args[1]&gt;&gt;
     &lt;&lt;if _energy_consumption &gt; 0&gt;&gt;
@@ -8879,7 +8886,7 @@ Let&#39;s start with some information on how the game is constructed
             &lt;&lt;update&gt;&gt;
         &lt;&lt;/button&gt;&gt;
     &lt;&lt;/disable&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="261" name="Energy_Willpower_Check_Button_Widget" tags="widget" position="100,3350" size="100,100">&lt;&lt;widget &quot;energy_willpower_check_button&quot; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="264" name="Energy_Willpower_Check_Button_Widget" tags="widget" position="475,3350" size="100,100">&lt;&lt;widget &quot;energy_willpower_check_button&quot; container&gt;&gt;
     &lt;!-- Calculate energy usage --&gt;
     &lt;&lt;set _energy_consumption to $energy-$args[2]&gt;&gt;
     &lt;&lt;if _energy_consumption &gt; 0&gt;&gt;
@@ -8925,31 +8932,31 @@ Let&#39;s start with some information on how the game is constructed
             &lt;&lt;update&gt;&gt;
         &lt;&lt;/button&gt;&gt;
     &lt;&lt;/disable&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="262" name="Hints_Include_Widget" tags="widget" position="225,3350" size="100,100">&lt;&lt;widget &#39;hints_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="265" name="Hints_Include_Widget" tags="widget" position="600,3350" size="100,100">&lt;&lt;widget &#39;hints_include&#39;&gt;&gt;
     &lt;&lt;if $progress_main_story &gt; $args[0]&gt;&gt;
         &lt;&lt;set _scene to &quot;Hints_&quot;+$args[0]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="263" name="Hints_Plans_Include_Widget" tags="widget" position="350,3350" size="100,100">&lt;&lt;widget &#39;hints_plans_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="266" name="Hints_Plans_Include_Widget" tags="widget" position="725,3350" size="100,100">&lt;&lt;widget &#39;hints_plans_include&#39;&gt;&gt;
     &lt;&lt;if $progress_main_story == $args[0]&gt;&gt;
         &lt;&lt;set $has_clues to true&gt;&gt;
         &lt;&lt;set _scene to &quot;Hints_Plans_&quot;+$args[0]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="264" name="Mainstory_Button_Widget" tags="widget" position="475,3350" size="100,100">&lt;&lt;widget &#39;mainstory_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="267" name="Mainstory_Button_Widget" tags="widget" position="850,3350" size="100,100">&lt;&lt;widget &#39;mainstory_button&#39; container&gt;&gt;
     &lt;&lt;button $args[0]&gt;&gt;
         _contents
         &lt;&lt;set $progress_main_story++&gt;&gt;
         &lt;&lt;set $mainStoryDay to $currentDay&gt;&gt;
     &lt;&lt;/button&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="265" name="Mainstory_Include_Widget" tags="widget" position="600,3350" size="100,100">&lt;&lt;widget &#39;mainstory_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="268" name="Mainstory_Include_Widget" tags="widget" position="975,3350" size="100,100">&lt;&lt;widget &#39;mainstory_include&#39;&gt;&gt;
     &lt;&lt;if $progress_main_story == $args[0] and $mainStoryDay + $args[1] &lt;= $currentDay and passage() == $args[2]&gt;&gt;
         &lt;&lt;set _scene to &quot;Main_Story_Text_Scene_&quot;+$args[0]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
         &lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="266" name="Quest_Button_Widget" tags="widget" position="725,3350" size="100,100">&lt;&lt;widget &#39;quest_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="269" name="Quest_Button_Widget" tags="widget" position="1100,3350" size="100,100">&lt;&lt;widget &#39;quest_button&#39; container&gt;&gt;
     &lt;&lt;if $args[0]&gt;&gt;
         &lt;&lt;set _classes to &quot;quest-button&quot;&gt;&gt;
         &lt;&lt;if $args[1]&gt;&gt;
@@ -8967,14 +8974,14 @@ Let&#39;s start with some information on how the game is constructed
         &lt;&lt;set $progress_main_story++&gt;&gt;
         &lt;&lt;set $mainStoryDay to $currentDay&gt;&gt;
     &lt;&lt;/button&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="267" name="Random_Scenes_Button_Widget" tags="widget" position="850,3350" size="100,100">&lt;&lt;widget &#39;random_scenes_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="270" name="Random_Scenes_Button_Widget" tags="widget" position="1225,3350" size="100,100">&lt;&lt;widget &#39;random_scenes_button&#39; container&gt;&gt;
     &lt;&lt;button $args[2]&gt;&gt;
         _contents
         &lt;&lt;if !$args[1].includes($args[0])&gt;&gt;
             &lt;&lt;set $args[1].push($args[0])&gt;&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/button&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="268" name="Random_Scenes_Include_Widget" tags="widget" position="975,3350" size="100,100">&lt;&lt;widget &#39;random_scenes_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="271" name="Random_Scenes_Include_Widget" tags="widget" position="100,3475" size="100,100">&lt;&lt;widget &#39;random_scenes_include&#39;&gt;&gt;
     &lt;&lt;set _random_event to random(0, ($args[0] * $rnd_chance_multiplier) - 1);&gt;&gt;
     &lt;&lt;for _i to 0; _i lt $args[0]; _i++&gt;&gt;
         &lt;&lt;if _random_event == _i&gt;&gt;
@@ -8983,20 +8990,20 @@ Let&#39;s start with some information on how the game is constructed
             &lt;br&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/for&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="269" name="Sidestories_Button_Widget" tags="widget" position="1100,3350" size="100,100">&lt;&lt;widget &#39;sidestories_button&#39; container&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="272" name="Sidestories_Button_Widget" tags="widget" position="225,3475" size="100,100">&lt;&lt;widget &#39;sidestories_button&#39; container&gt;&gt;
     &lt;&lt;button $args[1]&gt;&gt;
         _contents
         &lt;&lt;set $progress_side_stories[$args[0]-1]++&gt;&gt;
         &lt;&lt;set $sideStoriesDay[$args[0]-1] to $currentDay&gt;&gt;
     &lt;&lt;/button&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="270" name="Sidestories_Include_Widget" tags="widget" position="1225,3350" size="100,100">&lt;&lt;widget &#39;sidestories_include&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="273" name="Sidestories_Include_Widget" tags="widget" position="350,3475" size="100,100">&lt;&lt;widget &#39;sidestories_include&#39;&gt;&gt;
     &lt;&lt;if $progress_side_stories[$args[0]-1] == $args[1] and $sideStoriesDay[$args[0]-1] + $args[2] &lt;= $currentDay and passage() == $args[3]&gt;&gt;
         &lt;&lt;set _scene to &quot;Side_Stories_Text_Scene_&quot;+$args[0]+&quot;_&quot;+$args[1]&gt;&gt;
         &lt;&lt;include _scene&gt;&gt;
         &lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="271" name="Update_Willpower_Widget" tags="widget" position="100,3475" size="100,100">&lt;&lt;widget &#39;update_willpower&#39;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="274" name="Update_Willpower_Widget" tags="widget" position="475,3475" size="100,100">&lt;&lt;widget &#39;update_willpower&#39;&gt;&gt;
     &lt;&lt;set _willpower to $args[0]&gt;&gt;
     &lt;&lt;if _willpower &gt; $maxWillpower&gt;&gt;
         &lt;&lt;set _willpower to $maxWillpower&gt;&gt;
